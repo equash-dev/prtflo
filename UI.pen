@@ -1,0 +1,3004 @@
+{
+  "version": "2.13",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bi8Au",
+      "x": 0,
+      "y": 0,
+      "name": "Frame",
+      "clip": true,
+      "width": 800,
+      "height": 600,
+      "fill": "#FFFFFF",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "j1APK",
+          "x": 253,
+          "y": 85,
+          "fill": "#CCCCCC",
+          "width": 216,
+          "height": 281
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ohe9R",
+      "x": 880,
+      "y": 0,
+      "name": "ButtonPrimary",
+      "reusable": true,
+      "fill": "$ink",
+      "cornerRadius": 999,
+      "gap": 8,
+      "padding": [
+        15,
+        28
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "p6WJ6M",
+          "name": "Label",
+          "fill": "$canvas",
+          "content": "VIEW THE CATALOGUE",
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "500",
+          "letterSpacing": 1.6
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "wStjF",
+      "x": 1121,
+      "y": 0,
+      "name": "ButtonSecondary",
+      "reusable": true,
+      "fill": "#00000000",
+      "cornerRadius": 999,
+      "stroke": "$ink",
+      "strokeWidth": 1,
+      "gap": 8,
+      "padding": [
+        15,
+        28
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "ryPpb",
+          "name": "Label",
+          "fill": "$ink",
+          "content": "SEE THE NUMBERS",
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "500",
+          "letterSpacing": 1.6
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "E7U4EL",
+      "x": 880,
+      "y": 104,
+      "name": "ProductCard",
+      "reusable": true,
+      "width": 300,
+      "layout": "vertical",
+      "gap": 16,
+      "children": [
+        {
+          "type": "frame",
+          "id": "qWAct",
+          "name": "ImageSlot",
+          "clip": true,
+          "width": "fill_container",
+          "height": 400,
+          "fill": "$panel",
+          "padding": 12,
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "frame",
+              "id": "WwuOi",
+              "name": "NewBadge",
+              "fill": "$ink",
+              "padding": [
+                4,
+                8
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Zfh59",
+                  "name": "BadgeLabel",
+                  "fill": "$canvas",
+                  "content": "NEW",
+                  "fontFamily": "Geist",
+                  "fontSize": 10,
+                  "fontWeight": "500",
+                  "letterSpacing": 1.6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Me34R",
+          "name": "Info",
+          "width": "fill_container",
+          "gap": 16,
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "I3Jfcd",
+              "name": "NameDesc",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 6,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vXDKU",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "SILK COLUMN BLOUSE",
+                  "fontFamily": "Geist",
+                  "fontSize": 12,
+                  "fontWeight": "500",
+                  "letterSpacing": 1.2
+                },
+                {
+                  "type": "text",
+                  "id": "rQhll",
+                  "name": "Desc",
+                  "fill": "$muted",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Fluid silk, column-cut, ivory.",
+                  "lineHeight": 1.4,
+                  "fontFamily": "Geist",
+                  "fontSize": 12,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "rCgqd",
+              "name": "Price",
+              "fill": "$ink",
+              "content": "£215",
+              "fontFamily": "Geist",
+              "fontSize": 12,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "rZT58",
+      "x": 880,
+      "y": 619,
+      "name": "Header",
+      "reusable": true,
+      "width": 1360,
+      "fill": "$canvas",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "YiGHF",
+          "name": "Row1",
+          "width": "fill_container",
+          "height": 64,
+          "stroke": "$hairline",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 24,
+          "padding": [
+            0,
+            40
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "CFi0d",
+              "name": "Wordmark",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 4,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "QtU5l",
+                  "name": "Brand",
+                  "fill": "$ink",
+                  "content": "ELLIOTT QUASHIE",
+                  "fontFamily": "Geist",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "letterSpacing": 2.9
+                },
+                {
+                  "type": "text",
+                  "id": "Sp9GZ",
+                  "name": "Serial",
+                  "fill": "$muted",
+                  "content": "EQ—001 / SS26",
+                  "fontFamily": "Geist",
+                  "fontSize": 10,
+                  "fontWeight": "normal",
+                  "letterSpacing": 2.8
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Xjk0k",
+              "name": "Nav",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lLZmO",
+                  "name": "MEN",
+                  "fill": "$muted",
+                  "content": "MEN",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "y9RXDz",
+                  "name": "Slash",
+                  "fill": "$hairline",
+                  "content": "/",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "RVO0d",
+                  "name": "WOMEN",
+                  "fill": "$muted",
+                  "content": "WOMEN",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 2
+                },
+                {
+                  "type": "text",
+                  "id": "aH3Cr",
+                  "name": "Slash",
+                  "fill": "$hairline",
+                  "content": "/",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "bqLxL",
+                  "name": "ARCHIVE",
+                  "fill": "$muted",
+                  "content": "ARCHIVE",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "uy6Yz",
+              "name": "Utility",
+              "width": "fill_container",
+              "gap": 20,
+              "justifyContent": "end",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "pwY47",
+                  "name": "ROI CALCULATOR",
+                  "fill": "$muted",
+                  "content": "ROI CALCULATOR",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.8
+                },
+                {
+                  "type": "text",
+                  "id": "AYpVt",
+                  "name": "TRIAL",
+                  "fill": "$muted",
+                  "content": "TRIAL",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.8
+                },
+                {
+                  "type": "text",
+                  "id": "YDjis",
+                  "name": "ABOUT",
+                  "fill": "$muted",
+                  "content": "ABOUT",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.8
+                },
+                {
+                  "type": "text",
+                  "id": "o4lT2",
+                  "name": "Currency",
+                  "fill": "$ink",
+                  "content": "£ GBP",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.4
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "r4BN5w",
+          "name": "Row2",
+          "width": "fill_container",
+          "height": 40,
+          "stroke": "$hairline",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 10,
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "end",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "grfMM",
+              "name": "ToggleLabel",
+              "fill": "$muted",
+              "content": "SHOW ROI OVERLAY",
+              "fontFamily": "Geist",
+              "fontSize": 10,
+              "fontWeight": "normal",
+              "letterSpacing": 1.6
+            },
+            {
+              "type": "frame",
+              "id": "T1HbC4",
+              "name": "ToggleTrack",
+              "width": 34,
+              "height": 18,
+              "fill": "$hairline",
+              "cornerRadius": 999,
+              "padding": 2,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "UCsCD",
+                  "name": "Knob",
+                  "fill": "$canvas",
+                  "width": 14,
+                  "height": 14
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "A8q1Ro",
+      "x": 880,
+      "y": 783,
+      "name": "Footer",
+      "reusable": true,
+      "width": 1360,
+      "fill": "$canvas",
+      "stroke": "$hairline",
+      "strokeWidth": {
+        "top": 1
+      },
+      "layout": "vertical",
+      "padding": [
+        0,
+        40
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "OiEYH",
+          "name": "FooterInner",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 64,
+          "padding": [
+            64,
+            0
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "MfY5G",
+              "name": "Columns",
+              "width": "fill_container",
+              "gap": 48,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "NN0rq",
+                  "name": "Brand",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "HV9Fa",
+                      "name": "Wordmark",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "O9vij",
+                          "name": "BrandName",
+                          "fill": "$ink",
+                          "content": "ELLIOTT QUASHIE",
+                          "fontFamily": "Geist",
+                          "fontSize": 16,
+                          "fontWeight": "500",
+                          "letterSpacing": 2.9
+                        },
+                        {
+                          "type": "text",
+                          "id": "zShpT",
+                          "name": "Serial",
+                          "fill": "$muted",
+                          "content": "EQ—001 / SS26",
+                          "fontFamily": "Geist",
+                          "fontSize": 10,
+                          "fontWeight": "normal",
+                          "letterSpacing": 2.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "vJUht",
+                      "name": "Tagline",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": 220,
+                      "content": "A fashion house, built on a pipeline.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vmKtp",
+                  "name": "COLLECTIONS",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "BRZaY",
+                      "name": "Heading",
+                      "fill": "$muted",
+                      "content": "COLLECTIONS",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "O9obo",
+                      "name": "List",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "a1kq1k",
+                          "name": "Men",
+                          "fill": "$ink",
+                          "content": "Men",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ienxI",
+                          "name": "Women",
+                          "fill": "$ink",
+                          "content": "Women",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "nVdf0",
+                          "name": "Archive",
+                          "fill": "$ink",
+                          "content": "Archive",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "akv7p",
+                  "name": "HOUSE",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "zvwRQ",
+                      "name": "Heading",
+                      "fill": "$muted",
+                      "content": "HOUSE",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "UM7HN",
+                      "name": "List",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Ka3Z5",
+                          "name": "ROI calculator",
+                          "fill": "$ink",
+                          "content": "ROI calculator",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ymBVP",
+                          "name": "Trial",
+                          "fill": "$ink",
+                          "content": "Trial",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "A7f2B",
+                          "name": "About",
+                          "fill": "$ink",
+                          "content": "About",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ETuHR",
+                  "name": "CONTACT",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 20,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rGjuS",
+                      "name": "Heading",
+                      "fill": "$muted",
+                      "content": "CONTACT",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "frame",
+                      "id": "u8Lzrp",
+                      "name": "List",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "xOqnl",
+                          "name": "hello@elliottquashie.com",
+                          "fill": "$ink",
+                          "content": "hello@elliottquashie.com",
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "b3QzjS",
+              "name": "BottomRow",
+              "width": "fill_container",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "top": 1
+              },
+              "gap": 24,
+              "padding": [
+                32,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "y4gs9r",
+                  "name": "RevealLine",
+                  "fill": "$muted",
+                  "content": "EVERY IMAGE IN THIS HOUSE WAS GENERATED.",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 2.4
+                },
+                {
+                  "type": "text",
+                  "id": "kJoam",
+                  "name": "Copyright",
+                  "fill": "$muted",
+                  "content": "© 2026 ELLIOTT QUASHIE",
+                  "fontFamily": "Geist",
+                  "fontSize": 11,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1.8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mUNC4",
+      "x": 880,
+      "y": 1233,
+      "name": "Screen — Home",
+      "clip": true,
+      "width": 1520,
+      "fill": "$ground",
+      "layout": "vertical",
+      "padding": 40,
+      "children": [
+        {
+          "type": "frame",
+          "id": "NNBUs",
+          "name": "Canvas",
+          "width": "fill_container",
+          "fill": "$canvas",
+          "layout": "vertical",
+          "children": [
+            {
+              "id": "eSMyn",
+              "type": "ref",
+              "ref": "rZT58",
+              "name": "Header",
+              "width": "fill_container"
+            },
+            {
+              "type": "frame",
+              "id": "sP1NF",
+              "name": "Hero",
+              "width": "fill_container",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 48,
+              "padding": [
+                80,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "p5m1Aq",
+                  "name": "HeroCopy",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "gZcxM",
+                      "name": "Eyebrow",
+                      "fill": "$muted",
+                      "content": "SPRING / SUMMER 2026",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2.42
+                    },
+                    {
+                      "type": "text",
+                      "id": "OrG5X",
+                      "name": "Heading",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "A DESIGNER LABEL OF ONE.",
+                      "lineHeight": 1.05,
+                      "fontFamily": "Geist",
+                      "fontSize": 56,
+                      "fontWeight": "500",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "k8A2r",
+                      "name": "Subcopy",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Season-less drops, a tight palette, an obsession with how the work is seen. Crafted in technical fabric. Cut to sit close.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "I9wTZ",
+                      "name": "HeroButtons",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "id": "qGcUY",
+                          "type": "ref",
+                          "ref": "ohe9R",
+                          "name": "PrimaryCta"
+                        },
+                        {
+                          "id": "EQA04",
+                          "type": "ref",
+                          "ref": "wStjF",
+                          "name": "SecondaryCta"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "k0rZD",
+                  "name": "CategoryCards",
+                  "width": "fill_container",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "MLktS",
+                      "name": "MEN Card",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "nc7pe",
+                          "name": "Image",
+                          "width": "fill_container",
+                          "height": 280,
+                          "fill": "$panel"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "S6KO6",
+                          "name": "LabelRow",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "xRaOD",
+                              "name": "Name",
+                              "fill": "$ink",
+                              "content": "MEN",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "bo2yq",
+                              "name": "View",
+                              "fill": "$muted",
+                              "content": "VIEW",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "us3vo",
+                      "name": "WOMEN Card",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "hK15w",
+                          "name": "Image",
+                          "width": "fill_container",
+                          "height": 280,
+                          "fill": "$panel"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "O0oDJA",
+                          "name": "LabelRow",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Pqjsr",
+                              "name": "Name",
+                              "fill": "$ink",
+                              "content": "WOMEN",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "TGAkz",
+                              "name": "View",
+                              "fill": "$muted",
+                              "content": "VIEW",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qlo2k",
+                      "name": "ARCHIVE Card",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "f1E75",
+                          "name": "Image",
+                          "width": "fill_container",
+                          "height": 280,
+                          "fill": "$panel"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "UDLuw",
+                          "name": "LabelRow",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "woCV6",
+                              "name": "Name",
+                              "fill": "$ink",
+                              "content": "ARCHIVE",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "Wm0vJ",
+                              "name": "View",
+                              "fill": "$muted",
+                              "content": "VIEW",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NShpY",
+              "name": "Featured",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                80,
+                40
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "HgN5y",
+                  "name": "SectionHead",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "end",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "K27AL1",
+                      "name": "Titles",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "jQrLg",
+                          "name": "Eyebrow",
+                          "fill": "$muted",
+                          "content": "FEATURED",
+                          "fontFamily": "Geist",
+                          "fontSize": 11,
+                          "fontWeight": "normal",
+                          "letterSpacing": 2.42
+                        },
+                        {
+                          "type": "text",
+                          "id": "OknPg",
+                          "name": "Title",
+                          "fill": "$ink",
+                          "content": "NEW & BEST SELLING",
+                          "fontFamily": "Geist",
+                          "fontSize": 30,
+                          "fontWeight": "500",
+                          "letterSpacing": -0.3
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "Zik3m",
+                      "name": "ViewAll",
+                      "fill": "$muted",
+                      "content": "VIEW ALL →",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aMh2l",
+                  "name": "Grid",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "id": "GQCZw",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "SILK COLUMN BLOUSE",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": false
+                        },
+                        "vXDKU": {
+                          "content": "SILK COLUMN BLOUSE"
+                        },
+                        "rQhll": {
+                          "content": "Fluid silk, column-cut, ivory."
+                        },
+                        "rCgqd": {
+                          "content": "£215"
+                        }
+                      }
+                    },
+                    {
+                      "id": "N5A5vW",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "WOOL DOUBLE COAT",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": true
+                        },
+                        "vXDKU": {
+                          "content": "WOOL DOUBLE COAT"
+                        },
+                        "rQhll": {
+                          "content": "Double-breasted, mid-length, camel."
+                        },
+                        "rCgqd": {
+                          "content": "£485"
+                        }
+                      }
+                    },
+                    {
+                      "id": "K47XS",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "COTTON TWILL OVERSHIRT",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": false
+                        },
+                        "vXDKU": {
+                          "content": "COTTON TWILL OVERSHIRT"
+                        },
+                        "rQhll": {
+                          "content": "Heavy cotton twill, boxy fit."
+                        },
+                        "rCgqd": {
+                          "content": "£185"
+                        }
+                      }
+                    },
+                    {
+                      "id": "m9wPpH",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "CASHMERE CREW",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": true
+                        },
+                        "vXDKU": {
+                          "content": "CASHMERE CREW"
+                        },
+                        "rQhll": {
+                          "content": "Lightweight cashmere, crew neck."
+                        },
+                        "rCgqd": {
+                          "content": "£295"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "aHIpf",
+              "name": "ROI Strip",
+              "width": "fill_container",
+              "fill": "$panel",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "top": 1
+              },
+              "gap": 40,
+              "padding": [
+                80,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "z17nl",
+                  "name": "ROICopy",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "iy8Ve",
+                      "name": "Eyebrow",
+                      "fill": "$muted",
+                      "content": "THE ROI IN ONE LINE",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2.42
+                    },
+                    {
+                      "type": "text",
+                      "id": "hQpe2",
+                      "name": "Heading",
+                      "fill": "$ink",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "95% LESS PER ASSET. HOURS, NOT WEEKS.",
+                      "lineHeight": 1.1,
+                      "fontFamily": "Geist",
+                      "fontSize": 40,
+                      "fontWeight": "500",
+                      "letterSpacing": -0.3
+                    },
+                    {
+                      "type": "text",
+                      "id": "IkjJC",
+                      "name": "Subcopy",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Every image on this page would have cost about £85 and 1.5 days in a traditional studio. On a pipeline it is £4 and minutes. Toggle the ROI overlay in the header to see the badges and running tally on every page.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nWROR",
+                      "name": "ROIButtons",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "id": "M68Bi",
+                          "type": "ref",
+                          "ref": "ohe9R",
+                          "name": "PrimaryCta",
+                          "descendants": {
+                            "p6WJ6M": {
+                              "content": "RUN YOUR OWN NUMBERS"
+                            }
+                          }
+                        },
+                        {
+                          "id": "n81oe",
+                          "type": "ref",
+                          "ref": "wStjF",
+                          "name": "SecondaryCta",
+                          "descendants": {
+                            "ryPpb": {
+                              "content": "TRY IT ON YOUR PRODUCT"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Am4gn",
+                  "name": "Metrics",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "oqYuO",
+                      "name": "MetricRow",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "XSE2g",
+                          "name": "COST PER ASSET (STUDIO)",
+                          "width": "fill_container",
+                          "fill": "$canvas",
+                          "stroke": "$hairline",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": 24,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ltCSf",
+                              "name": "Label",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "COST PER ASSET (STUDIO)",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "vuIMu",
+                              "name": "Value",
+                              "fill": "$ink",
+                              "content": "£85",
+                              "fontFamily": "Geist",
+                              "fontSize": 30,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "e0RZY",
+                          "name": "COST PER ASSET (PIPELINE)",
+                          "width": "fill_container",
+                          "fill": "$canvas",
+                          "stroke": "$hairline",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": 24,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "p1U28",
+                              "name": "Label",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "COST PER ASSET (PIPELINE)",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "hkzq7",
+                              "name": "Value",
+                              "fill": "$ink",
+                              "content": "£4",
+                              "fontFamily": "Geist",
+                              "fontSize": 30,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "x3B6J",
+                      "name": "MetricRow",
+                      "width": "fill_container",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "x7EAgF",
+                          "name": "LEAD TIME (STUDIO)",
+                          "width": "fill_container",
+                          "fill": "$canvas",
+                          "stroke": "$hairline",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": 24,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Z33isN",
+                              "name": "Label",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "LEAD TIME (STUDIO)",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "UWX6a",
+                              "name": "Value",
+                              "fill": "$ink",
+                              "content": "10 days",
+                              "fontFamily": "Geist",
+                              "fontSize": 30,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "IsLIN",
+                          "name": "LEAD TIME (PIPELINE)",
+                          "width": "fill_container",
+                          "fill": "$canvas",
+                          "stroke": "$hairline",
+                          "strokeWidth": 1,
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": 24,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "hCdD6",
+                              "name": "Label",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "LEAD TIME (PIPELINE)",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2
+                            },
+                            {
+                              "type": "text",
+                              "id": "PZ5LB",
+                              "name": "Value",
+                              "fill": "$ink",
+                              "content": "8 min",
+                              "fontFamily": "Geist",
+                              "fontSize": 30,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "XNjCV",
+              "type": "ref",
+              "ref": "A8q1Ro",
+              "name": "Footer",
+              "width": "fill_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "O6tnly",
+      "x": 2500,
+      "y": 1233,
+      "name": "Screen — Category (Men)",
+      "clip": true,
+      "width": 1520,
+      "fill": "$ground",
+      "layout": "vertical",
+      "padding": 40,
+      "children": [
+        {
+          "type": "frame",
+          "id": "sceIE",
+          "name": "Canvas",
+          "width": "fill_container",
+          "fill": "$canvas",
+          "layout": "vertical",
+          "children": [
+            {
+              "id": "Ztl03",
+              "type": "ref",
+              "ref": "rZT58",
+              "name": "Header",
+              "width": "fill_container"
+            },
+            {
+              "type": "frame",
+              "id": "uyb7t",
+              "name": "CategoryNav",
+              "width": "fill_container",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 32,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Ud6ha",
+                  "name": "MEN Tab",
+                  "height": 48,
+                  "stroke": "$ink",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "SfHxH",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "MEN",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GEQI3",
+                  "name": "WOMEN Tab",
+                  "height": 48,
+                  "stroke": "#00000000",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qv5TC",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "WOMEN",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "m7ful",
+                  "name": "ARCHIVE Tab",
+                  "height": 48,
+                  "stroke": "#00000000",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "RWlzx",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "ARCHIVE",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yKaat",
+              "name": "Hero",
+              "width": "fill_container",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 40,
+              "padding": [
+                56,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ed0UC",
+                  "name": "HeroCopy",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "qsTmo",
+                      "name": "Eyebrow",
+                      "fill": "$muted",
+                      "content": "COLLECTION",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2.42
+                    },
+                    {
+                      "type": "text",
+                      "id": "bxZHG",
+                      "name": "Heading",
+                      "fill": "$ink",
+                      "content": "MEN",
+                      "lineHeight": 1.05,
+                      "fontFamily": "Geist",
+                      "fontSize": 56,
+                      "fontWeight": "500",
+                      "letterSpacing": -0.5
+                    },
+                    {
+                      "type": "text",
+                      "id": "apLhO",
+                      "name": "Subcopy",
+                      "fill": "$muted",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Quiet utility, precise cuts. Tailoring, knitwear and considered footwear.",
+                      "lineHeight": 1.5,
+                      "fontFamily": "Geist",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "WWvRD",
+                  "name": "HeroImage",
+                  "width": "fill_container",
+                  "height": 340,
+                  "fill": "$panel"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DWF4e",
+              "name": "Products",
+              "width": "fill_container",
+              "layout": "vertical",
+              "padding": [
+                56,
+                40
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "gxplC",
+                  "name": "Grid",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "id": "jg2Qr",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "COTTON TWILL OVERSHIRT",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": false
+                        },
+                        "vXDKU": {
+                          "content": "COTTON TWILL OVERSHIRT"
+                        },
+                        "rQhll": {
+                          "content": "Heavy cotton twill, boxy fit."
+                        },
+                        "rCgqd": {
+                          "content": "£185"
+                        }
+                      }
+                    },
+                    {
+                      "id": "yBupO",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "PLEAT-FRONT TROUSER",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": false
+                        },
+                        "vXDKU": {
+                          "content": "PLEAT-FRONT TROUSER"
+                        },
+                        "rQhll": {
+                          "content": "Single pleat, tapered, wool."
+                        },
+                        "rCgqd": {
+                          "content": "£225"
+                        }
+                      }
+                    },
+                    {
+                      "id": "i08UwL",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "CASHMERE CREW",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": true
+                        },
+                        "vXDKU": {
+                          "content": "CASHMERE CREW"
+                        },
+                        "rQhll": {
+                          "content": "Lightweight cashmere, crew neck."
+                        },
+                        "rCgqd": {
+                          "content": "£295"
+                        }
+                      }
+                    },
+                    {
+                      "id": "Y6qdkz",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "LEATHER DERBY",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": false
+                        },
+                        "vXDKU": {
+                          "content": "LEATHER DERBY"
+                        },
+                        "rQhll": {
+                          "content": "Goodyear-welted, calf leather."
+                        },
+                        "rCgqd": {
+                          "content": "£320"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Rw9vJ",
+              "type": "ref",
+              "ref": "A8q1Ro",
+              "name": "Footer",
+              "width": "fill_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "iYetA",
+      "x": 4120,
+      "y": 1233,
+      "name": "Screen — Product Detail",
+      "clip": true,
+      "width": 1520,
+      "fill": "$ground",
+      "layout": "vertical",
+      "padding": 40,
+      "children": [
+        {
+          "type": "frame",
+          "id": "lW8kL",
+          "name": "Canvas",
+          "width": "fill_container",
+          "fill": "$canvas",
+          "layout": "vertical",
+          "children": [
+            {
+              "id": "FIUGK",
+              "type": "ref",
+              "ref": "rZT58",
+              "name": "Header",
+              "width": "fill_container"
+            },
+            {
+              "type": "frame",
+              "id": "NFOnU",
+              "name": "CategoryNav",
+              "width": "fill_container",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "bottom": 1
+              },
+              "gap": 32,
+              "padding": [
+                0,
+                40
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "O9NchI",
+                  "name": "MEN Tab",
+                  "height": 48,
+                  "stroke": "#00000000",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "U4GzrP",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "MEN",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "E3t5CS",
+                  "name": "WOMEN Tab",
+                  "height": 48,
+                  "stroke": "$ink",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "LyIED",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "WOMEN",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Iz901",
+                  "name": "ARCHIVE Tab",
+                  "height": 48,
+                  "stroke": "#00000000",
+                  "strokeWidth": {
+                    "bottom": 2
+                  },
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sZVS0",
+                      "name": "Label",
+                      "fill": "$muted",
+                      "content": "ARCHIVE",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a9RBEH",
+              "name": "ProductSection",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                56,
+                40
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "pX2Nw",
+                  "name": "Breadcrumb",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "vVT1u",
+                      "name": "Cat",
+                      "fill": "$muted",
+                      "content": "WOMEN",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    },
+                    {
+                      "type": "text",
+                      "id": "XHXH0",
+                      "name": "Slash",
+                      "fill": "$hairline",
+                      "content": "/",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yS6U1",
+                      "name": "Name",
+                      "fill": "$ink",
+                      "content": "SILK COLUMN BLOUSE",
+                      "fontFamily": "Geist",
+                      "fontSize": 11,
+                      "fontWeight": "normal",
+                      "letterSpacing": 2
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Jo1jU",
+                  "name": "Split",
+                  "width": "fill_container",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sJKUh",
+                      "name": "Gallery",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": [
+                        0,
+                        56,
+                        0,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "LQJmP",
+                          "name": "MainImage",
+                          "width": "fill_container",
+                          "height": 620,
+                          "fill": "$panel"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "MXNq9",
+                          "name": "Thumbnails",
+                          "width": "fill_container",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "A4bVd",
+                              "name": "Thumb0",
+                              "width": "fill_container",
+                              "height": 120,
+                              "fill": "$panel",
+                              "stroke": "$ink",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "frame",
+                              "id": "y2bxY",
+                              "name": "Thumb1",
+                              "width": "fill_container",
+                              "height": 120,
+                              "fill": "$panel",
+                              "stroke": "#00000000",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "frame",
+                              "id": "VE5Tn",
+                              "name": "Thumb2",
+                              "width": "fill_container",
+                              "height": 120,
+                              "fill": "$panel",
+                              "stroke": "#00000000",
+                              "strokeWidth": 1
+                            },
+                            {
+                              "type": "frame",
+                              "id": "gbowT",
+                              "name": "Thumb3",
+                              "width": "fill_container",
+                              "height": 120,
+                              "fill": "$panel",
+                              "stroke": "#00000000",
+                              "strokeWidth": 1
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TQS4g",
+                      "name": "Details",
+                      "width": "fill_container",
+                      "stroke": "$hairline",
+                      "strokeWidth": {
+                        "left": 1
+                      },
+                      "layout": "vertical",
+                      "gap": 40,
+                      "padding": [
+                        0,
+                        0,
+                        0,
+                        56
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "KNhkN",
+                          "name": "TitleBlock",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 12,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "uomh2",
+                              "name": "Eyebrow",
+                              "fill": "$muted",
+                              "content": "WOMEN",
+                              "fontFamily": "Geist",
+                              "fontSize": 11,
+                              "fontWeight": "normal",
+                              "letterSpacing": 2.42
+                            },
+                            {
+                              "type": "text",
+                              "id": "Tb5WD",
+                              "name": "Title",
+                              "fill": "$ink",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "SILK COLUMN BLOUSE",
+                              "fontFamily": "Geist",
+                              "fontSize": 30,
+                              "fontWeight": "500",
+                              "letterSpacing": -0.3
+                            },
+                            {
+                              "type": "text",
+                              "id": "YvrQp",
+                              "name": "Price",
+                              "fill": "$ink",
+                              "content": "£215",
+                              "fontFamily": "Geist",
+                              "fontSize": 18,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "E3JqPD",
+                          "name": "Description",
+                          "fill": "$ink",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "A high-shine silk blouse with a relaxed column cut. Designed to drape from the shoulder with no break at the waist.",
+                          "lineHeight": 1.5,
+                          "fontFamily": "Geist",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "frame",
+                          "id": "RQQAR",
+                          "name": "ColourBlock",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 16,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "Y06UV8",
+                              "name": "ColourHead",
+                              "gap": 5,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "Qt2kc",
+                                  "name": "L",
+                                  "fill": "$muted",
+                                  "content": "COLOUR",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal",
+                                  "letterSpacing": 2
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "fYu44",
+                                  "name": "V",
+                                  "fill": "$ink",
+                                  "content": "— IVORY",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal",
+                                  "letterSpacing": 2
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "IDw9q",
+                              "name": "ColourOptions",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "hUP4I",
+                                  "name": "IVORY",
+                                  "height": 44,
+                                  "fill": "$selected",
+                                  "stroke": "$ink",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    0,
+                                    16
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "GI7by",
+                                      "name": "Label",
+                                      "fill": "$ink",
+                                      "content": "IVORY",
+                                      "fontFamily": "Geist",
+                                      "fontSize": 11,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 1.5
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "gDShC",
+                                  "name": "BLACK",
+                                  "height": 44,
+                                  "fill": "#00000000",
+                                  "stroke": "$hairline",
+                                  "strokeWidth": 1,
+                                  "padding": [
+                                    0,
+                                    16
+                                  ],
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "kmbgH",
+                                      "name": "Label",
+                                      "fill": "$muted",
+                                      "content": "BLACK",
+                                      "fontFamily": "Geist",
+                                      "fontSize": 11,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 1.5
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "HSNFp",
+                          "name": "SizeBlock",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 16,
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "z347h",
+                              "name": "SizeHead",
+                              "gap": 5,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "tPdsi",
+                                  "name": "L",
+                                  "fill": "$muted",
+                                  "content": "SIZE",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal",
+                                  "letterSpacing": 2
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "wGZ7a",
+                                  "name": "V",
+                                  "fill": "$ink",
+                                  "content": "— XS",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal",
+                                  "letterSpacing": 2
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "n363l",
+                              "name": "SizeOptions",
+                              "gap": 8,
+                              "children": [
+                                {
+                                  "type": "frame",
+                                  "id": "rAld1",
+                                  "name": "XS",
+                                  "width": 48,
+                                  "height": 48,
+                                  "fill": "$selected",
+                                  "stroke": "$ink",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "lJP2s",
+                                      "name": "Label",
+                                      "fill": "$ink",
+                                      "content": "XS",
+                                      "fontFamily": "Geist",
+                                      "fontSize": 11,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 1.2
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "u6vFjn",
+                                  "name": "S",
+                                  "width": 48,
+                                  "height": 48,
+                                  "fill": "#00000000",
+                                  "stroke": "$hairline",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "AjHdb",
+                                      "name": "Label",
+                                      "fill": "$ink",
+                                      "content": "S",
+                                      "fontFamily": "Geist",
+                                      "fontSize": 11,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 1.2
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "M5uKqC",
+                                  "name": "M",
+                                  "width": 48,
+                                  "height": 48,
+                                  "fill": "#00000000",
+                                  "stroke": "$hairline",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "uistp",
+                                      "name": "Label",
+                                      "fill": "$ink",
+                                      "content": "M",
+                                      "fontFamily": "Geist",
+                                      "fontSize": 11,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 1.2
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "frame",
+                                  "id": "TKTW2",
+                                  "name": "L",
+                                  "width": 48,
+                                  "height": 48,
+                                  "fill": "#00000000",
+                                  "stroke": "$hairline",
+                                  "strokeWidth": 1,
+                                  "justifyContent": "center",
+                                  "alignItems": "center",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "id": "VtlGW",
+                                      "name": "Label",
+                                      "fill": "$muted",
+                                      "content": "L",
+                                      "fontFamily": "Geist",
+                                      "fontSize": 11,
+                                      "fontWeight": "normal",
+                                      "letterSpacing": 1.2
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "DjO4r",
+                          "name": "Actions",
+                          "width": "fill_container",
+                          "gap": 16,
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "k3PYy",
+                              "type": "ref",
+                              "ref": "ohe9R",
+                              "name": "AddToBasket",
+                              "width": "fill_container",
+                              "descendants": {
+                                "p6WJ6M": {
+                                  "content": "ADD TO BASKET"
+                                }
+                              }
+                            },
+                            {
+                              "type": "frame",
+                              "id": "bNt7K",
+                              "name": "FindInStore",
+                              "gap": 8,
+                              "alignItems": "center",
+                              "children": [
+                                {
+                                  "type": "icon",
+                                  "id": "jAtWq",
+                                  "name": "Pin",
+                                  "width": 16,
+                                  "height": 16,
+                                  "icon": "map-pin",
+                                  "library": "lucide",
+                                  "fill": "$muted"
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "w5mPK",
+                                  "name": "Label",
+                                  "fill": "$muted",
+                                  "content": "FIND IN STORE",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal",
+                                  "letterSpacing": 2
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ligvs",
+                          "name": "Specs",
+                          "width": "fill_container",
+                          "stroke": "$hairline",
+                          "strokeWidth": {
+                            "top": 1
+                          },
+                          "layout": "vertical",
+                          "gap": 12,
+                          "padding": [
+                            32,
+                            0,
+                            0,
+                            0
+                          ],
+                          "children": [
+                            {
+                              "type": "frame",
+                              "id": "aqGlg",
+                              "name": "COMPOSITION",
+                              "width": "fill_container",
+                              "gap": 24,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "B8nil",
+                                  "name": "Term",
+                                  "fill": "$muted",
+                                  "content": "COMPOSITION",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal",
+                                  "letterSpacing": 2
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "IrmM8",
+                                  "name": "Def",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "100% mulberry silk. Lining: cupro.",
+                                  "lineHeight": 1.5,
+                                  "fontFamily": "Geist",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "frame",
+                              "id": "QlaHL",
+                              "name": "CARE",
+                              "width": "fill_container",
+                              "gap": 24,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "id": "km6uA",
+                                  "name": "Term",
+                                  "fill": "$muted",
+                                  "content": "CARE",
+                                  "fontFamily": "Geist",
+                                  "fontSize": 11,
+                                  "fontWeight": "normal",
+                                  "letterSpacing": 2
+                                },
+                                {
+                                  "type": "text",
+                                  "id": "QFA8U",
+                                  "name": "Def",
+                                  "fill": "$ink",
+                                  "textGrowth": "fixed-width",
+                                  "width": "fill_container",
+                                  "content": "Dry clean only.",
+                                  "lineHeight": 1.5,
+                                  "fontFamily": "Geist",
+                                  "fontSize": 14,
+                                  "fontWeight": "normal"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "v576H",
+              "name": "Related",
+              "width": "fill_container",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "top": 1
+              },
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                56,
+                40
+              ],
+              "children": [
+                {
+                  "type": "text",
+                  "id": "tBiw0",
+                  "name": "Heading",
+                  "fill": "$ink",
+                  "content": "YOU MAY ALSO LIKE",
+                  "fontFamily": "Geist",
+                  "fontSize": 30,
+                  "fontWeight": "500",
+                  "letterSpacing": -0.3
+                },
+                {
+                  "type": "frame",
+                  "id": "lAvHH",
+                  "name": "Grid",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "id": "AYUAg",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "WOOL DOUBLE COAT",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": true
+                        },
+                        "vXDKU": {
+                          "content": "WOOL DOUBLE COAT"
+                        },
+                        "rQhll": {
+                          "content": "Double-breasted, mid-length, camel."
+                        },
+                        "rCgqd": {
+                          "content": "£485"
+                        }
+                      }
+                    },
+                    {
+                      "id": "g75gCU",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "RIBBED MERINO KNIT",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": false
+                        },
+                        "vXDKU": {
+                          "content": "RIBBED MERINO KNIT"
+                        },
+                        "rQhll": {
+                          "content": "Fine-gauge merino, slim fit."
+                        },
+                        "rCgqd": {
+                          "content": "£145"
+                        }
+                      }
+                    },
+                    {
+                      "id": "Jzl9B",
+                      "type": "ref",
+                      "ref": "E7U4EL",
+                      "name": "STRUCTURED LEATHER TOTE",
+                      "width": "fill_container",
+                      "descendants": {
+                        "WwuOi": {
+                          "enabled": false
+                        },
+                        "vXDKU": {
+                          "content": "STRUCTURED LEATHER TOTE"
+                        },
+                        "rQhll": {
+                          "content": "Vegetable-tanned, hand-finished."
+                        },
+                        "rCgqd": {
+                          "content": "£425"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "crdAX",
+              "type": "ref",
+              "ref": "A8q1Ro",
+              "name": "Footer",
+              "width": "fill_container"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "XAFYr",
+      "x": 880,
+      "y": -440,
+      "name": "Design Tokens",
+      "width": 620,
+      "fill": "$canvas",
+      "stroke": "$hairline",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "gap": 28,
+      "padding": 32,
+      "children": [
+        {
+          "type": "text",
+          "id": "c5qYb",
+          "name": "Title",
+          "fill": "$muted",
+          "content": "DESIGN TOKENS",
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 2.4
+        },
+        {
+          "type": "frame",
+          "id": "O700sQ",
+          "name": "Palette",
+          "width": "fill_container",
+          "gap": 12,
+          "children": [
+            {
+              "type": "frame",
+              "id": "Ra32M",
+              "name": "GROUND",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "A5HEf",
+                  "name": "Swatch",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$ground",
+                  "stroke": "$hairline",
+                  "strokeWidth": 1
+                },
+                {
+                  "type": "text",
+                  "id": "z40VE",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "GROUND",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "qyfIs",
+                  "name": "Hex",
+                  "fill": "$muted",
+                  "content": "#4F4A44",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "WrkjC",
+              "name": "CANVAS",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "fsUBi",
+                  "name": "Swatch",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$canvas",
+                  "stroke": "$hairline",
+                  "strokeWidth": 1
+                },
+                {
+                  "type": "text",
+                  "id": "nvNqr",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "CANVAS",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "UWQ9U",
+                  "name": "Hex",
+                  "fill": "$muted",
+                  "content": "#F4F2ED",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "u9MKss",
+              "name": "PANEL",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "nFpoj",
+                  "name": "Swatch",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$panel",
+                  "stroke": "$hairline",
+                  "strokeWidth": 1
+                },
+                {
+                  "type": "text",
+                  "id": "GrCM7",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "PANEL",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "mywn7",
+                  "name": "Hex",
+                  "fill": "$muted",
+                  "content": "#EDEAE4",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lo4RX",
+              "name": "INK",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "lqW3N",
+                  "name": "Swatch",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$ink",
+                  "stroke": "$hairline",
+                  "strokeWidth": 1
+                },
+                {
+                  "type": "text",
+                  "id": "j3JAX0",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "INK",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "vsbXJ",
+                  "name": "Hex",
+                  "fill": "$muted",
+                  "content": "#1A1A1A",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hepZn",
+              "name": "MUTED",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "XGWO0",
+                  "name": "Swatch",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$muted",
+                  "stroke": "$hairline",
+                  "strokeWidth": 1
+                },
+                {
+                  "type": "text",
+                  "id": "JWjY7",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "MUTED",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "WLYF8",
+                  "name": "Hex",
+                  "fill": "$muted",
+                  "content": "#8A857D",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y6lgpT",
+              "name": "HAIRLINE",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "CDl5Y",
+                  "name": "Swatch",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$hairline",
+                  "stroke": "$hairline",
+                  "strokeWidth": 1
+                },
+                {
+                  "type": "text",
+                  "id": "EW9Jf",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "HAIRLINE",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "nu0Vj",
+                  "name": "Hex",
+                  "fill": "$muted",
+                  "content": "#DAD6CE",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "KFkqP",
+              "name": "SELECTED",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "aitPl",
+                  "name": "Swatch",
+                  "width": "fill_container",
+                  "height": 56,
+                  "fill": "$selected",
+                  "stroke": "$hairline",
+                  "strokeWidth": 1
+                },
+                {
+                  "type": "text",
+                  "id": "fdrA7",
+                  "name": "Name",
+                  "fill": "$ink",
+                  "content": "SELECTED",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal",
+                  "letterSpacing": 1
+                },
+                {
+                  "type": "text",
+                  "id": "Uhxwo",
+                  "name": "Hex",
+                  "fill": "$muted",
+                  "content": "#D8D2C8",
+                  "fontFamily": "Geist",
+                  "fontSize": 9,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "PrktP",
+          "name": "TypeScale",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "children": [
+            {
+              "type": "text",
+              "id": "R9mDEo",
+              "name": "Sample 56",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "A designer label of one.",
+              "lineHeight": 1.1,
+              "fontFamily": "Geist",
+              "fontSize": 56,
+              "fontWeight": "500",
+              "letterSpacing": -0.5
+            },
+            {
+              "type": "text",
+              "id": "cANFU",
+              "name": "Sample 30",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "New & best selling",
+              "lineHeight": 1.1,
+              "fontFamily": "Geist",
+              "fontSize": 30,
+              "fontWeight": "500",
+              "letterSpacing": -0.3
+            },
+            {
+              "type": "text",
+              "id": "XAXu7",
+              "name": "Sample 16",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Body — season-less drops, a tight palette.",
+              "lineHeight": 1.1,
+              "fontFamily": "Geist",
+              "fontSize": 16
+            },
+            {
+              "type": "text",
+              "id": "uLuWQ",
+              "name": "Sample 11",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "LABEL / 11 CAPS",
+              "lineHeight": 1.1,
+              "fontFamily": "Geist",
+              "fontSize": 11,
+              "fontWeight": "500",
+              "letterSpacing": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "canvas": {
+      "type": "color",
+      "value": "#f4f2ed"
+    },
+    "font-sans": {
+      "type": "string",
+      "value": "Geist"
+    },
+    "ground": {
+      "type": "color",
+      "value": "#4f4a44"
+    },
+    "hairline": {
+      "type": "color",
+      "value": "#dad6ce"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#1a1a1a"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#8a857d"
+    },
+    "panel": {
+      "type": "color",
+      "value": "#edeae4"
+    },
+    "selected": {
+      "type": "color",
+      "value": "#d8d2c8"
+    }
+  }
+}

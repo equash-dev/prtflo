@@ -1,0 +1,52 @@
+slot,category,product_slug,product_name,shot_type,alt_text,path,optional_reference_path,aspect,required
+product,women,silk-column-blouse,Silk column blouse,hero,Silk column blouse — front,public/products/women/silk-column-blouse/01.webp,public/products/women/silk-column-blouse/ref-01.webp,2:3,yes
+product,women,silk-column-blouse,Silk column blouse,detail,Silk column blouse — side,public/products/women/silk-column-blouse/02.webp,public/products/women/silk-column-blouse/ref-02.webp,2:3,yes
+product,women,silk-column-blouse,Silk column blouse,model,Silk column blouse — on model,public/products/women/silk-column-blouse/03.webp,public/products/women/silk-column-blouse/ref-03.webp,2:3,yes
+product,women,silk-column-blouse,Silk column blouse,flatlay,Silk column blouse — flatlay,public/products/women/silk-column-blouse/04.webp,public/products/women/silk-column-blouse/ref-04.webp,2:3,yes
+product,women,wool-double-coat,Wool double coat,hero,Wool double coat — front,public/products/women/wool-double-coat/01.webp,public/products/women/wool-double-coat/ref-01.webp,2:3,yes
+product,women,wool-double-coat,Wool double coat,detail,Wool double coat — back,public/products/women/wool-double-coat/02.webp,public/products/women/wool-double-coat/ref-02.webp,2:3,yes
+product,women,wool-double-coat,Wool double coat,lifestyle,Wool double coat — styled,public/products/women/wool-double-coat/03.webp,public/products/women/wool-double-coat/ref-03.webp,2:3,yes
+product,women,ribbed-merino-knit,Ribbed merino knit,hero,Ribbed merino knit — front,public/products/women/ribbed-merino-knit/01.webp,public/products/women/ribbed-merino-knit/ref-01.webp,2:3,yes
+product,women,ribbed-merino-knit,Ribbed merino knit,detail,Ribbed merino knit — detail,public/products/women/ribbed-merino-knit/02.webp,public/products/women/ribbed-merino-knit/ref-02.webp,2:3,yes
+product,women,ribbed-merino-knit,Ribbed merino knit,lifestyle,Ribbed merino knit — styled,public/products/women/ribbed-merino-knit/03.webp,public/products/women/ribbed-merino-knit/ref-03.webp,2:3,yes
+product,women,structured-leather-tote,Structured leather tote,hero,Structured tote — front,public/products/women/structured-leather-tote/01.webp,public/products/women/structured-leather-tote/ref-01.webp,2:3,yes
+product,women,structured-leather-tote,Structured leather tote,detail,Structured tote — interior,public/products/women/structured-leather-tote/02.webp,public/products/women/structured-leather-tote/ref-02.webp,2:3,yes
+product,women,structured-leather-tote,Structured leather tote,lifestyle,Structured tote — carried,public/products/women/structured-leather-tote/03.webp,public/products/women/structured-leather-tote/ref-03.webp,2:3,yes
+product,men,cotton-twill-overshirt,Cotton twill overshirt,hero,Cotton twill overshirt — front,public/products/men/cotton-twill-overshirt/01.webp,public/products/men/cotton-twill-overshirt/ref-01.webp,2:3,yes
+product,men,cotton-twill-overshirt,Cotton twill overshirt,detail,Cotton twill overshirt — back,public/products/men/cotton-twill-overshirt/02.webp,public/products/men/cotton-twill-overshirt/ref-02.webp,2:3,yes
+product,men,cotton-twill-overshirt,Cotton twill overshirt,model,Cotton twill overshirt — on model,public/products/men/cotton-twill-overshirt/03.webp,public/products/men/cotton-twill-overshirt/ref-03.webp,2:3,yes
+product,men,pleat-front-trouser,Pleat-front trouser,hero,Pleat-front trouser — front,public/products/men/pleat-front-trouser/01.webp,public/products/men/pleat-front-trouser/ref-01.webp,2:3,yes
+product,men,pleat-front-trouser,Pleat-front trouser,detail,Pleat-front trouser — detail,public/products/men/pleat-front-trouser/02.webp,public/products/men/pleat-front-trouser/ref-02.webp,2:3,yes
+product,men,pleat-front-trouser,Pleat-front trouser,flatlay,Pleat-front trouser — flatlay,public/products/men/pleat-front-trouser/03.webp,public/products/men/pleat-front-trouser/ref-03.webp,2:3,yes
+product,men,cashmere-crew,Cashmere crew,hero,Cashmere crew — front,public/products/men/cashmere-crew/01.webp,public/products/men/cashmere-crew/ref-01.webp,2:3,yes
+product,men,cashmere-crew,Cashmere crew,detail,Cashmere crew — detail,public/products/men/cashmere-crew/02.webp,public/products/men/cashmere-crew/ref-02.webp,2:3,yes
+product,men,cashmere-crew,Cashmere crew,lifestyle,Cashmere crew — styled,public/products/men/cashmere-crew/03.webp,public/products/men/cashmere-crew/ref-03.webp,2:3,yes
+product,men,leather-derby,Leather derby,hero,Leather derby — quarter,public/products/men/leather-derby/01.webp,public/products/men/leather-derby/ref-01.webp,2:3,yes
+product,men,leather-derby,Leather derby,detail,Leather derby — sole,public/products/men/leather-derby/02.webp,public/products/men/leather-derby/ref-02.webp,2:3,yes
+product,men,leather-derby,Leather derby,flatlay,Leather derby — pair,public/products/men/leather-derby/03.webp,public/products/men/leather-derby/ref-03.webp,2:3,yes
+product,home,boiled-wool-throw,Boiled wool throw,hero,Boiled wool throw — folded,public/products/home/boiled-wool-throw/01.webp,public/products/home/boiled-wool-throw/ref-01.webp,2:3,yes
+product,home,boiled-wool-throw,Boiled wool throw,detail,Boiled wool throw — stitch detail,public/products/home/boiled-wool-throw/02.webp,public/products/home/boiled-wool-throw/ref-02.webp,2:3,yes
+product,home,boiled-wool-throw,Boiled wool throw,lifestyle,Boiled wool throw — draped,public/products/home/boiled-wool-throw/03.webp,public/products/home/boiled-wool-throw/ref-03.webp,2:3,yes
+product,home,stoneware-vessel-set,Stoneware vessel set,hero,Stoneware vessel set — grouped,public/products/home/stoneware-vessel-set/01.webp,public/products/home/stoneware-vessel-set/ref-01.webp,2:3,yes
+product,home,stoneware-vessel-set,Stoneware vessel set,detail,Stoneware vessel set — surface detail,public/products/home/stoneware-vessel-set/02.webp,public/products/home/stoneware-vessel-set/ref-02.webp,2:3,yes
+product,home,washed-linen-bed-set,Washed linen bed set,hero,Washed linen bed set — made bed,public/products/home/washed-linen-bed-set/01.webp,public/products/home/washed-linen-bed-set/ref-01.webp,2:3,yes
+product,home,washed-linen-bed-set,Washed linen bed set,detail,Washed linen bed set — texture detail,public/products/home/washed-linen-bed-set/02.webp,public/products/home/washed-linen-bed-set/ref-02.webp,2:3,yes
+product,home,washed-linen-bed-set,Washed linen bed set,flatlay,Washed linen bed set — flatlay,public/products/home/washed-linen-bed-set/03.webp,public/products/home/washed-linen-bed-set/ref-03.webp,2:3,yes
+product,archive,low-profile-trainer,Low-profile trainer,hero,Low-profile trainer — quarter,public/products/archive/low-profile-trainer/01.webp,public/products/archive/low-profile-trainer/ref-01.webp,2:3,yes
+product,archive,low-profile-trainer,Low-profile trainer,detail,Low-profile trainer — top,public/products/archive/low-profile-trainer/02.webp,public/products/archive/low-profile-trainer/ref-02.webp,2:3,yes
+product,archive,low-profile-trainer,Low-profile trainer,flatlay,Low-profile trainer — pair,public/products/archive/low-profile-trainer/03.webp,public/products/archive/low-profile-trainer/ref-03.webp,2:3,yes
+product,archive,suede-chelsea,Suede Chelsea,hero,Suede Chelsea — quarter,public/products/archive/suede-chelsea/01.webp,public/products/archive/suede-chelsea/ref-01.webp,2:3,yes
+product,archive,suede-chelsea,Suede Chelsea,detail,Suede Chelsea — back,public/products/archive/suede-chelsea/02.webp,public/products/archive/suede-chelsea/ref-02.webp,2:3,yes
+product,archive,suede-chelsea,Suede Chelsea,lifestyle,Suede Chelsea — styled,public/products/archive/suede-chelsea/03.webp,public/products/archive/suede-chelsea/ref-03.webp,2:3,yes
+product,archive,woven-leather-belt,Woven leather belt,hero,Woven leather belt — flatlay,public/products/archive/woven-leather-belt/01.webp,public/products/archive/woven-leather-belt/ref-01.webp,2:3,yes
+product,archive,woven-leather-belt,Woven leather belt,detail,Woven leather belt — detail,public/products/archive/woven-leather-belt/02.webp,public/products/archive/woven-leather-belt/ref-02.webp,2:3,yes
+product,archive,silk-blend-scarf,Silk-blend scarf,hero,Silk-blend scarf — flatlay,public/products/archive/silk-blend-scarf/01.webp,public/products/archive/silk-blend-scarf/ref-01.webp,2:3,yes
+product,archive,silk-blend-scarf,Silk-blend scarf,detail,Silk-blend scarf — detail,public/products/archive/silk-blend-scarf/02.webp,public/products/archive/silk-blend-scarf/ref-02.webp,2:3,yes
+product,archive,silk-blend-scarf,Silk-blend scarf,model,Silk-blend scarf — worn,public/products/archive/silk-blend-scarf/03.webp,public/products/archive/silk-blend-scarf/ref-03.webp,2:3,yes
+campaign,,,SS26 campaign,campaign,SS26 campaign,public/campaign/ss26-01.webp,,landscape full-bleed,yes
+reveal,,,Intro drag slider — studio side,studio,Studio capture of the garment,public/reveal/studio.webp,,16:10,yes
+reveal,,,Intro drag slider — generated side,generated,Generated image of the same garment,public/reveal/generated.webp,,16:10 (same framing as studio),yes
+hero,men,,Men category hero,hero,Men category hero,public/hero/menswear.webp,,configured in config/categories.ts; not yet rendered on category pages,no
+hero,women,,Women category hero,hero,Women category hero,public/hero/womenswear.webp,,configured in config/categories.ts; not yet rendered on category pages,no
+hero,home,,Home category hero,hero,Home category hero,public/hero/home.webp,,configured in config/categories.ts; not yet rendered on category pages,no
+hero,archive,,Archive category hero,hero,Archive category hero,public/hero/accessories.webp,,configured in config/categories.ts; not yet rendered on category pages,no

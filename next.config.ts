@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    // Local images live in /public; no remote patterns required for v1.
+    formats: ['image/webp'],
+  },
 };
 
 export default nextConfig;

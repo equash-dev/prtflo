@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#f4f2ed" />
+  <text
+    x="32"
+    y="40"
+    font-family="Helvetica, Arial, sans-serif"
+    font-size="22"
+    font-weight="300"
+    letter-spacing="2"
+    text-anchor="middle"
+    fill="#1a1a1a"
+  >EQ</text>
+  <rect x="20" y="48" width="24" height="1" fill="#8a857d" />
+</svg>

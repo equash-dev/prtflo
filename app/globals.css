@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ground: #4f4a44;
+  --color-canvas: #f4f2ed;
+  --color-panel: #edeae4;
+  --color-ink: #1a1a1a;
+  --color-muted: #8a857d;
+  --color-hairline: #dad6ce;
+  --color-selected: #d8d2c8;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html,
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---- /intro experiential motion (restrained, in-brand) ---- */
+
+/* Cold-open: fade + small rise on first paint via @starting-style */
+.cold-open {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--cold-open-delay, 0ms);
+}
+@starting-style {
+  .cold-open {
+    opacity: 0;
+    transform: translateY(0.6rem);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Scroll-revealed plates. Armed by JS only when motion is allowed,
+   so no-JS and reduced-motion users always see content. */
+.reveal-up {
+  transition:
+    opacity 800ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-up.reveal-armed {
+  opacity: 0;
+  transform: translateY(1.5rem);
+}
+.reveal-up.reveal-armed.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* "Pixels resolving" texture — pure CSS grid of fine cells */
+.pixel-field {
+  background-image:
+    linear-gradient(rgba(26, 26, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 26, 26, 0.05) 1px, transparent 1px);
+  background-size: 9px 9px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cold-open,
+  .reveal-up {
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
