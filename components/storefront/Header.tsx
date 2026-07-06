@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { SITE } from '@/config/site';
 import { CurrencySwitcher } from './CurrencySwitcher';
+import { PipelineToggle } from './PipelineToggle';
 import { SearchOverlay } from './SearchOverlay';
 
 export function Header() {
@@ -75,6 +76,9 @@ export function Header() {
           >
             Search
           </button>
+          <div className="hidden sm:block">
+            <PipelineToggle />
+          </div>
           <div className="hidden sm:block">
             <CurrencySwitcher />
           </div>
@@ -155,7 +159,8 @@ export function Header() {
             </Link>
           </nav>
 
-          <div className="mt-auto flex flex-col gap-5 border-t border-hairline pt-6">
+          <div className="mt-auto flex flex-col items-start gap-4 border-t border-hairline pt-6">
+            <PipelineToggle />
             <CurrencySwitcher />
           </div>
         </div>

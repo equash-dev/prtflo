@@ -6,12 +6,18 @@ import type { Product } from '@/types/product';
 import { useCurrency } from '@/context/CurrencyContext';
 import { formatPrice } from '@/lib/pricing';
 import { colourHex } from '@/lib/colours';
+import { PipelineOverlay } from './PipelineOverlay';
 
 export function ProductCard({ product }: { product: Product }) {
   const { code } = useCurrency();
   const colours = product.colours ?? [];
   const href = `/product/${product.slug}`;
   const [primary, secondary] = product.images;
+  const assetId = (
+    primary?.src ?? `/products/${product.category}/${product.slug}/01.webp`
+  )
+    .replace('/products/', '')
+    .replace('.webp', '');
 
   return (
     <div className="group">
@@ -45,6 +51,7 @@ export function ProductCard({ product }: { product: Product }) {
               New
             </span>
           ) : null}
+          <PipelineOverlay assetId={assetId} shotType={primary?.shotType} />
         </div>
       </Link>
 

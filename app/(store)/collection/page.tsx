@@ -4,6 +4,7 @@ import { COPY } from '@/config/copy';
 import { SITE } from '@/config/site';
 import { CATEGORIES } from '@/config/categories';
 import { PRODUCTS } from '@/config/products';
+import { PipelineOverlay } from '@/components/storefront/PipelineOverlay';
 import { ProductGrid } from '@/components/storefront/ProductGrid';
 import { Button } from '@/components/ui/Button';
 import { imageExists, withExistingImages } from '@/lib/images';
@@ -89,6 +90,7 @@ export default function CollectionPage() {
               className="object-cover"
             />
           ) : null}
+          <PipelineOverlay assetId="campaign/ss26-01" shotType="campaign" />
         </div>
         <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10">
           <p className="text-[11px] uppercase tracking-[0.04em] text-muted">

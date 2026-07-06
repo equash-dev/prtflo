@@ -1,12 +1,15 @@
 import Image from 'next/image';
 import type { GalleryShot } from '@/lib/images';
+import { PipelineOverlay } from './PipelineOverlay';
 
 // One frame per configured shot. Missing files render as warm panels
 // labelled by shot type; frames with a generation reference (ref-NN.webp)
 // swap to it on hover.
 function Frame({ shot, priority, sizes }: { shot: GalleryShot; priority?: boolean; sizes: string }) {
+  const assetId = shot.src.replace('/products/', '').replace('.webp', '');
   return (
     <div className="group/frame relative aspect-[2/3] overflow-hidden bg-panel">
+      <PipelineOverlay assetId={assetId} shotType={shot.shotType} />
       {shot.exists ? (
         <>
           <Image
