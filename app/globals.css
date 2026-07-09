@@ -12,6 +12,18 @@
   --color-selected: #d8d2c8;
 }
 
+/* Controls opt out of double-tap-to-zoom so taps fire immediately on touch
+   screens; utility classes like .touch-none still override this default. */
+a,
+button,
+input,
+select,
+textarea,
+summary,
+[role='button'] {
+  touch-action: manipulation;
+}
+
 html,
 body {
   background: var(--color-ground);
@@ -56,6 +68,21 @@ body {
   transform: none;
 }
 
+/* Film grain — a whisper of static over generated imagery. Tiled SVG
+   turbulence; opacity below is the single tuning knob. */
+.grain {
+  position: relative;
+}
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+
 /* "Pixels resolving" texture — pure CSS grid of fine cells */
 .pixel-field {
   background-image:
@@ -64,11 +91,82 @@ body {
   background-size: 9px 9px;
 }
 
+/* ---- Pipeline dossier: the shoot that never happened, assembling ----
+   Ingredient plates rise in sequence; the final shot resolves from blur
+   the way a generation lands. Staged via inline animation-delay. */
+.plate-in {
+  animation: plate-in 500ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes plate-in {
+  from { opacity: 0; transform: translateY(0.4rem); }
+  to { opacity: 1; transform: none; }
+}
+.shot-resolve {
+  animation: shot-resolve 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes shot-resolve {
+  from { opacity: 0; filter: blur(16px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+/* ---- Ambient drift: slow-moving warm glow on immersive dark surfaces ---- */
+.ambient {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.ambient::before {
+  content: '';
+  position: absolute;
+  inset: -30%;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(45% 55% at 22% 28%, rgba(244, 242, 237, 0.1), transparent 70%),
+    radial-gradient(55% 65% at 80% 75%, rgba(26, 26, 26, 0.2), transparent 72%),
+    radial-gradient(36% 45% at 68% 12%, rgba(216, 210, 200, 0.07), transparent 70%);
+  animation: ambient-drift 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@keyframes ambient-drift {
+  0% { transform: translate3d(-3%, -2%, 0) scale(1.05); }
+  50% { transform: translate3d(2%, 3%, 0) scale(1.12); }
+  100% { transform: translate3d(4%, -3%, 0) scale(1.05); }
+}
+
+/* ---- /enter gate ---- */
+
+/* Wrong password: a quiet 1px settle, never a klaxon */
+.gate-miss {
+  animation: gate-miss 360ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes gate-miss {
+  0% { transform: translateX(0); }
+  30% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+  100% { transform: translateX(0); }
+}
+
+.gate-error {
+  animation: gate-error-in 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes gate-error-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cold-open,
   .reveal-up {
     transition: none !important;
     opacity: 1 !important;
     transform: none !important;
+  }
+  .gate-miss,
+  .gate-error,
+  .ambient::before,
+  .plate-in,
+  .shot-resolve {
+    animation: none !important;
   }
 }

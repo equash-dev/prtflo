@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { useCallback, useEffect, useRef, useState, type PointerEvent } from 'react';
+import { useCallback, useRef, useState, type PointerEvent } from 'react';
 
 interface GeneratedRevealProps {
   // Real before/after pair; when absent the frame falls back to the
@@ -14,11 +14,6 @@ export function GeneratedReveal({ studioSrc, generatedSrc }: GeneratedRevealProp
   const frameRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
   const [pos, setPos] = useState(56);
-  const [reduce, setReduce] = useState(false);
-
-  useEffect(() => {
-    setReduce(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  }, []);
 
   const update = useCallback((clientX: number) => {
     const el = frameRef.current;
@@ -27,8 +22,9 @@ export function GeneratedReveal({ studioSrc, generatedSrc }: GeneratedRevealProp
     setPos(Math.min(100, Math.max(0, ((clientX - r.left) / r.width) * 100)));
   }, []);
 
+  // Reduced motion never disables the slider: the reveal only moves when
+  // the user moves it, which is exactly the motion that setting permits.
   const onPointerDown = (e: PointerEvent<HTMLDivElement>) => {
-    if (reduce) return;
     dragging.current = true;
     e.currentTarget.setPointerCapture(e.pointerId);
     update(e.clientX);
@@ -43,7 +39,7 @@ export function GeneratedReveal({ studioSrc, generatedSrc }: GeneratedRevealProp
     }
   };
 
-  const reveal = reduce ? 50 : pos;
+  const reveal = pos;
 
   return (
     <div>
@@ -53,9 +49,7 @@ export function GeneratedReveal({ studioSrc, generatedSrc }: GeneratedRevealProp
         onPointerMove={onPointerMove}
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
-        className={`relative aspect-[4/5] w-full select-none overflow-hidden bg-canvas sm:aspect-[16/10] ${
-          reduce ? '' : 'cursor-ew-resize touch-none'
-        }`}
+        className="relative aspect-[4/5] w-full cursor-ew-resize touch-none select-none overflow-hidden bg-canvas sm:aspect-[16/10]"
       >
         {/* Studio capture — the base layer */}
         <div className="absolute inset-0 bg-gradient-to-br from-panel to-canvas">
@@ -109,45 +103,37 @@ export function GeneratedReveal({ studioSrc, generatedSrc }: GeneratedRevealProp
           </div>
           <div className="absolute bottom-5 left-5 max-w-[60%]">
             <p className="font-mono text-[10px] leading-relaxed tracking-tight text-muted">
-              EQ—001 / SS26 · technical wool, close cut, bone field, soft key light
+              PRTFLO—001 / SS26 · technical wool, close cut, bone field, soft key light
             </p>
           </div>
         </div>
 
         {/* Divider handle */}
-        {!reduce && (
-          <div
-            className="pointer-events-none absolute inset-y-0 flex items-center"
-            style={{ left: `${reveal}%`, transform: 'translateX(-50%)' }}
-          >
-            <div className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-ink/30" />
-            <div className="relative flex h-9 w-9 items-center justify-center rounded-full border border-ink/30 bg-canvas text-ink shadow-sm">
-              <span className="text-[10px] tracking-[0.1em]">‹ ›</span>
-            </div>
+        <div
+          className="pointer-events-none absolute inset-y-0 flex items-center"
+          style={{ left: `${reveal}%`, transform: 'translateX(-50%)' }}
+        >
+          <div className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-ink/30" />
+          <div className="relative flex h-9 w-9 items-center justify-center rounded-full border border-ink/30 bg-canvas text-ink shadow-sm">
+            <span className="text-[10px] tracking-[0.1em]">‹ ›</span>
           </div>
-        )}
+        </div>
       </div>
 
-      {reduce ? (
-        <p className="mt-4 text-[11px] uppercase tracking-[0.04em] text-muted">
-          Left: studio capture. Right: generated.
-        </p>
-      ) : (
-        <label className="mt-4 block">
-          <span className="text-[11px] uppercase tracking-[0.04em] text-muted">
-            Drag, or use the slider, to reveal what is generated
-          </span>
-          <input
-            type="range"
-            min={0}
-            max={100}
-            value={Math.round(pos)}
-            onChange={(e) => setPos(Number(e.target.value))}
-            aria-label="Reveal the generated image"
-            className="mt-3 w-full accent-ink"
-          />
-        </label>
-      )}
+      <label className="mt-4 block">
+        <span className="text-[11px] uppercase tracking-[0.04em] text-muted">
+          Drag, or use the slider, to reveal what is generated
+        </span>
+        <input
+          type="range"
+          min={0}
+          max={100}
+          value={Math.round(pos)}
+          onChange={(e) => setPos(Number(e.target.value))}
+          aria-label="Reveal the generated image"
+          className="mt-3 w-full accent-ink"
+        />
+      </label>
     </div>
   );
 }

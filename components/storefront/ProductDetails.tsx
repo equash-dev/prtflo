@@ -1,12 +1,16 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { ReactNode } from 'react';
+import Link from 'next/link';
 import type { Product } from '@/types/product';
+import type { GalleryShot } from '@/lib/images';
 import { useCurrency } from '@/context/CurrencyContext';
+import { useBasket } from '@/context/BasketContext';
 import { formatPrice } from '@/lib/pricing';
 import { colourHex } from '@/lib/colours';
 import { Button } from '@/components/ui/Button';
+import { PipelineDossier } from './PipelineDossier';
 
 function Accordion({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -30,15 +34,33 @@ function Accordion({ title, children }: { title: string; children: ReactNode }) 
   );
 }
 
-export function ProductDetails({ product }: { product: Product }) {
+export function ProductDetails({
+  product,
+  shots,
+}: {
+  product: Product;
+  shots: GalleryShot[];
+}) {
   const { code } = useCurrency();
+  const { add } = useBasket();
   const [size, setSize] = useState<string | null>(
     product.sizes?.find((s) => s.inStock)?.label ?? null,
   );
   const [colour, setColour] = useState<string | null>(
     product.colours?.[0] ?? null,
   );
-  const [disclosed, setDisclosed] = useState(false);
+  const [added, setAdded] = useState(false);
+  const [dossierOpen, setDossierOpen] = useState(false);
+  const addedTimer = useRef<number | undefined>(undefined);
+
+  useEffect(() => () => window.clearTimeout(addedTimer.current), []);
+
+  const addToBasket = () => {
+    add({ slug: product.slug, size, colour });
+    setAdded(true);
+    window.clearTimeout(addedTimer.current);
+    addedTimer.current = window.setTimeout(() => setAdded(false), 3000);
+  };
 
   return (
     <div className="flex flex-col">
@@ -109,35 +131,43 @@ export function ProductDetails({ product }: { product: Product }) {
         </div>
       ) : null}
 
-      <div className="sticky bottom-0 z-10 -mx-4 mt-8 border-t border-hairline bg-canvas px-4 py-3 lg:static lg:z-auto lg:mx-0 lg:border-0 lg:bg-transparent lg:p-0">
+      {/* Fixed, not sticky, below lg: sticky can't escape this column, so
+          the bar would be absent while the gallery above it is on screen.
+          On mobile the commerce controls stay present from first paint. */}
+      <div className="fixed inset-x-0 bottom-0 z-30 border-t border-hairline bg-canvas px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] lg:static lg:z-auto lg:mt-8 lg:border-0 lg:bg-transparent lg:p-0">
         <div className="flex gap-2">
-          <Button
-            size="lg"
-            type="button"
-            className="flex-1"
-            onClick={() => setDisclosed(true)}
-          >
-            Add to basket
+          <Button size="lg" type="button" className="flex-1" onClick={addToBasket}>
+            {added ? 'Added' : 'Add to basket'}
           </Button>
           <Button
             size="lg"
             variant="secondary"
             type="button"
             className="flex-1"
-            onClick={() => setDisclosed(true)}
+            onClick={() => setDossierOpen(true)}
           >
-            Find in store
+            Pipeline
           </Button>
         </div>
         <p aria-live="polite" className="text-[11px] uppercase tracking-[0.04em] text-muted">
-          {disclosed ? (
+          {added ? (
             <span className="mt-3 block">
-              This house does not sell. Every piece exists only as generated
-              images.
+              Added to basket —{' '}
+              <Link href="/basket" className="text-ink underline underline-offset-4">
+                view basket
+              </Link>
             </span>
           ) : null}
         </p>
       </div>
+
+      {dossierOpen ? (
+        <PipelineDossier
+          product={product}
+          shots={shots}
+          onClose={() => setDossierOpen(false)}
+        />
+      ) : null}
 
       <p className="mt-8 text-sm leading-relaxed text-ink">
         {product.description}
@@ -158,6 +188,9 @@ export function ProductDetails({ product }: { product: Product }) {
           <p>Complimentary delivery and 30-day returns on every order.</p>
         </Accordion>
       </div>
+
+      {/* Clearance for the fixed bar so the last accordion scrolls past it. */}
+      <div aria-hidden className="h-24 lg:hidden" />
     </div>
   );
 }

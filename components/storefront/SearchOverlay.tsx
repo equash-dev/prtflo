@@ -39,7 +39,7 @@ export function SearchOverlay({ onClose }: { onClose: () => void }) {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search the collection"
           aria-label="Search the collection"
-          className="h-10 w-full min-w-0 border-0 bg-transparent text-[15px] uppercase tracking-[0.04em] text-ink placeholder:normal-case placeholder:text-muted focus:outline-none"
+          className="h-10 w-full min-w-0 border-0 bg-transparent text-base uppercase tracking-[0.04em] text-ink placeholder:normal-case placeholder:text-muted focus:outline-none"
         />
         <button
           type="button"

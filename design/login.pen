@@ -1,0 +1,18 @@
+{
+  "version": "2.14",
+  "children": [
+    {
+      "type": "frame",
+      "id": "bNPKc",
+      "x": 99,
+      "y": -234,
+      "name": "Frame 1",
+      "clip": true,
+      "width": 569,
+      "height": 460,
+      "fill": "#FFFFFF",
+      "layout": "none"
+    }
+  ],
+  "fileToken": "3a1642f3-df4b-484e-b209-31413f0e8182"
+}

@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import type { Product } from '@/types/product';
 import { useCurrency } from '@/context/CurrencyContext';
 import { formatPrice } from '@/lib/pricing';
@@ -10,38 +11,44 @@ import { PipelineOverlay } from './PipelineOverlay';
 
 export function ProductCard({ product }: { product: Product }) {
   const { code } = useCurrency();
+  // The hover-swap frame can never show on touch devices, so don't make
+  // them download it — it doubles the grid's image payload otherwise.
+  const [hoverCapable, setHoverCapable] = useState(false);
+  useEffect(() => {
+    setHoverCapable(window.matchMedia('(hover: hover)').matches);
+  }, []);
   const colours = product.colours ?? [];
   const href = `/product/${product.slug}`;
   const [primary, secondary] = product.images;
-  const assetId = (
-    primary?.src ?? `/products/${product.category}/${product.slug}/01.webp`
-  )
-    .replace('/products/', '')
-    .replace('.webp', '');
+  const assetId =
+    primary?.assetCode ??
+    `${product.code}_${product.colourCode}_01`;
 
   return (
     <div className="group">
       <Link href={href} prefetch={false} className="block">
-        <div className="relative aspect-[2/3] overflow-hidden bg-panel transition-colors duration-500 group-hover:bg-selected">
+        <div className="grain relative aspect-[2/3] overflow-hidden bg-panel transition-colors duration-500 group-hover:bg-selected">
           {primary ? (
             <Image
               src={primary.src}
               alt={primary.alt}
               fill
+              quality={90}
               sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
               className={[
                 'object-cover',
-                secondary
+                secondary && hoverCapable
                   ? 'transition-opacity duration-500 group-hover:opacity-0'
                   : '',
               ].join(' ')}
             />
           ) : null}
-          {secondary ? (
+          {secondary && hoverCapable ? (
             <Image
               src={secondary.src}
               alt={secondary.alt}
               fill
+              quality={90}
               sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
               className="object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             />

@@ -1,4 +1,4 @@
-# Elliott Quashie — fashion portfolio
+# PRTFLO — fashion portfolio
 
 A portfolio piece: a fictional fashion house where every product image is
 AI-generated. It is **not a real shop** — the site exists to show the work, and

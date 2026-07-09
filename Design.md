@@ -2,15 +2,15 @@
 
 ## Design Language
 
-A faithful **Zara-structured** e-commerce system wearing **Elliott Quashie's** warm-neutral skin.
+A faithful **Zara-structured** e-commerce system wearing **PRTFLO's** warm-neutral skin.
 The structure — grid, spacing, type scale, and component anatomy — is taken directly from Zara
 (scanned live; see `zara-ui-spec.md`): edge-to-edge imagery, extreme restraint in the chrome, tiny
 light-weight uppercase labels with **near-zero letter-spacing**, square controls, and generous
-whitespace. EQ keeps its warm palette, its wordmark + serial, its voice, and its currency switcher.
+whitespace. PRTFLO keeps its warm palette, its wordmark + serial, its voice, and its currency switcher.
 Nothing competes with the product. The page does very little and trusts the imagery to carry it.
 
 > We replicate Zara's *structure, grid, spacing, and interaction patterns* — never its photography,
-> font, or copy. EQ supplies its own assets and words.
+> font, or copy. PRTFLO supplies its own assets and words.
 
 ---
 
@@ -50,7 +50,7 @@ primary luxury signal — when in doubt, add more. Grid gaps are large; componen
 
 ## Colour
 
-Unchanged from EQ. A near-monochrome, **warm-neutral** palette — colour only ever enters through
+Unchanged from PRTFLO. A near-monochrome, **warm-neutral** palette — colour only ever enters through
 product imagery. These are the seven tokens in `app/globals.css` `@theme`.
 
 | Role | Token | Colour | Zara equivalent |
@@ -69,9 +69,9 @@ Contrast stays deliberately soft. Borders and dividers are felt more than seen.
 
 ## Typography
 
-**Geist** (neo-grotesque, close to Zara's Helvetica Now). The defining shift from the old EQ system:
+**Geist** (neo-grotesque, close to Zara's Helvetica Now). The defining shift from the old PRTFLO system:
 **light weight (300/400), not medium**, and **near-zero letter-spacing**. Light tracking (~0.1em) is
-reserved for the EQ wordmark/serial as a brand signature.
+reserved for the PRTFLO wordmark/serial as a brand signature.
 
 | Role | Size / line-height / weight / transform / tracking |
 |---|---|
@@ -93,7 +93,7 @@ structural signature now (replacing the old wide-tracked medium caps).
 
 **Header / nav**
 Sparse, minimal-height, **sticky with hide-on-scroll**. Transparent over the home hero (light text),
-solid `canvas` elsewhere. Left: EQ wordmark + serial beside a **hamburger** that opens a **category
+solid `canvas` elsewhere. Left: PRTFLO wordmark + serial beside a **hamburger** that opens a **category
 drawer / mega-menu** (MEN / WOMEN / ARCHIVE + subcategories) — there is no inline category bar.
 Right: `SEARCH` (thin underline) + a utility cluster — **CurrencySwitcher, Contact/Bag**. Mobile:
 hamburger left, optional centred page label, icon cluster right.
@@ -152,7 +152,7 @@ experiential motion lives only on `/intro`; the store stays restrained.
 ## Principles
 
 1. **The product is the only colour.** Chrome stays warm-neutral; imagery does the talking.
-2. **Zara structure, EQ skin.** Match the grid, spacing, and component anatomy exactly; dress it in
+2. **Zara structure, PRTFLO skin.** Match the grid, spacing, and component anatomy exactly; dress it in
    the warm palette, wordmark, and voice.
 3. **Light + tight type.** Light weight, near-zero tracking, small uppercase labels — not bold,
    not widely spaced.

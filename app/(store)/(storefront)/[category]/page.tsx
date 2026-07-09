@@ -53,7 +53,13 @@ export default async function CategoryPage({ params }: Props) {
             {products.length} {products.length === 1 ? 'item' : 'items'}
           </span>
         </div>
-        <ProductGrid products={products} />
+        {products.length > 0 ? (
+          <ProductGrid products={products} />
+        ) : (
+          <p className="py-16 text-center text-[11px] uppercase tracking-[0.04em] text-muted">
+            Nothing is held in the archive yet.
+          </p>
+        )}
       </section>
     </>
   );

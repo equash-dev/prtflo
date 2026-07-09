@@ -1,6 +1,6 @@
 # brand.md
 
-## ELLIOTT QUASHIE
+## PRTFLO
 
 A personal designer label presented as a fashion house. The name is the brand — worn plainly, set in the same quiet, technical register as the storefront it lives in. No mascot, no story-selling, no exclamation. The work speaks; the label simply signs it.
 
@@ -10,7 +10,7 @@ The brand reads as a real, restrained fashion imprint — but everything it prod
 
 ## Positioning
 
-A designer label of one. Elliott Quashie operates the way a small, exacting fashion house does: a clear point of view, a tight palette, season-less drops, and an obsession with how the product is *seen*. The label's edge isn't loud branding — it's that every image in the house was produced through an AI content pipeline, indistinguishable from a studio shoot.
+A designer label of one. PRTFLO operates the way a small, exacting fashion house does: a clear point of view, a tight palette, season-less drops, and an obsession with how the product is *seen*. The label's edge isn't loud branding — it's that every image in the house was produced through an AI content pipeline, indistinguishable from a studio shoot.
 
 The storefront is the proof of work. It looks like any premium technical-wear label. It isn't.
 
@@ -23,6 +23,7 @@ The storefront is the proof of work. It looks like any premium technical-wear la
 Quiet and editorial. Sentence-light. Declarative. The brand never over-explains and never sells hard — it states.
 
 - **Calm over excited.** No exclamation marks. No "shop now," no urgency.
+- **No em dashes in sentences.** Break into separate sentences, or use commas, colons, or semicolons.
 - **Specific over decorative.** Name the fabric, the construction, the fit. Detail is the flex, not adjectives.
 - **Confident through brevity.** Short lines. Comfortable with white space in copy the way the layout is comfortable with white space on screen.
 - **Technical, lightly worn.** Material and method are stated as fact (CORDURA®, fluorine-free), never bragged about.
@@ -35,7 +36,7 @@ Quiet and editorial. Sentence-light. Declarative. The brand never over-explains 
 
 ## Naming
 
-**House name:** ELLIOTT QUASHIE — always full, always caps in the logo lockup. Never "EQ" in primary use, never a first-name-only diminutive.
+**House name:** PRTFLO — always full, always caps in the logo lockup. Never spelled out as "Portfolio", never lowercased or broken up.
 
 **Sub-label / technical mark:** A small line of micro type beneath the wordmark — a string of characters in the HALO manner (a code, a founding marker, a serial). Treated as texture, not information. It signals craft and system without spelling anything out.
 
@@ -56,7 +57,7 @@ No cute names, no collection theatrics. The descriptor *is* the name.
 |---|---|
 | Product titles | Caps, descriptive, no flourish |
 | Product copy | 2–3 short declarative sentences. Fabric, construction, fit. |
-| Buttons | Plain verbs in caps: `ADD TO BASKET`, `FIND IN STORE` |
+| Buttons | Plain verbs in caps: `ADD TO BASKET`, `PIPELINE` |
 | Feature tags | Caps micro-labels, factual: `CORDURA®`, `FLUORINE-FREE` |
 | Section labels | Caps, muted, tight-set — signposts not headlines |
 | Empty / utility states | One quiet line. No personality padding. |

@@ -14,7 +14,7 @@ export const CATEGORIES: CategoryConfig[] = [
     name: 'Men',
     heroHeading: 'Men',
     heroSubcopy:
-      'Quiet utility, precise cuts. Tailoring, knitwear and considered footwear.',
+      'Heavy jerseys, worked denim, garment-dyed twill. Cut loose, finished precisely.',
     heroImage: '/hero/menswear.webp',
   },
   {
@@ -22,23 +22,15 @@ export const CATEGORIES: CategoryConfig[] = [
     name: 'Women',
     heroHeading: 'Women',
     heroSubcopy:
-      'Fluid tailoring, fine-gauge knits and structured leather. Cut to sit close.',
+      'Sculpted trousers, washed denim, fine knits and sequins that glint, not glitter.',
     heroImage: '/hero/womenswear.webp',
-  },
-  {
-    slug: 'home',
-    name: 'Home',
-    heroHeading: 'Home',
-    heroSubcopy:
-      'Objects for the rooms the clothes live in. Boiled wool, stoneware, washed linen.',
-    heroImage: '/hero/home.webp',
   },
   {
     slug: 'archive',
     name: 'Archive',
     heroHeading: 'Archive',
     heroSubcopy:
-      'Season-less pieces. Unisex footwear and small leather goods, held in catalogue.',
+      'Pieces retired from the range are held here, not discounted. The archive opens when the first season closes.',
     heroImage: '/hero/accessories.webp',
   },
 ];

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist } from 'next/font/google';
 import './globals.css';
 import { Providers } from '@/context/Providers';
@@ -9,6 +9,12 @@ const geist = Geist({
   subsets: ['latin'],
   display: 'swap',
 });
+
+// Tints mobile browser chrome to the ground token so the frame around
+// the page belongs to the house rather than defaulting to white.
+export const viewport: Viewport = {
+  themeColor: '#4f4a44',
+};
 
 export const metadata: Metadata = {
   title: {

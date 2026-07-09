@@ -52,7 +52,7 @@ export default async function ProductPage({ params }: Props) {
         <div className="grid gap-8 lg:grid-cols-[1.7fr_minmax(320px,1fr)] lg:gap-12">
           <ProductGallery shots={shots} />
           <div className="lg:sticky lg:top-20 lg:self-start">
-            <ProductDetails product={product} />
+            <ProductDetails product={product} shots={shots} />
           </div>
         </div>
       </section>

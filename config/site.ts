@@ -1,12 +1,11 @@
 export const SITE = {
-  brandName: 'Elliott Quashie',
-  brandSerial: 'EQ—001 / SS26',
+  brandName: 'PRTFLO',
+  brandSerial: 'PRTFLO—001 / SS26',
   brandTagline: 'A fashion house that exists only as generated images.',
-  contactEmail: 'hello@elliottquashie.com',
+  contactEmail: 'hello@prtflo.com',
   nav: [
     { label: 'Men', href: '/men' },
     { label: 'Women', href: '/women' },
-    { label: 'Home', href: '/home' },
     { label: 'Archive', href: '/archive' },
   ],
   utilityNav: [

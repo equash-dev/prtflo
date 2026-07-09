@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function LandingPage() {
   return (
-    <main className="flex min-h-screen flex-col justify-between bg-ground px-6 py-12 text-canvas md:px-12 md:py-16">
+    <main className="flex min-h-svh flex-col justify-between bg-ground px-6 py-12 text-canvas md:px-12 md:py-16">
       <p className="cold-open text-[11px] uppercase tracking-[0.2em] text-canvas/60">
         {SITE.brandSerial}
       </p>

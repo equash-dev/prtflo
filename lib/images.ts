@@ -27,6 +27,18 @@ export interface GalleryShot extends ProductImage {
   refSrc?: string;
 }
 
+// Campaign banners land as public/campaign/banner-NN.webp via the ingest
+// script; the collection banner strip shows whatever has arrived, in order.
+export function campaignBanners(): string[] {
+  const dir = path.join(PUBLIC_DIR, 'campaign');
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => /^banner-\d{2}\.webp$/.test(f))
+    .sort()
+    .map((f) => `/campaign/${f}`);
+}
+
 export function galleryShots(product: Product): GalleryShot[] {
   return product.images.map((img) => {
     const refSrc = img.src.replace(/\/(\d+)\.webp$/, '/ref-$1.webp');

@@ -3,11 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { SITE } from '@/config/site';
+import { useBasket } from '@/context/BasketContext';
 import { CurrencySwitcher } from './CurrencySwitcher';
 import { PipelineToggle } from './PipelineToggle';
 import { SearchOverlay } from './SearchOverlay';
 
 export function Header() {
+  const { count } = useBasket();
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -68,14 +70,22 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-4 md:gap-5">
+          {/* Negative margins keep the layout tight while the padded box
+              gives both text controls a finger-sized touch target. */}
           <button
             type="button"
             aria-label="Search"
             onClick={() => setSearchOpen(true)}
-            className="border-b border-ink pb-0.5 text-[11px] uppercase tracking-[0.04em] text-ink transition-opacity hover:opacity-60"
+            className="-mx-1 -my-3 px-1 py-3 text-[11px] uppercase tracking-[0.04em] text-ink transition-opacity hover:opacity-60"
           >
-            Search
+            <span className="border-b border-ink pb-0.5">Search</span>
           </button>
+          <Link
+            href="/basket"
+            className="-mx-1 -my-3 px-1 py-3 text-[11px] uppercase tracking-[0.04em] text-ink transition-opacity hover:opacity-60"
+          >
+            Basket{count > 0 ? ` (${count})` : ''}
+          </Link>
           <div className="hidden sm:block">
             <PipelineToggle />
           </div>
