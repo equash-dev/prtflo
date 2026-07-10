@@ -39,6 +39,12 @@ export function campaignBanners(): string[] {
     .map((f) => `/campaign/${f}`);
 }
 
+// Department tiles land as public/spots/{slug}.webp via the ingest script.
+export function spotImage(slug: string): string | undefined {
+  const src = `/spots/${slug}.webp`;
+  return imageExists(src) ? src : undefined;
+}
+
 export function galleryShots(product: Product): GalleryShot[] {
   return product.images.map((img) => {
     const refSrc = img.src.replace(/\/(\d+)\.webp$/, '/ref-$1.webp');

@@ -6,7 +6,7 @@ export const SITE = {
   nav: [
     { label: 'Men', href: '/men' },
     { label: 'Women', href: '/women' },
-    { label: 'Archive', href: '/archive' },
+    { label: 'Home', href: '/home' },
   ],
   utilityNav: [
     { label: 'About', href: '/about' },

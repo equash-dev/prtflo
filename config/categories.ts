@@ -26,12 +26,12 @@ export const CATEGORIES: CategoryConfig[] = [
     heroImage: '/hero/womenswear.webp',
   },
   {
-    slug: 'archive',
-    name: 'Archive',
-    heroHeading: 'Archive',
+    slug: 'home',
+    name: 'Home',
+    heroHeading: 'Home',
     heroSubcopy:
-      'Pieces retired from the range are held here, not discounted. The archive opens when the first season closes.',
-    heroImage: '/hero/accessories.webp',
+      'Objects for the rooms the clothes live in. Stoneware, travertine, washed linen, timber.',
+    heroImage: '/hero/home.webp',
   },
 ];
 

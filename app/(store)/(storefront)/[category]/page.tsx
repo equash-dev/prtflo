@@ -57,7 +57,7 @@ export default async function CategoryPage({ params }: Props) {
           <ProductGrid products={products} />
         ) : (
           <p className="py-16 text-center text-[11px] uppercase tracking-[0.04em] text-muted">
-            Nothing is held in the archive yet.
+            The first pieces are still in the pipeline.
           </p>
         )}
       </section>

@@ -1,6 +1,11 @@
-export type CategorySlug = 'men' | 'women' | 'archive';
+export type CategorySlug = 'men' | 'women' | 'home';
 
-export type ShotType = 'ghost hero' | 'editorial' | 'mid-crop' | 'detail macro';
+export type ShotType =
+  | 'ghost hero'
+  | 'editorial'
+  | 'mid-crop'
+  | 'detail macro'
+  | 'packshot';
 
 export interface ProductImage {
   src: string;

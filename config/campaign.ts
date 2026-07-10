@@ -78,24 +78,24 @@ export const CAMPAIGN_SPOTS: Record<string, CampaignSpot> = {
     selects: 1,
     minutes: 30,
   },
-  'spot/archive': {
-    id: 'spot/archive',
+  'spot/home': {
+    id: 'spot/home',
     kind: 'spot',
-    title: 'Archive — department tile',
+    title: 'Home — department tile',
     placement: 'Collection front — department rail',
-    concept: 'Held empty on purpose. The tile is the promise, not the product.',
+    concept: 'Objects for the rooms the clothes live in.',
     process: [
       {
         stage: 'Passes',
-        detail: 'No frames generated; the warm panel is the design.',
+        detail: 'Twelve packs staged as gallery still lifes; one prompt system.',
       },
       {
         stage: 'Grade',
-        detail: 'Nothing to grade until the first season closes.',
+        detail: 'Warm film grade, blank book spines, nothing branded but the house.',
       },
     ],
-    attempts: 0,
-    selects: 0,
-    minutes: 0,
+    attempts: 14,
+    selects: 1,
+    minutes: 30,
   },
 };

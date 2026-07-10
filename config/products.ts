@@ -30,6 +30,17 @@ const shots = (
     assetCode: `${code}_${colourCode}_${String(i + 1).padStart(2, '0')}`,
   }));
 
+// PRTFLO HOME, transcribed from PRTFLO_HOME_generation_prompts_v2.csv:
+// twelve pieces, H01–H12, three styled packshots each under the
+// {Code}_PACK naming (the root PACK render is the generation reference).
+const homeShots = (slug: string, code: string, name: string): ProductImage[] =>
+  Array.from({ length: 3 }, (_, i) => ({
+    src: `/products/home/${slug}/${String(i + 1).padStart(2, '0')}.webp`,
+    alt: `${name} — still life ${String(i + 1).padStart(2, '0')}`,
+    shotType: 'packshot' as const,
+    assetCode: `${code}_PACK_${String(i + 1).padStart(2, '0')}`,
+  }));
+
 export const PRODUCTS: Product[] = [
   // ── Men · PRTM01–10 ──────────────────────────────────────────────────────
   {
@@ -491,6 +502,184 @@ export const PRODUCTS: Product[] = [
     isNew: true,
   },
 ];
+
+// ── Home · H01–H12 ───────────────────────────────────────────────────────
+const HOME_PRODUCTS: Product[] = [
+  {
+    slug: 'sculptural-stoneware-vase',
+    name: 'Sculptural stoneware vase',
+    code: 'H01',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 85,
+    shortDescription: 'High-fired stoneware, thrown off-centre.',
+    description:
+      'A hand-thrown vase in high-fired stoneware, pulled off-centre on purpose. The surface keeps its throwing rings; no two are alike.',
+    composition: 'High-fired stoneware.',
+    care: 'Wipe clean.',
+    images: homeShots('sculptural-stoneware-vase', 'H01', 'Sculptural stoneware vase'),
+    isBestSeller: true,
+  },
+  {
+    slug: 'hand-painted-plate-set',
+    name: 'Hand-painted plate set',
+    code: 'H02',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 95,
+    shortDescription: 'Set of four, brushwork under glaze.',
+    description:
+      'Four plates, each carrying a different pass of the same brush. Glazed to a soft sheen; the edges keep the stroke.',
+    composition: 'Glazed stoneware.',
+    care: 'Dishwasher safe on a gentle cycle.',
+    images: homeShots('hand-painted-plate-set', 'H02', 'Hand-painted plate set'),
+  },
+  {
+    slug: 'ribbed-amber-glass-tumblers',
+    name: 'Ribbed amber glass tumblers',
+    code: 'H03',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 45,
+    shortDescription: 'Set of four, mouth-blown amber glass.',
+    description:
+      'Mouth-blown tumblers in ribbed amber glass. The ribs catch low light; the amber warms whatever they hold.',
+    composition: 'Mouth-blown glass.',
+    care: 'Hand wash.',
+    images: homeShots('ribbed-amber-glass-tumblers', 'H03', 'Ribbed amber glass tumblers'),
+    isNew: true,
+  },
+  {
+    slug: 'travertine-candleholder-pair',
+    name: 'Travertine candleholder pair',
+    code: 'H04',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 70,
+    shortDescription: 'Unfilled travertine, two heights.',
+    description:
+      'A pair in unfilled travertine, cut to two heights. The stone keeps its pores; wax is welcome to them.',
+    composition: 'Unfilled travertine.',
+    care: 'Wipe clean; lift wax when cool.',
+    images: homeShots('travertine-candleholder-pair', 'H04', 'Travertine candleholder pair'),
+  },
+  {
+    slug: 'kilim-patchwork-cushion',
+    name: 'Kilim patchwork cushion',
+    code: 'H05',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 75,
+    shortDescription: 'Pieced kilim fragments, linen back.',
+    description:
+      'A cushion pieced from woven kilim fragments, no two faces the same. Backed in flax linen with a hidden zip.',
+    composition: 'Wool face, linen back, feather pad.',
+    care: 'Spot clean.',
+    images: homeShots('kilim-patchwork-cushion', 'H05', 'Kilim patchwork cushion'),
+  },
+  {
+    slug: 'herringbone-wool-throw',
+    name: 'Herringbone wool throw',
+    code: 'H06',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 110,
+    shortDescription: 'Brushed lambswool, twisted fringe.',
+    description:
+      'A brushed lambswool throw in a soft herringbone, finished with a twisted fringe. Sized to fall over the arm of a sofa.',
+    composition: '100% brushed lambswool.',
+    care: 'Dry clean or air flat.',
+    images: homeShots('herringbone-wool-throw', 'H06', 'Herringbone wool throw'),
+    isNew: true,
+  },
+  {
+    slug: 'geometric-wool-runner',
+    name: 'Geometric wool runner',
+    code: 'H07',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 160,
+    shortDescription: 'Hand-loomed wool, drawn in the weave.',
+    description:
+      'A hand-loomed runner in undyed and rust wools, the geometry drawn in the weave rather than printed on it.',
+    composition: 'Hand-loomed wool.',
+    care: 'Professional clean.',
+    images: homeShots('geometric-wool-runner', 'H07', 'Geometric wool runner'),
+  },
+  {
+    slug: 'glazed-ceramic-table-lamp',
+    name: 'Glazed ceramic table lamp',
+    code: 'H08',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 140,
+    shortDescription: 'Glazed ceramic base, washed-linen shade.',
+    description:
+      'A glazed ceramic base under a washed-linen shade. The glaze pools at the foot; the light lands warm.',
+    composition: 'Glazed ceramic, linen shade.',
+    care: 'Wipe clean.',
+    images: homeShots('glazed-ceramic-table-lamp', 'H08', 'Glazed ceramic table lamp'),
+  },
+  {
+    slug: 'organic-plaster-mirror',
+    name: 'Organic plaster mirror',
+    code: 'H09',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 190,
+    shortDescription: 'Hand-shaped plaster, organic edge.',
+    description:
+      'A mirror set in hand-shaped plaster, the edge left where the hand stopped. Hung from a single point.',
+    composition: 'Plaster, glass.',
+    care: 'Dust dry; do not wet.',
+    images: homeShots('organic-plaster-mirror', 'H09', 'Organic plaster mirror'),
+  },
+  {
+    slug: 'olive-wood-serving-board',
+    name: 'Olive wood serving board',
+    code: 'H10',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 55,
+    shortDescription: 'Single olive plank, oiled, food safe.',
+    description:
+      'Cut from a single olive plank, the grain running end to end. Oiled, food safe, and better with use.',
+    composition: 'Oiled olive wood.',
+    care: 'Hand wash; re-oil now and then.',
+    images: homeShots('olive-wood-serving-board', 'H10', 'Olive wood serving board'),
+  },
+  {
+    slug: 'washed-linen-bedding-stack',
+    name: 'Washed linen bedding stack',
+    code: 'H11',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 180,
+    shortDescription: 'Stone-washed flax, duvet and cases.',
+    description:
+      'Duvet cover and two pillowcases in stone-washed European flax. Softens with every wash; pressed by no one.',
+    composition: '100% European flax linen.',
+    care: 'Machine wash cool. Do not iron.',
+    images: homeShots('washed-linen-bedding-stack', 'H11', 'Washed linen bedding stack'),
+    isBestSeller: true,
+  },
+  {
+    slug: 'ceramic-arch-bookends',
+    name: 'Ceramic arch bookends',
+    code: 'H12',
+    colourCode: 'PACK',
+    category: 'home',
+    basePriceGBP: 60,
+    shortDescription: 'Glazed arches, weighted.',
+    description:
+      'A pair of glazed ceramic arches, weighted to hold a shelf’s worth. As happy apart as together.',
+    composition: 'Glazed ceramic, weighted.',
+    care: 'Wipe clean.',
+    images: homeShots('ceramic-arch-bookends', 'H12', 'Ceramic arch bookends'),
+  },
+];
+
+PRODUCTS.push(...HOME_PRODUCTS);
 
 export const PRODUCT_MAP: Record<string, Product> = PRODUCTS.reduce(
   (acc, p) => {
