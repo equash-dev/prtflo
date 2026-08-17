@@ -1,9 +1,10 @@
+import { Button } from '@/components/ui/Button';
 import { COPY } from '@/config/copy';
 import { SITE } from '@/config/site';
 
 export function Arrival() {
-  // svh keeps the scroll cue inside the visible viewport on mobile;
-  // 100vh hides it behind the browser toolbar.
+  // svh, not 100vh: keeps the CTA inside the visible viewport on mobile
+  // rather than hidden behind the browser toolbar.
   return (
     <section className="ambient flex min-h-svh flex-col justify-between px-6 py-12 md:px-12 md:py-16">
       <p className="cold-open text-[11px] uppercase tracking-[0.2em] text-canvas/60">
@@ -26,11 +27,12 @@ export function Arrival() {
       </div>
 
       <div
-        className="cold-open flex items-center gap-3 text-[11px] uppercase tracking-[0.04em] text-canvas/50"
+        className="cold-open"
         style={{ '--cold-open-delay': '320ms' } as React.CSSProperties}
       >
-        <span>{COPY.intro.arrival.scrollCue}</span>
-        <span className="h-px w-12 bg-canvas/30" />
+        <Button href="/collection" size="lg">
+          {COPY.intro.exit.ctaLabel}
+        </Button>
       </div>
     </section>
   );

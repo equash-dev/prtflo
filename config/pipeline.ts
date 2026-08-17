@@ -10,5 +10,5 @@ export const PIPELINE = {
   // wherever a piece has no `generation` log of its own (types/product.ts).
   attemptsPerFrame: 6,
   minutesPerAttempt: 2,
-  line: 'Generated — no studio, no shoot, no camera',
+  line: 'Generated. No studio, no shoot, no camera.',
 } as const;

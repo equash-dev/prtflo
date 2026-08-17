@@ -47,8 +47,8 @@ export default async function CategoryPage({ params }: Props) {
           {cat.heroSubcopy}
         </p>
       </section>
-      <section className="px-4 pb-16 md:px-10">
-        <div className="mb-8 border-y border-hairline py-3">
+      <section className="pb-16">
+        <div className="mb-8 border-y border-hairline px-4 py-3 md:px-10">
           <span className="text-[11px] uppercase tracking-[0.04em] text-muted">
             {products.length} {products.length === 1 ? 'item' : 'items'}
           </span>
@@ -56,8 +56,8 @@ export default async function CategoryPage({ params }: Props) {
         {products.length > 0 ? (
           <ProductGrid products={products} />
         ) : (
-          <p className="py-16 text-center text-[11px] uppercase tracking-[0.04em] text-muted">
-            The first pieces are still in the pipeline.
+          <p className="px-4 py-16 text-center text-[11px] uppercase tracking-[0.04em] text-muted md:px-10">
+            The first pieces are still on the way.
           </p>
         )}
       </section>

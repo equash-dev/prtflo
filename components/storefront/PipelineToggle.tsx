@@ -17,7 +17,7 @@ export function PipelineToggle() {
           : 'border-hairline bg-transparent text-muted hover:text-ink',
       ].join(' ')}
     >
-      Pipeline
+      Workflow
       <span
         className={[
           'h-1.5 w-1.5 rounded-full',

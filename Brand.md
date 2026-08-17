@@ -57,7 +57,7 @@ No cute names, no collection theatrics. The descriptor *is* the name.
 |---|---|
 | Product titles | Caps, descriptive, no flourish |
 | Product copy | 2–3 short declarative sentences. Fabric, construction, fit. |
-| Buttons | Plain verbs in caps: `ADD TO BASKET`, `PIPELINE` |
+| Buttons | Plain verbs in caps: `ADD TO BASKET`, `WORKFLOW` |
 | Feature tags | Caps micro-labels, factual: `CORDURA®`, `FLUORINE-FREE` |
 | Section labels | Caps, muted, tight-set — signposts not headlines |
 | Empty / utility states | One quiet line. No personality padding. |

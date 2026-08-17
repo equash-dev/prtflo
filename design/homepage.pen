@@ -1,0 +1,762 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "phUlC",
+      "x": 0,
+      "y": 0,
+      "name": "Button",
+      "reusable": true,
+      "fill": "$ink",
+      "padding": [
+        12,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "WTXyV",
+          "name": "Label",
+          "fill": "$canvas",
+          "content": "ADD TO BASKET",
+          "fontFamily": "$font-sans",
+          "fontSize": 13,
+          "letterSpacing": 0.3
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "KAj86",
+      "x": 200,
+      "y": 0,
+      "name": "Colour Swatch",
+      "reusable": true,
+      "width": 14,
+      "height": 14,
+      "fill": "$ink",
+      "stroke": "$hairline",
+      "strokeWidth": 1
+    },
+    {
+      "type": "frame",
+      "id": "MYPJn",
+      "x": 400,
+      "y": 0,
+      "name": "Product Card",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "gap": 8,
+      "children": [
+        {
+          "type": "frame",
+          "id": "h5UeBF",
+          "name": "Image",
+          "clip": true,
+          "width": "fill_container",
+          "height": 480,
+          "fill": "$panel"
+        },
+        {
+          "type": "frame",
+          "id": "y5m4D",
+          "name": "Meta",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "MrSfA",
+              "name": "Name",
+              "fill": "$ink",
+              "content": "HEAVYWEIGHT BOXY TEE",
+              "fontFamily": "$font-sans",
+              "fontSize": 11
+            },
+            {
+              "type": "text",
+              "id": "bCHQC",
+              "name": "Price",
+              "fill": "$ink",
+              "content": "£55",
+              "fontFamily": "$font-sans",
+              "fontSize": 13
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bYEou",
+          "name": "Swatches",
+          "gap": 6,
+          "children": [
+            {
+              "id": "i5iTe",
+              "type": "ref",
+              "ref": "KAj86",
+              "name": "Swatch",
+              "fill": "#1A2233"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "endvP",
+      "x": 0,
+      "y": 600,
+      "name": "Header",
+      "reusable": true,
+      "width": 1440,
+      "fill": "$canvas",
+      "stroke": "$hairline",
+      "strokeWidth": {
+        "bottom": 1
+      },
+      "padding": [
+        14,
+        64
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "g9tkBx",
+          "name": "Left",
+          "gap": 16,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "OdnhT",
+              "name": "Menu Icon",
+              "width": 18,
+              "height": 18,
+              "icon": "menu",
+              "library": "lucide",
+              "fill": "$ink"
+            },
+            {
+              "type": "frame",
+              "id": "oaxNl",
+              "name": "Wordmark Group",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "HiCF3",
+                  "name": "Wordmark",
+                  "fill": "$ink",
+                  "content": "PRTFLO",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "letterSpacing": 1.3
+                },
+                {
+                  "type": "text",
+                  "id": "L7vJ7E",
+                  "name": "Serial",
+                  "fill": "$muted",
+                  "content": "PRTFLO—001 / SS26",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 10,
+                  "letterSpacing": 1.6
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "IYNBe",
+          "name": "Right",
+          "gap": 24,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "W81SaX",
+              "name": "Search",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "W72o7l",
+                  "name": "Search Icon",
+                  "width": 15,
+                  "height": 15,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "$ink"
+                },
+                {
+                  "type": "text",
+                  "id": "vYfiw",
+                  "name": "Search Label",
+                  "fill": "$ink",
+                  "content": "SEARCH",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 11,
+                  "letterSpacing": 0.3
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "r1zwO",
+              "name": "Currency",
+              "fill": "$ink",
+              "content": "GBP £",
+              "fontFamily": "$font-sans",
+              "fontSize": 11
+            },
+            {
+              "type": "icon",
+              "id": "CxjU9",
+              "name": "Bag Icon",
+              "width": 17,
+              "height": 17,
+              "icon": "shopping-bag",
+              "library": "lucide",
+              "fill": "$ink"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "P72ERQ",
+      "x": 0,
+      "y": 700,
+      "name": "Footer",
+      "reusable": true,
+      "width": 1440,
+      "fill": "$ground",
+      "layout": "vertical",
+      "gap": 40,
+      "padding": 64,
+      "children": [
+        {
+          "type": "frame",
+          "id": "eL8Gx",
+          "name": "Columns",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Jog8Q",
+              "name": "COLLECTIONS Column",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "TwuXZ",
+                  "name": "Heading",
+                  "fill": "$muted",
+                  "content": "COLLECTIONS",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 10,
+                  "letterSpacing": 0.4
+                },
+                {
+                  "type": "text",
+                  "id": "chdAZ",
+                  "name": "Men",
+                  "fill": "$canvas",
+                  "content": "MEN",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "Jih1S",
+                  "name": "Women",
+                  "fill": "$canvas",
+                  "content": "WOMEN",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "i4VTo",
+                  "name": "Home",
+                  "fill": "$canvas",
+                  "content": "HOME",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "b21RR",
+              "name": "HOUSE Column",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "P5EUJ",
+                  "name": "Heading",
+                  "fill": "$muted",
+                  "content": "HOUSE",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 10,
+                  "letterSpacing": 0.4
+                },
+                {
+                  "type": "text",
+                  "id": "sf5M9",
+                  "name": "About",
+                  "fill": "$canvas",
+                  "content": "ABOUT",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "kqHZh",
+                  "name": "Pipeline",
+                  "fill": "$canvas",
+                  "content": "PIPELINE",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13
+                },
+                {
+                  "type": "text",
+                  "id": "zxMPJ",
+                  "name": "Contact",
+                  "fill": "$canvas",
+                  "content": "CONTACT",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SLiDD",
+              "name": "Newsletter Column",
+              "width": 280,
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "C7B4y5",
+                  "name": "Heading",
+                  "fill": "$muted",
+                  "content": "NEWSLETTER",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 10,
+                  "letterSpacing": 0.4
+                },
+                {
+                  "type": "frame",
+                  "id": "Jrmbk",
+                  "name": "Newsletter Row",
+                  "width": "fill_container",
+                  "stroke": "#FFFFFF33",
+                  "strokeWidth": {
+                    "bottom": 1
+                  },
+                  "padding": [
+                    10,
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B6Q6t",
+                      "name": "Email Placeholder",
+                      "fill": "$muted",
+                      "content": "Email address",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 13,
+                      "fontWeight": "300"
+                    },
+                    {
+                      "type": "icon",
+                      "id": "BIOeb",
+                      "name": "Arrow Icon",
+                      "width": 15,
+                      "height": 15,
+                      "icon": "arrow-right",
+                      "library": "lucide",
+                      "fill": "$canvas"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "SF9jT",
+          "name": "Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#FFFFFF1A"
+        },
+        {
+          "type": "frame",
+          "id": "g0wsRO",
+          "name": "Legal Row",
+          "width": "fill_container",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "h2M8wf",
+              "name": "Copyright",
+              "fill": "$muted",
+              "content": "© PRTFLO",
+              "fontFamily": "$font-sans",
+              "fontSize": 11
+            },
+            {
+              "type": "text",
+              "id": "R3SscG",
+              "name": "Reveal Line",
+              "fill": "$muted",
+              "content": "EVERY IMAGE IN THIS HOUSE WAS GENERATED.",
+              "fontFamily": "$font-sans",
+              "fontSize": 10,
+              "letterSpacing": 0.4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xNzeU",
+      "x": 0,
+      "y": 1143,
+      "name": "Home",
+      "clip": true,
+      "width": 1440,
+      "fill": "$canvas",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "AcxHH",
+          "type": "ref",
+          "ref": "endvP",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "GelAf",
+          "name": "Pinned Wordmark Zone",
+          "clip": true,
+          "width": "fill_container",
+          "height": 1400,
+          "layout": "none",
+          "children": [
+            {
+              "type": "frame",
+              "id": "WZOEh",
+              "x": 0,
+              "y": 0,
+              "name": "Hero Split",
+              "clip": true,
+              "width": 1440,
+              "height": 760,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ncErD",
+                  "name": "SHOP WOMEN Panel",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#E3E1DC",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yAtyL",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "SHOP WOMEN",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 10,
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bx6zz",
+                  "name": "SHOP MEN Panel",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#C9CDBF",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sxrsa",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "SHOP MEN",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 10,
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "j9zmbX",
+              "x": 0,
+              "y": 760,
+              "name": "Category Strip",
+              "clip": true,
+              "width": 1440,
+              "height": 640,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "h6RfO",
+                  "name": "SHOP MEN Panel",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#D8D6CF",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OSIt4",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "SHOP MEN",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 10,
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uWuIQ",
+                  "name": "SHOP WOMEN Panel",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#CBCFC2",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "fqM3S",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "SHOP WOMEN",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 10,
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "b1ktb",
+                  "name": "SHOP HOME Panel",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": "#DCD2C4",
+                  "layout": "vertical",
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YavCr",
+                      "name": "Label",
+                      "fill": "$ink",
+                      "content": "SHOP HOME",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 10,
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "pUEAw",
+              "x": 0,
+              "y": 0,
+              "name": "Wordmark Overlay",
+              "width": 1440,
+              "height": 1400,
+              "layout": "vertical",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "n5pA6",
+                  "name": "Pinned Wordmark",
+                  "fill": "$ink",
+                  "content": "PRTFLO",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 140,
+                  "fontWeight": "800",
+                  "letterSpacing": -2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "itDR0",
+          "name": "New In Section",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "children": [
+            {
+              "type": "text",
+              "id": "KFmCY",
+              "name": "Section Label",
+              "fill": "$muted",
+              "content": "NEW IN",
+              "fontFamily": "$font-sans",
+              "fontSize": 10,
+              "letterSpacing": 0.4
+            },
+            {
+              "type": "frame",
+              "id": "fPBJT",
+              "name": "Grid",
+              "width": "fill_container",
+              "children": [
+                {
+                  "id": "Bd0qP",
+                  "type": "ref",
+                  "ref": "MYPJn",
+                  "name": "HEAVYWEIGHT BOXY TEE",
+                  "width": "fill_container",
+                  "descendants": {
+                    "MrSfA": {
+                      "content": "HEAVYWEIGHT BOXY TEE"
+                    },
+                    "bCHQC": {
+                      "content": "£55"
+                    },
+                    "i5iTe": {
+                      "fill": "#1A2233"
+                    }
+                  }
+                },
+                {
+                  "id": "VnQPK",
+                  "type": "ref",
+                  "ref": "MYPJn",
+                  "name": "GARMENT-DYED SLOGAN TEE",
+                  "width": "fill_container",
+                  "descendants": {
+                    "MrSfA": {
+                      "content": "GARMENT-DYED SLOGAN TEE"
+                    },
+                    "bCHQC": {
+                      "content": "£50"
+                    },
+                    "i5iTe": {
+                      "fill": "#2F4A34"
+                    }
+                  }
+                },
+                {
+                  "id": "UxFyf",
+                  "type": "ref",
+                  "ref": "MYPJn",
+                  "name": "CAMP COLLAR GRAPHIC SHIRT",
+                  "width": "fill_container",
+                  "descendants": {
+                    "MrSfA": {
+                      "content": "CAMP COLLAR GRAPHIC SHIRT"
+                    },
+                    "bCHQC": {
+                      "content": "£85"
+                    },
+                    "i5iTe": {
+                      "fill": "#EDE7DC"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pGyof",
+          "type": "ref",
+          "ref": "P72ERQ",
+          "name": "Footer",
+          "width": "fill_container"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "ground": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "canvas": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "panel": {
+      "type": "color",
+      "value": "#F2F2F2"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#111111"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#767676"
+    },
+    "hairline": {
+      "type": "color",
+      "value": "#E2E2E2"
+    },
+    "selected": {
+      "type": "color",
+      "value": "#D4D4D4"
+    },
+    "font-sans": {
+      "type": "string",
+      "value": "Geist"
+    }
+  },
+  "fileToken": "9f8d0a22-01db-450e-ac77-4042abb722ce"
+}

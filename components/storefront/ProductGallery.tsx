@@ -88,36 +88,28 @@ export function ProductGallery({ shots }: { shots: GalleryShot[] }) {
 
   if (shots.length === 0) {
     return (
-      <div className="flex flex-col gap-1 md:gap-2">
+      <div className="flex flex-col">
         <div className="relative aspect-[2/3] overflow-hidden bg-panel" />
       </div>
     );
   }
 
-  const [first, ...rest] = shots;
   const zoomHandler = (shot: GalleryShot) =>
     shot.exists ? () => setZoomIndex(zoomable.indexOf(shot)) : undefined;
 
   return (
-    <div className="flex flex-col gap-1 md:gap-2">
-      <Frame
-        shot={first}
-        priority
-        sizes="(min-width: 1024px) 60vw, 100vw"
-        onZoom={zoomHandler(first)}
-      />
-      {rest.length > 0 ? (
-        <div className="grid grid-cols-2 gap-1 md:gap-2">
-          {rest.map((shot) => (
-            <Frame
-              key={shot.src}
-              shot={shot}
-              sizes="(min-width: 1024px) 30vw, 50vw"
-              onZoom={zoomHandler(shot)}
-            />
-          ))}
-        </div>
-      ) : null}
+    // One full-bleed shot at a time, stacked — confirmed from screenshot,
+    // replacing the earlier first-shot-plus-2-up-pairing layout.
+    <div className="flex flex-col">
+      {shots.map((shot, i) => (
+        <Frame
+          key={shot.src}
+          shot={shot}
+          priority={i === 0}
+          sizes="(min-width: 1024px) 52vw, 100vw"
+          onZoom={zoomHandler(shot)}
+        />
+      ))}
       {zoomIndex !== null && zoomable.length > 0 ? (
         <GalleryLightbox
           shots={zoomable}

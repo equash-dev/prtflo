@@ -120,7 +120,7 @@ export const PRODUCTS: Product[] = [
     basePriceGBP: 65,
     shortDescription: 'Fine-gauge knit, jacquard arch, ochre.',
     description:
-      'A fine-gauge knitted vest with the graphic built in, not printed — a faded PRTFLO collegiate arch worked in cream jacquard. Navy tipping traces the neck and armholes. Relaxed through the body, ribbed at every edge.',
+      'A fine-gauge knitted vest with the graphic built in, not printed: a faded PRTFLO collegiate arch worked in cream jacquard. Navy tipping traces the neck and armholes. Relaxed through the body, ribbed at every edge.',
     signatureDetail: 'Knitted-in jacquard arch + navy tipping',
     composition: 'Fine-gauge knit.',
     care: 'Hand wash cold. Dry flat.',
@@ -142,7 +142,7 @@ export const PRODUCTS: Product[] = [
     basePriceGBP: 85,
     shortDescription: 'Cotton poplin, camp collar, off-white.',
     description:
-      'Crisp poplin cut boxy, worn open at the camp collar. A sun-faded circular crest — PRTFLO ringing a bold P — sits centre chest; navy piping edges the collar and mother-of-pearl buttons close the placket.',
+      'Crisp poplin cut boxy, worn open at the camp collar. A sun-faded circular crest, PRTFLO ringing a bold P, sits centre chest; navy piping edges the collar and mother-of-pearl buttons close the placket.',
     signatureDetail: 'Circular crest graphic + collar piping + MOP buttons',
     composition: 'Cotton poplin.',
     care: 'Machine wash cool. Iron low.',
@@ -187,7 +187,7 @@ export const PRODUCTS: Product[] = [
     basePriceGBP: 125,
     shortDescription: '14oz rigid denim, balloon leg, stone wash.',
     description:
-      'A 14oz rigid denim cut to a full balloon — swelling through the thigh, tapering to a stacked, roped ankle. Stone-washed with 3D whiskering and honeycomb fading; ecru topstitch and doubled belt loops throughout.',
+      'A 14oz rigid denim cut to a full balloon, swelling through the thigh and tapering to a stacked, roped ankle. Stone-washed with 3D whiskering and honeycomb fading; ecru topstitch and doubled belt loops throughout.',
     signatureDetail: '3D whiskering + roped stacked cuff + ecru topstitch',
     composition: '14oz rigid denim.',
     care: 'Machine wash cold, inside out. Wash seldom.',
@@ -350,7 +350,7 @@ export const PRODUCTS: Product[] = [
     basePriceGBP: 120,
     shortDescription: 'Washed denim, low-rise, grey-green.',
     description:
-      'Slouched low through the hip and roomy to the floor, in a heavily worked grey-green wash — whiskered, hand-sanded, hems lightly frayed by intent. A dropped micro coin pocket sits at the front.',
+      'Slouched low through the hip and roomy to the floor, in a heavily worked grey-green wash: whiskered, hand-sanded, hems lightly frayed by intent. A dropped micro coin pocket sits at the front.',
     signatureDetail: 'Frayed hem edge + dropped micro coin pocket',
     composition: 'Washed denim.',
     care: 'Machine wash cold, inside out. Wash seldom.',
@@ -418,7 +418,7 @@ export const PRODUCTS: Product[] = [
     basePriceGBP: 125,
     shortDescription: 'Floral sequins, micro mini, moss.',
     description:
-      'A low-rise micro mini worked entirely in dimensional florals — layered moss paillettes in mixed scales, each bloom centred with glass beads. Bound at the waist in satin.',
+      'A low-rise micro mini worked entirely in dimensional florals: layered moss paillettes in mixed scales, each bloom centred with glass beads. Bound at the waist in satin.',
     signatureDetail: 'Beaded floral paillettes, petal depth',
     composition: 'Dimensional floral sequins on soft base.',
     care: 'Spot clean only.',
@@ -487,7 +487,7 @@ export const PRODUCTS: Product[] = [
     basePriceGBP: 85,
     shortDescription: 'Mixed-gauge rib, cropped, black.',
     description:
-      'Mixed-gauge rib in deep black — chunky at the boat neck, cuffs and hem, micro-ribbed through the body. Sleeves run deliberately long, finished with thumbholes; the cropped hem pulls in at the waist.',
+      'Mixed-gauge rib in deep black: chunky at the boat neck, cuffs and hem, micro-ribbed through the body. Sleeves run deliberately long, finished with thumbholes; the cropped hem pulls in at the waist.',
     signatureDetail: 'Gauge transition + thumbhole cuff',
     composition: 'Mixed-gauge rib knit.',
     care: 'Hand wash cold. Dry flat.',

@@ -15,7 +15,7 @@ Next.js docs for the installed version live at `node_modules/next/dist/docs/` �
 
 ## What this is
 
-A portfolio piece disguised as a fictional fashion house ("PRTFLO") where every product image is AI-generated. There is no backend: no API routes, no data fetching, no orders submitted anywhere — the entire catalogue is compile-time static. Commerce controls are theatre with a payoff, not inert: ADD TO BASKET feeds a real client-side basket (`context/BasketContext`, localStorage `eq.basket`) through `/basket` into the `/checkout` funnel, which plays it straight until the payment step and then discloses and pitches contact (`components/checkout/CheckoutFunnel.tsx`). PIPELINE opens the generation dossier (`PipelineDossier`): a staged model + mannequin + backdrop = final-shot equation over the hero image, plus attempts, minutes, and cost vs studio equivalent, computed in `lib/generation.ts` from house averages in `config/pipeline.ts`, overridden by a per-piece `generation` log on `Product` when one is recorded. Belief before reveal — basket and delivery copy never wink; the disclosure lands at payment and in the dossier. Search and filters remain inert by design.
+A portfolio piece disguised as a fictional fashion house ("PRTFLO") where every product image is AI-generated. There is no backend: no API routes, no data fetching, no orders submitted anywhere — the entire catalogue is compile-time static. Commerce controls are theatre with a payoff, not inert: ADD TO BASKET feeds a real client-side basket (`context/BasketContext`, localStorage `eq.basket`) through `/basket` into the `/checkout` funnel, which plays it straight until the payment step and then discloses and pitches contact (`components/checkout/CheckoutFunnel.tsx`). WORKFLOW opens the generation dossier (`PipelineDossier`): a staged model + mannequin + backdrop = final-shot equation over the hero image, plus attempts, minutes, and cost vs studio equivalent, computed in `lib/generation.ts` from house averages in `config/pipeline.ts`, overridden by a per-piece `generation` log on `Product` when one is recorded. Belief before reveal — basket and delivery copy never wink; the disclosure lands at payment and in the dossier. Search and filters remain inert by design.
 
 ## Environment
 
@@ -34,6 +34,8 @@ A portfolio piece disguised as a fictional fashion house ("PRTFLO") where every 
 ## Source-of-truth docs
 
 - `Brand.md` — voice and copy rules (quiet, declarative, no urgency; MEN / WOMEN / ARCHIVE, never "Sale").
+- `Copywriter.md` — anti-AI-slop discipline for storefront copy (listings, descriptions, nav, buttons): forbidden patterns (em dashes, rule of three, rhetorical Q&A, metaphor reflex, retail filler) with before/after examples.
+- `Narrator.md` — same discipline for the process-disclosure voice (pipeline dossier, checkout reveal, intro, about): keeps the reveal flat and fact-led instead of hyping the AI angle.
 - `Design.md` — visual language; `zara-ui-spec.md` — structural spec for layout/component anatomy (the active refactor reference).
 - `prompts/SYSTEM-INSTRUCTIONS.md` + `prompts/new-in-ss26.csv` — the image-generation pipeline (locked flatlay prompt system).
 - `UI.pen` — Pencil design file; encrypted, only accessible via the Pencil MCP tools, never Read/Grep.

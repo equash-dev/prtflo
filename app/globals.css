@@ -3,13 +3,14 @@
 @theme {
   --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
 
-  --color-ground: #4f4a44;
-  --color-canvas: #f4f2ed;
-  --color-panel: #edeae4;
-  --color-ink: #1a1a1a;
-  --color-muted: #8a857d;
-  --color-hairline: #dad6ce;
-  --color-selected: #d8d2c8;
+  --color-ground: #000000;
+  --color-canvas: #ffffff;
+  --color-panel: #f2f2f2;
+  --color-ink: #111111;
+  --color-muted: #767676;
+  --color-hairline: #e2e2e2;
+  --color-selected: #d4d4d4;
+  --color-accent: #1414e0;
 }
 
 /* Controls opt out of double-tap-to-zoom so taps fire immediately on touch
@@ -86,8 +87,8 @@ body {
 /* "Pixels resolving" texture — pure CSS grid of fine cells */
 .pixel-field {
   background-image:
-    linear-gradient(rgba(26, 26, 26, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(26, 26, 26, 0.05) 1px, transparent 1px);
+    linear-gradient(rgba(17, 17, 17, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.05) 1px, transparent 1px);
   background-size: 9px 9px;
 }
 
@@ -122,9 +123,9 @@ body {
   z-index: -1;
   pointer-events: none;
   background:
-    radial-gradient(45% 55% at 22% 28%, rgba(244, 242, 237, 0.1), transparent 70%),
-    radial-gradient(55% 65% at 80% 75%, rgba(26, 26, 26, 0.2), transparent 72%),
-    radial-gradient(36% 45% at 68% 12%, rgba(216, 210, 200, 0.07), transparent 70%);
+    radial-gradient(45% 55% at 22% 28%, rgba(255, 255, 255, 0.1), transparent 70%),
+    radial-gradient(55% 65% at 80% 75%, rgba(17, 17, 17, 0.2), transparent 72%),
+    radial-gradient(36% 45% at 68% 12%, rgba(212, 212, 212, 0.07), transparent 70%);
   animation: ambient-drift 26s ease-in-out infinite alternate;
   will-change: transform;
 }

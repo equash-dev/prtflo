@@ -63,7 +63,7 @@ refactor. **We replicate structure/grid/spacing/anatomy only — not Zara's phot
   5. colour name + ref (`LIGHT BEIGE | 5070/903/052`, tiny)
   6. **colour swatch squares** (row)
   7. **ADD** button (square, bordered) + a secondary square button beside it (Zara = Apple Pay;
-     **PRTFLO uses `PIPELINE`** — opens the generation dossier)
+     **PRTFLO uses `WORKFLOW`** — opens the generation dossier)
   8. short **description** paragraph
   9. `COMPLETE YOUR LOOK` thumbnail strip (optional / skip for PRTFLO)
   10. **meta accordion links:** `PRODUCT MEASUREMENTS` · `COMPOSITION, CARE & ORIGIN` ·
@@ -73,7 +73,7 @@ refactor. **We replicate structure/grid/spacing/anatomy only — not Zara's phot
   bottom**.
 - **PRTFLO adaptation:** replace current 50/50 hairline split with gallery + sticky rail; size selector
   as a list/row in the rail; description/composition/care become **accordions** (desktop) / tabs
-  (mobile). Keep ADD TO BASKET / PIPELINE, currency, `AssetCostBadge`.
+  (mobile). Keep ADD TO BASKET / WORKFLOW, currency, `AssetCostBadge`.
 
 ## Home
 - **Full-bleed editorial campaign imagery** dominating the viewport (Zara: two large side-by-side

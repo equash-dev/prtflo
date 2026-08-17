@@ -1,0 +1,1365 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "x7Amu",
+      "x": 0,
+      "y": 0,
+      "name": "Button Primary",
+      "reusable": true,
+      "fill": "$accent",
+      "padding": [
+        12,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "hKIx5",
+          "name": "Label",
+          "fill": "$canvas",
+          "content": "ADD TO BASKET",
+          "fontFamily": "$font-sans",
+          "fontSize": 13,
+          "letterSpacing": 0.3
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Apeh1",
+      "x": 0,
+      "y": 70,
+      "name": "Button Secondary",
+      "reusable": true,
+      "fill": "$canvas",
+      "stroke": "$ink",
+      "strokeWidth": 1,
+      "padding": [
+        12,
+        24
+      ],
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "MtM2A",
+          "name": "Label",
+          "fill": "$ink",
+          "content": "FIND IN STORE",
+          "fontFamily": "$font-sans",
+          "fontSize": 13,
+          "letterSpacing": 0.3
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ORi0v",
+      "x": 200,
+      "y": 0,
+      "name": "Wishlist Button",
+      "reusable": true,
+      "width": 48,
+      "height": 48,
+      "stroke": "$accent",
+      "strokeWidth": 1,
+      "layout": "vertical",
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "icon",
+          "id": "PVqGR",
+          "name": "Heart Icon",
+          "width": 16,
+          "height": 16,
+          "icon": "heart",
+          "library": "lucide",
+          "fill": "$accent"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "NlfuW",
+      "x": 260,
+      "y": 0,
+      "name": "Size Cell",
+      "reusable": true,
+      "width": 56,
+      "height": 44,
+      "fill": "$canvas",
+      "stroke": "$hairline",
+      "strokeWidth": 1,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "Cpmfa",
+          "name": "Label",
+          "fill": "$ink",
+          "content": "M",
+          "fontFamily": "$font-sans",
+          "fontSize": 13
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "DBE0u",
+      "x": 260,
+      "y": 60,
+      "name": "Size Cell Unavailable",
+      "reusable": true,
+      "width": 56,
+      "height": 44,
+      "fill": "$canvas",
+      "stroke": "$hairline",
+      "strokeWidth": 1,
+      "justifyContent": "center",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "text",
+          "id": "uk7mc",
+          "name": "Label",
+          "fill": "$muted",
+          "content": "M",
+          "fontFamily": "$font-sans",
+          "fontSize": 13
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "h3aUfv",
+      "x": 0,
+      "y": 400,
+      "name": "Header",
+      "reusable": true,
+      "width": 1440,
+      "fill": "$canvas",
+      "stroke": "$hairline",
+      "strokeWidth": {
+        "bottom": 1
+      },
+      "padding": [
+        16,
+        32
+      ],
+      "justifyContent": "space_between",
+      "alignItems": "center",
+      "children": [
+        {
+          "type": "frame",
+          "id": "X2TTU3",
+          "name": "Nav",
+          "gap": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "RLpEU",
+              "name": "MEN",
+              "fill": "$ink",
+              "content": "MEN",
+              "fontFamily": "$font-sans",
+              "fontSize": 12,
+              "letterSpacing": 0.2
+            },
+            {
+              "type": "text",
+              "id": "q4wnii",
+              "name": "WOMEN",
+              "fill": "$ink",
+              "content": "WOMEN",
+              "fontFamily": "$font-sans",
+              "fontSize": 12,
+              "letterSpacing": 0.2
+            },
+            {
+              "type": "text",
+              "id": "G04MDv",
+              "name": "HOME",
+              "fill": "$ink",
+              "content": "HOME",
+              "fontFamily": "$font-sans",
+              "fontSize": 12,
+              "letterSpacing": 0.2
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "v0nUF",
+          "name": "Wordmark",
+          "fill": "$ink",
+          "content": "PRTFLO",
+          "fontFamily": "$font-sans",
+          "fontSize": 20,
+          "fontWeight": "800",
+          "letterSpacing": -0.3
+        },
+        {
+          "type": "frame",
+          "id": "l7ZDW",
+          "name": "Right",
+          "gap": 20,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "LrdZC",
+              "name": "Search",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon",
+                  "id": "kdLU2",
+                  "name": "Search Icon",
+                  "width": 14,
+                  "height": 14,
+                  "icon": "search",
+                  "library": "lucide",
+                  "fill": "$ink"
+                },
+                {
+                  "type": "text",
+                  "id": "IbGbV",
+                  "name": "Search Label",
+                  "fill": "$ink",
+                  "content": "SEARCH",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 11,
+                  "letterSpacing": 0.3
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "QyYrO",
+              "name": "Currency",
+              "fill": "$ink",
+              "content": "GBP £",
+              "fontFamily": "$font-sans",
+              "fontSize": 11
+            },
+            {
+              "type": "icon",
+              "id": "ghlyz",
+              "name": "Bag Icon",
+              "width": 16,
+              "height": 16,
+              "icon": "shopping-bag",
+              "library": "lucide",
+              "fill": "$ink"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "EtTZE",
+      "x": 400,
+      "y": 0,
+      "name": "Product Card",
+      "reusable": true,
+      "width": 320,
+      "layout": "vertical",
+      "gap": 6,
+      "children": [
+        {
+          "type": "frame",
+          "id": "GFTdb",
+          "name": "Image",
+          "clip": true,
+          "width": "fill_container",
+          "height": 520,
+          "fill": "$panel"
+        },
+        {
+          "type": "frame",
+          "id": "J6iXN",
+          "name": "Meta",
+          "width": "fill_container",
+          "padding": [
+            8,
+            0,
+            0,
+            0
+          ],
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "j1KvEY",
+              "name": "Name",
+              "fill": "$accent",
+              "content": "HEAVYWEIGHT BOXY TEE",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "lUaOR",
+              "name": "Price",
+              "fill": "$ink",
+              "content": "£55",
+              "fontFamily": "$font-sans",
+              "fontSize": 13
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "MZVb6",
+          "name": "Colour Count",
+          "fill": "$muted",
+          "content": "2 Colours",
+          "fontFamily": "$font-sans",
+          "fontSize": 11
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ikAzZ",
+      "x": 400,
+      "y": 691,
+      "name": "PLP — Men",
+      "clip": true,
+      "width": 1440,
+      "fill": "$canvas",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "hClce",
+          "type": "ref",
+          "ref": "h3aUfv",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "l6jUgF",
+          "name": "Sub Nav",
+          "width": "fill_container",
+          "stroke": "$hairline",
+          "strokeWidth": {
+            "bottom": 1
+          },
+          "gap": 24,
+          "padding": [
+            14,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "Xql43",
+              "name": "All Men",
+              "fill": "$ink",
+              "content": "All Men",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "eaDyq",
+              "name": "New Arrivals",
+              "fill": "$muted",
+              "content": "New Arrivals",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "DKadw",
+              "name": "Tees",
+              "fill": "$muted",
+              "content": "Tees",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "ehirh",
+              "name": "Denim",
+              "fill": "$muted",
+              "content": "Denim",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "aVRjo",
+              "name": "Outerwear",
+              "fill": "$muted",
+              "content": "Outerwear",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "xcBVb",
+          "name": "Title Row",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 12,
+          "padding": [
+            20,
+            32,
+            16,
+            32
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "f7rho",
+              "name": "H1",
+              "fill": "$ink",
+              "content": "MEN",
+              "fontFamily": "$font-sans",
+              "fontSize": 22,
+              "fontWeight": "700",
+              "letterSpacing": 0.2
+            },
+            {
+              "type": "frame",
+              "id": "n42If",
+              "name": "Meta Row",
+              "width": "fill_container",
+              "stroke": "$hairline",
+              "strokeWidth": {
+                "top": 1
+              },
+              "padding": [
+                8,
+                0,
+                0,
+                0
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ukmH4",
+                  "name": "Item Count",
+                  "fill": "$muted",
+                  "content": "10 items",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 12
+                },
+                {
+                  "type": "frame",
+                  "id": "V65U68",
+                  "name": "Filter",
+                  "gap": 6,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon",
+                      "id": "SYe2W",
+                      "name": "Filter Icon",
+                      "width": 13,
+                      "height": 13,
+                      "icon": "sliders-horizontal",
+                      "library": "lucide",
+                      "fill": "$ink"
+                    },
+                    {
+                      "type": "text",
+                      "id": "h2nvUS",
+                      "name": "Filter Label",
+                      "fill": "$ink",
+                      "content": "FILTER",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 11,
+                      "letterSpacing": 0.3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Gng85",
+          "name": "Grid",
+          "width": "fill_container",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "kBzzo",
+              "name": "Row 1",
+              "width": "fill_container",
+              "children": [
+                {
+                  "id": "IvEQY",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "HEAVYWEIGHT BOXY TEE",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "HEAVYWEIGHT BOXY TEE"
+                    },
+                    "lUaOR": {
+                      "content": "£55"
+                    },
+                    "MZVb6": {
+                      "enabled": false
+                    }
+                  }
+                },
+                {
+                  "id": "BRIKc",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "GARMENT-DYED SLOGAN TEE",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "GARMENT-DYED SLOGAN TEE"
+                    },
+                    "lUaOR": {
+                      "content": "£50"
+                    },
+                    "MZVb6": {
+                      "enabled": false
+                    }
+                  }
+                },
+                {
+                  "id": "bgUAl",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "HEAVYWEIGHT CREW TEE",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "HEAVYWEIGHT CREW TEE"
+                    },
+                    "lUaOR": {
+                      "content": "£55"
+                    },
+                    "MZVb6": {
+                      "enabled": false
+                    }
+                  }
+                },
+                {
+                  "id": "qZZoZ",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "PRINTED KNIT TANK",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "PRINTED KNIT TANK"
+                    },
+                    "lUaOR": {
+                      "content": "£65"
+                    },
+                    "MZVb6": {
+                      "enabled": false
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "j3ca2Z",
+              "name": "Row 2",
+              "width": "fill_container",
+              "children": [
+                {
+                  "id": "nHe44",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "CAMP COLLAR GRAPHIC SHIRT",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "CAMP COLLAR GRAPHIC SHIRT"
+                    },
+                    "lUaOR": {
+                      "content": "£85"
+                    },
+                    "MZVb6": {
+                      "enabled": false
+                    }
+                  }
+                },
+                {
+                  "id": "hwqGo",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "DOUBLE-LAYER LONG SLEEVE TEE",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "DOUBLE-LAYER LONG SLEEVE TEE"
+                    },
+                    "lUaOR": {
+                      "content": "£60"
+                    },
+                    "MZVb6": {
+                      "enabled": false
+                    }
+                  }
+                },
+                {
+                  "id": "b742Sk",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "WASHED BALLOON JEANS",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "WASHED BALLOON JEANS"
+                    },
+                    "lUaOR": {
+                      "content": "£125"
+                    },
+                    "MZVb6": {
+                      "content": "4 Colours"
+                    }
+                  }
+                },
+                {
+                  "id": "K1vS1",
+                  "type": "ref",
+                  "ref": "EtTZE",
+                  "name": "WIDE-LEG TWILL TROUSERS",
+                  "width": "fill_container",
+                  "descendants": {
+                    "j1KvEY": {
+                      "content": "WIDE-LEG TWILL TROUSERS"
+                    },
+                    "lUaOR": {
+                      "content": "£95"
+                    },
+                    "MZVb6": {
+                      "enabled": false
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Oy9HA",
+      "x": 1960,
+      "y": 691,
+      "name": "PDP — Heavyweight Boxy Tee",
+      "clip": true,
+      "width": 1440,
+      "fill": "$canvas",
+      "layout": "vertical",
+      "children": [
+        {
+          "id": "dQDqL",
+          "type": "ref",
+          "ref": "h3aUfv",
+          "name": "Header",
+          "width": "fill_container"
+        },
+        {
+          "type": "frame",
+          "id": "CWE9j",
+          "name": "Breadcrumb",
+          "width": "fill_container",
+          "gap": 10,
+          "padding": [
+            14,
+            32
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon",
+              "id": "ZbFlT",
+              "name": "Back Icon",
+              "width": 13,
+              "height": 13,
+              "icon": "arrow-left",
+              "library": "lucide",
+              "fill": "$ink"
+            },
+            {
+              "type": "text",
+              "id": "BjXZD",
+              "name": "Men",
+              "fill": "$ink",
+              "content": "Men",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "z4d2D",
+              "name": "Sep1",
+              "fill": "$muted",
+              "content": "/",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "q7GHp",
+              "name": "New Arrivals",
+              "fill": "$ink",
+              "content": "New Arrivals",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "IRGeS",
+              "name": "Sep2",
+              "fill": "$muted",
+              "content": "/",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            },
+            {
+              "type": "text",
+              "id": "VIFel",
+              "name": "Product",
+              "fill": "$muted",
+              "content": "Heavyweight boxy tee",
+              "fontFamily": "$font-sans",
+              "fontSize": 12
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Bpptg",
+          "name": "Zones",
+          "width": "fill_container",
+          "children": [
+            {
+              "type": "frame",
+              "id": "PI3v3",
+              "name": "Image",
+              "width": "fill_container",
+              "height": 1400,
+              "fill": "$panel"
+            },
+            {
+              "type": "frame",
+              "id": "K5FXud",
+              "name": "Info Rail",
+              "width": 680,
+              "layout": "vertical",
+              "gap": 14,
+              "padding": [
+                24,
+                48,
+                64,
+                48
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Lnz2O",
+                  "name": "Title Price Row",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "u25pmm",
+                      "name": "Title",
+                      "fill": "$ink",
+                      "content": "HEAVYWEIGHT BOXY TEE",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15
+                    },
+                    {
+                      "type": "text",
+                      "id": "qNs1X",
+                      "name": "Price",
+                      "fill": "$ink",
+                      "content": "£55",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "pW2xS",
+                  "name": "Colour",
+                  "fill": "$muted",
+                  "content": "Ink navy",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 12
+                },
+                {
+                  "type": "frame",
+                  "id": "rl83k",
+                  "name": "Size Guide Row",
+                  "width": "fill_container",
+                  "padding": [
+                    10,
+                    0,
+                    0,
+                    0
+                  ],
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "GaimH",
+                      "name": "Size Label",
+                      "fill": "$muted",
+                      "content": "SIZE",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 10,
+                      "letterSpacing": 0.4
+                    },
+                    {
+                      "type": "text",
+                      "id": "fGJEy",
+                      "name": "Size Guide",
+                      "fill": "$accent",
+                      "content": "Size guide",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "CLGqQ",
+                  "name": "Size Row",
+                  "gap": 8,
+                  "children": [
+                    {
+                      "id": "BAQJU",
+                      "type": "ref",
+                      "ref": "NlfuW",
+                      "name": "S",
+                      "descendants": {
+                        "Cpmfa": {
+                          "content": "S"
+                        }
+                      }
+                    },
+                    {
+                      "id": "hYk8x",
+                      "type": "ref",
+                      "ref": "NlfuW",
+                      "name": "M",
+                      "descendants": {
+                        "Cpmfa": {
+                          "content": "M"
+                        }
+                      }
+                    },
+                    {
+                      "id": "g6DV2r",
+                      "type": "ref",
+                      "ref": "NlfuW",
+                      "name": "L",
+                      "descendants": {
+                        "Cpmfa": {
+                          "content": "L"
+                        }
+                      }
+                    },
+                    {
+                      "id": "s9dbe",
+                      "type": "ref",
+                      "ref": "DBE0u",
+                      "name": "XL",
+                      "descendants": {
+                        "uk7mc": {
+                          "content": "XL"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "ewSdU",
+                  "name": "Notify Line",
+                  "fill": "$muted",
+                  "content": "Out of stock? Get notified",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 11,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "frame",
+                  "id": "C1QdGL",
+                  "name": "CTA Row",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "id": "q9kHvs",
+                      "type": "ref",
+                      "ref": "x7Amu",
+                      "name": "Add To Basket",
+                      "width": "fill_container"
+                    },
+                    {
+                      "id": "P9NZR",
+                      "type": "ref",
+                      "ref": "ORi0v",
+                      "name": "Wishlist"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "f5XLyL",
+                  "name": "Accordions",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "padding": [
+                    8,
+                    0,
+                    0,
+                    0
+                  ],
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xE9P9",
+                      "name": "DELIVERY",
+                      "width": "fill_container",
+                      "stroke": "$hairline",
+                      "strokeWidth": {
+                        "top": 1
+                      },
+                      "padding": [
+                        14,
+                        0
+                      ],
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "y4DxyZ",
+                          "name": "Text",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ohlsZ",
+                              "name": "Title",
+                              "fill": "$accent",
+                              "content": "DELIVERY",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 12,
+                              "letterSpacing": 0.2
+                            },
+                            {
+                              "type": "text",
+                              "id": "E64JE",
+                              "name": "Sub",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Estimated delivery within 2–3 business days.",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 11,
+                              "fontWeight": "300"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon",
+                          "id": "a8RSX",
+                          "name": "Chevron",
+                          "width": 14,
+                          "height": 14,
+                          "icon": "chevron-right",
+                          "library": "lucide",
+                          "fill": "$ink"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hAUGu",
+                      "name": "GIFT NOTE",
+                      "width": "fill_container",
+                      "stroke": "$hairline",
+                      "strokeWidth": {
+                        "top": 1
+                      },
+                      "padding": [
+                        14,
+                        0
+                      ],
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "w6WGDu",
+                          "name": "Text",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "gO5dT",
+                              "name": "Title",
+                              "fill": "$accent",
+                              "content": "GIFT NOTE",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 12,
+                              "letterSpacing": 0.2
+                            },
+                            {
+                              "type": "text",
+                              "id": "n1QWj",
+                              "name": "Sub",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Add a note, no prices shown.",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 11,
+                              "fontWeight": "300"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon",
+                          "id": "YEYu9",
+                          "name": "Chevron",
+                          "width": 14,
+                          "height": 14,
+                          "icon": "chevron-right",
+                          "library": "lucide",
+                          "fill": "$ink"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nQM4T",
+                      "name": "FIND IN STORE",
+                      "width": "fill_container",
+                      "stroke": "$hairline",
+                      "strokeWidth": {
+                        "top": 1
+                      },
+                      "padding": [
+                        14,
+                        0
+                      ],
+                      "justifyContent": "space_between",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ML7H0",
+                          "name": "Text",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "e4ESat",
+                              "name": "Title",
+                              "fill": "$accent",
+                              "content": "FIND IN STORE",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 12,
+                              "letterSpacing": 0.2
+                            },
+                            {
+                              "type": "text",
+                              "id": "S5gE3V",
+                              "name": "Sub",
+                              "fill": "$muted",
+                              "textGrowth": "fixed-width",
+                              "width": "fill_container",
+                              "content": "Available for pickup within 1–2 business days.",
+                              "fontFamily": "$font-sans",
+                              "fontSize": 11,
+                              "fontWeight": "300"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "icon",
+                          "id": "niUTW",
+                          "name": "Chevron",
+                          "width": 14,
+                          "height": 14,
+                          "icon": "chevron-right",
+                          "library": "lucide",
+                          "fill": "$ink"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "S16D1",
+                  "name": "Description",
+                  "fill": "$ink",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Cut boxy in a dense 240gsm jersey that holds its own line. Contrast ecru flatlock stitching traces the shoulders and side seams; a woven PRTFLO tab sits at the hem.",
+                  "lineHeight": 1.6,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13,
+                  "fontWeight": "300"
+                },
+                {
+                  "type": "frame",
+                  "id": "NqMb5",
+                  "name": "Bullets",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 6,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "EnAHK",
+                      "name": "Dropped shoulders",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "FLvto",
+                          "name": "Dash",
+                          "fill": "$muted",
+                          "content": "—",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        },
+                        {
+                          "type": "text",
+                          "id": "qR6y3",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Dropped shoulders",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Dxe57",
+                      "name": "240gsm cotton jersey",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "i8LTB",
+                          "name": "Dash",
+                          "fill": "$muted",
+                          "content": "—",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        },
+                        {
+                          "type": "text",
+                          "id": "piaNv",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "240gsm cotton jersey",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "OGv51",
+                      "name": "Boxy fit",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ept1y",
+                          "name": "Dash",
+                          "fill": "$muted",
+                          "content": "—",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        },
+                        {
+                          "type": "text",
+                          "id": "BM8f9",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Boxy fit",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XO1i2",
+                      "name": "Ecru flatlock seam detail",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "dGUUs",
+                          "name": "Dash",
+                          "fill": "$muted",
+                          "content": "—",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        },
+                        {
+                          "type": "text",
+                          "id": "XkdiQ",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Ecru flatlock seam detail",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "F9oiW",
+                      "name": "Woven PRTFLO hem tab",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JbotH",
+                          "name": "Dash",
+                          "fill": "$muted",
+                          "content": "—",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        },
+                        {
+                          "type": "text",
+                          "id": "eE1Iq",
+                          "name": "Label",
+                          "fill": "$ink",
+                          "content": "Woven PRTFLO hem tab",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 12,
+                          "fontWeight": "300"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "Nipgi",
+                  "name": "Show More",
+                  "fill": "$accent",
+                  "content": "+ SHOW MORE",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 11,
+                  "letterSpacing": 0.3
+                },
+                {
+                  "type": "text",
+                  "id": "YU7ZG",
+                  "name": "Need Help",
+                  "fill": "$accent",
+                  "content": "Need help?",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 12
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "ground": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "canvas": {
+      "type": "color",
+      "value": "#FFFFFF"
+    },
+    "panel": {
+      "type": "color",
+      "value": "#F2F2F2"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#111111"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#767676"
+    },
+    "hairline": {
+      "type": "color",
+      "value": "#E2E2E2"
+    },
+    "selected": {
+      "type": "color",
+      "value": "#D4D4D4"
+    },
+    "accent": {
+      "type": "color",
+      "value": "#1414E0"
+    },
+    "font-sans": {
+      "type": "string",
+      "value": "Geist"
+    }
+  },
+  "fileToken": "20a61085-abb5-44bb-870f-132040e11275"
+}

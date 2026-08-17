@@ -21,7 +21,7 @@ password from `.env.local` and submit it once.
 ## Flows worth driving
 
 - **PDP** `/product/heavyweight-boxy-tee` — gallery, ref-image hover, ADD TO BASKET (button flips
-  to "Added", header count ticks), PIPELINE (generation dossier overlay with the
+  to "Added", header count ticks), WORKFLOW (generation dossier overlay with the
   model + mannequin + backdrop = final-shot animation; replays on each open).
 - **Basket** `/basket` — qty steppers, remove, subtotal; empty state after removing everything.
 - **Checkout** `/checkout` — delivery form → CONTINUE TO PAYMENT → ~1.4s processing beat → the

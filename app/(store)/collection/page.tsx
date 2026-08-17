@@ -6,7 +6,6 @@ import { PRODUCTS } from '@/config/products';
 import { CampaignSlot } from '@/components/storefront/CampaignSlot';
 import { CampaignProcess } from '@/components/storefront/CampaignProcess';
 import { ProductGrid } from '@/components/storefront/ProductGrid';
-import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
 import { campaignBanners, spotImage, withExistingImages } from '@/lib/images';
 
@@ -28,97 +27,118 @@ export default function CollectionPage() {
 
   return (
     <>
-      <section className="relative">
-        {/* svh, not vh: mobile browser chrome makes 72vh taller than the
-            visible viewport and the hero jumps as the toolbar collapses. */}
-        <div className="grid h-[72svh] min-h-[480px] grid-cols-1 md:grid-cols-2">
-          <div className="pixel-field bg-panel" />
-          <div className="pixel-field hidden bg-selected md:block" />
+      {/* Pinned wordmark zone: hero + category strip + campaign banner run as
+          one continuous, zero-margin block of imagery. PRTFLO's wordmark
+          stays anchored near the bottom of the viewport for the full scroll
+          through this zone via `sticky bottom-*`, so it rides along through
+          all three sections and lands flush with the bottom edge of the
+          campaign banner — the zone's last section — as it releases into
+          normal flow right where the product grid begins. Grid-stack (both
+          children in the same cell) overlays the sticky wordmark on top of
+          the in-flow imagery without it taking its own layout space
+          (`h-0`). */}
+      <div className="grid grid-cols-1">
+        <div className="col-start-1 row-start-1">
+          <section className="relative">
+            {/* svh, not vh: mobile browser chrome makes 100vh taller than the
+                visible viewport and the hero jumps as the toolbar collapses.
+                Full page height, confirmed from screenshot — Acne's hero and
+                category panels each run close to a full viewport, not a
+                fraction of one. */}
+            <div className="grid h-svh min-h-[560px] grid-cols-1 md:grid-cols-2">
+              {/* Visual placeholders: real Home-department shots standing in
+                  for whatever the eventual hero imagery is. Both act as
+                  buttons through to /home — black text throughout for
+                  legibility, and a solid button chip as the clear click
+                  target rather than bare text over the photo. */}
+              <Link href="/home" className="grain group relative block overflow-hidden bg-panel">
+                <Image
+                  src="/products/home/sculptural-stoneware-vase/01.webp"
+                  alt=""
+                  fill
+                  priority
+                  quality={90}
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover"
+                />
+                <p className="absolute left-4 top-4 text-[10px] uppercase tracking-[0.04em] text-ink">
+                  {COPY.home.heroEyebrow}
+                </p>
+                <span className="absolute bottom-4 left-4 bg-canvas px-4 py-2 text-[11px] uppercase tracking-[0.04em] text-ink transition-colors group-hover:bg-ink group-hover:text-canvas">
+                  Shop Home
+                </span>
+              </Link>
+              <Link href="/home" className="grain group relative hidden overflow-hidden bg-selected md:block">
+                <Image
+                  src="/products/home/washed-linen-bedding-stack/01.webp"
+                  alt=""
+                  fill
+                  priority
+                  quality={90}
+                  sizes="50vw"
+                  className="object-cover"
+                />
+                <p className="absolute left-4 top-4 text-[10px] uppercase tracking-[0.04em] text-ink">
+                  {SITE.brandSerial}
+                </p>
+                <span className="absolute bottom-4 left-4 bg-canvas px-4 py-2 text-[11px] uppercase tracking-[0.04em] text-ink transition-colors group-hover:bg-ink group-hover:text-canvas">
+                  Shop Home
+                </span>
+              </Link>
+            </div>
+          </section>
+
+          {/* Tiles act as buttons: a solid canvas/ink chip is the click
+              target, black text throughout — no more bare white text
+              scrimmed over the photo. Men/Women only — Home has no range
+              yet, so it's not featured here (it gets the hero row instead). */}
+          <section className="grid grid-cols-1 md:grid-cols-2">
+            {CATEGORIES.filter((c) => c.slug !== 'home').map((c) => {
+              const spot = spotImage(c.slug);
+              return (
+                <Link key={c.slug} href={`/${c.slug}`} className="group relative block">
+                  {/* 275:410 — the confirmed Acne spot ratio, not viewport
+                      height: a fixed portrait shape reads consistently across
+                      window sizes where h-svh didn't. */}
+                  <div className="grain relative aspect-[275/410] overflow-hidden bg-panel transition-colors duration-500 group-hover:bg-selected">
+                    {spot ? (
+                      <Image
+                        src={spot}
+                        alt={c.name}
+                        fill
+                        quality={90}
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className="object-cover"
+                      />
+                    ) : null}
+                  </div>
+                  <CampaignProcess id={`spot/${c.slug}`} />
+                  <span className="absolute bottom-4 left-4 bg-canvas px-4 py-2 text-[11px] uppercase tracking-[0.04em] text-ink transition-colors group-hover:bg-ink group-hover:text-canvas">
+                    Shop {c.name}
+                  </span>
+                </Link>
+              );
+            })}
+          </section>
+
+          {/* Campaign — one straightforward frame; the editorial expansion
+              is /campaign. Now part of the pinned-wordmark zone, not a
+              separate section after it. */}
+          <CampaignSlot image={banners[0]} />
         </div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-          <p className="text-[11px] uppercase tracking-[0.04em] text-muted">
-            {COPY.home.heroEyebrow}
-          </p>
-          <h1 className="mt-4 text-5xl font-normal uppercase leading-[0.95] tracking-[0.04em] text-ink md:text-7xl lg:text-8xl">
+
+        <div
+          aria-hidden
+          className="pointer-events-none sticky bottom-8 z-10 col-start-1 row-start-1 self-end select-none md:bottom-12"
+        >
+          <span className="block whitespace-nowrap text-center text-[22vw] font-light uppercase leading-none tracking-tight text-ink md:text-[18vw]">
             {SITE.brandName}
-          </h1>
-          <span className="mt-4 text-[11px] uppercase tracking-[0.2em] text-muted">
-            {SITE.brandSerial}
           </span>
         </div>
-      </section>
+      </div>
 
-      <section className="border-b border-hairline px-4 py-16 md:px-10 md:py-20">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_1fr] lg:items-end">
-          <h2 className="text-3xl font-normal uppercase leading-[1.05] tracking-[0.02em] text-ink md:text-4xl">
-            {COPY.home.heroHeading}
-          </h2>
-          <div>
-            <p className="max-w-xl text-sm leading-relaxed text-muted">
-              {COPY.home.heroSubcopy}
-            </p>
-            <div className="mt-7 flex flex-wrap gap-2">
-              <Button href={COPY.home.primaryCta.href} size="lg">
-                {COPY.home.primaryCta.label}
-              </Button>
-              <Button
-                href={COPY.home.secondaryCta.href}
-                size="lg"
-                variant="secondary"
-              >
-                {COPY.home.secondaryCta.label}
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Tile labels run light on a bottom scrim over a photo (spot content
-          is arbitrary — ink can't be trusted to read against it) and stay
-          ink on the bare panel fallback, where a scrim would be noise. */}
-      <section className="grid grid-cols-1 gap-1 md:grid-cols-3">
-        {CATEGORIES.map((c) => {
-          const spot = spotImage(c.slug);
-          return (
-            <Link key={c.slug} href={`/${c.slug}`} className="group relative block">
-              <div className="grain pixel-field relative aspect-[4/5] overflow-hidden bg-panel transition-colors duration-500 group-hover:bg-selected md:aspect-[3/4]">
-                {spot ? (
-                  <>
-                    <Image
-                      src={spot}
-                      alt={c.name}
-                      fill
-                      quality={90}
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink/55 to-transparent" />
-                  </>
-                ) : null}
-              </div>
-              <CampaignProcess id={`spot/${c.slug}`} />
-              <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5">
-                <span
-                  className={`text-[12px] uppercase tracking-[0.04em] ${spot ? 'text-canvas' : 'text-ink'}`}
-                >
-                  {c.name}
-                </span>
-                <span
-                  className={`text-[11px] uppercase tracking-[0.04em] transition-colors ${spot ? 'text-canvas/70 group-hover:text-canvas' : 'text-muted group-hover:text-ink'}`}
-                >
-                  View
-                </span>
-              </div>
-            </Link>
-          );
-        })}
-      </section>
-
-      {/* Campaign — one straightforward frame; the editorial expansion is /campaign */}
-      <CampaignSlot image={banners[0]} />
-
-      <section className="px-4 py-16 md:px-10 md:py-20">
-        <div className="mb-8 flex items-end justify-between gap-6 border-b border-hairline pb-4">
+      <section className="py-16 md:py-20">
+        <div className="mb-8 flex items-end justify-between gap-6 border-b border-hairline px-4 pb-4 md:px-10">
           <h2 className="text-[12px] uppercase tracking-[0.04em] text-ink">
             New &amp; best selling
           </h2>
@@ -129,7 +149,7 @@ export default function CollectionPage() {
             View all
           </Link>
         </div>
-        <ProductGrid products={featured} />
+        <ProductGrid products={featured} cols="fixed-4" />
       </section>
     </>
   );

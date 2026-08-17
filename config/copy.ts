@@ -17,7 +17,7 @@ export const COPY = {
   campaign: {
     eyebrow: 'Campaign · SS26',
     heading: 'The season campaign.',
-    body: 'Staged entirely in the pipeline: no location, no crew. Just the garments, placed wherever they need to be.',
+    body: 'Staged entirely in the workflow: no location, no crew. Just the garments, placed wherever they need to be.',
     cta: { label: 'How this is made', href: '/intro' },
     image: '/campaign/ss26-01.webp',
   },
@@ -33,12 +33,12 @@ export const COPY = {
     arrival: {
       eyebrow: 'You’re in',
       heading: 'Not a real shop.',
-      sub: 'A working fashion house where every image is generated. There’s no studio behind any of this, just a pipeline.',
+      sub: 'A working fashion house where every image is generated. There’s no studio behind any of this, just a workflow.',
       scrollCue: 'Scroll',
     },
     plates: [
       'The garments are real product concepts, designed, named, and priced like a label you could actually buy from.',
-      'The images are another story. No photographer, no model, no set. What looks like a campaign came out of a prompt and a pipeline.',
+      'The images are another story. No photographer, no model, no set. What looks like a campaign came out of a prompt and a workflow.',
       'The storefront is meant to feel like the genuine article. If you believed it for a moment, it did its job.',
     ],
     reveal: {
@@ -84,16 +84,16 @@ export const COPY = {
       imageryNote: 'Those two figures cover the same set of shots, the ones that just sold you this order.',
       contactHeading: 'What this actually is',
       contactBody:
-        'PRTFLO is my portfolio piece: one designer running a full catalogue on a generation pipeline. If you need something like this built, whether a range, a campaign, or a whole storefront, I’d be glad to talk.',
+        'PRTFLO is my portfolio piece: one designer running a full catalogue on a generation workflow. If you need something like this built, whether a range, a campaign, or a whole storefront, I’d be glad to talk.',
       contactCta: 'Get in touch',
       secondaryCta: 'How it was made',
       keepBrowsing: 'Keep browsing',
     },
   },
   pipeline: {
-    eyebrow: 'Pipeline',
+    eyebrow: 'Workflow',
     heading: 'There was no shoot.',
-    sub: 'A model who doesn’t exist, a garment never sewn, a backdrop never built, all put together in the pipeline. Here’s the record of making this piece:',
+    sub: 'A model who doesn’t exist, a garment never sewn, a backdrop never built, all put together in the workflow. Here’s the record of making this piece:',
     equation: {
       model: 'Model',
       mannequin: 'Mannequin',
@@ -103,7 +103,7 @@ export const COPY = {
     labels: {
       frames: 'Frames',
       attempts: 'Attempts',
-      time: 'Time in pipeline',
+      time: 'Time in workflow',
       costPerAttempt: 'Cost per attempt',
       total: 'Generation total',
       studio: 'Studio equivalent',

@@ -15,7 +15,7 @@ import { PipelineDossier } from './PipelineDossier';
 function Accordion({ title, children }: { title: string; children: ReactNode }) {
   return (
     <details className="group border-b border-hairline">
-      <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[12px] uppercase tracking-[0.04em] text-ink [&::-webkit-details-marker]:hidden">
+      <summary className="flex cursor-pointer list-none items-center justify-between py-4 text-[12px] uppercase tracking-[0.04em] text-accent [&::-webkit-details-marker]:hidden">
         {title}
         <svg
           viewBox="0 0 24 24"
@@ -67,21 +67,19 @@ export function ProductDetails({
       <p className="text-[11px] uppercase tracking-[0.04em] text-muted">
         {product.category}
       </p>
-      <h1 className="mt-2 text-[15px] font-normal uppercase tracking-[0.04em] text-ink">
-        {product.name}
-      </h1>
-      <p className="mt-2 text-[13px] tabular-nums text-ink">
-        {formatPrice(product.basePriceGBP, code)}
-      </p>
-
-      <hr className="mt-6 border-hairline" />
+      <div className="mt-2 flex items-start justify-between gap-4">
+        <h1 className="text-[15px] font-normal uppercase tracking-[0.04em] text-ink">
+          {product.name}
+        </h1>
+        <p className="shrink-0 text-[15px] tabular-nums text-ink">
+          {formatPrice(product.basePriceGBP, code)}
+        </p>
+      </div>
+      {colour ? <p className="mt-1 text-[12px] text-muted">{colour}</p> : null}
 
       {product.colours?.length ? (
         <div className="mt-6">
-          <p className="text-[11px] uppercase tracking-[0.04em] text-muted">
-            Colour{colour ? <span className="text-ink"> — {colour}</span> : null}
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2">
             {product.colours.map((c) => (
               <button
                 key={c}
@@ -105,9 +103,12 @@ export function ProductDetails({
 
       {product.sizes?.length ? (
         <div className="mt-6">
-          <p className="text-[11px] uppercase tracking-[0.04em] text-muted">
-            Size{size ? <span className="text-ink"> — {size}</span> : null}
-          </p>
+          <div className="flex items-center justify-between">
+            <p className="text-[11px] uppercase tracking-[0.04em] text-muted">
+              Size{size ? <span className="text-ink"> — {size}</span> : null}
+            </p>
+            <span className="text-[12px] text-accent">Size guide</span>
+          </div>
           <div className="mt-3 flex flex-wrap gap-2">
             {product.sizes.map((s) => (
               <button
@@ -120,7 +121,7 @@ export function ProductDetails({
                   !s.inStock
                     ? 'cursor-not-allowed border-hairline text-muted line-through'
                     : size === s.label
-                      ? 'border-ink bg-selected text-ink'
+                      ? 'border-ink bg-ink text-canvas'
                       : 'border-hairline text-ink hover:border-ink',
                 ].join(' ')}
               >
@@ -146,7 +147,7 @@ export function ProductDetails({
             className="flex-1"
             onClick={() => setDossierOpen(true)}
           >
-            Pipeline
+            Workflow
           </Button>
         </div>
         <p aria-live="polite" className="text-[11px] uppercase tracking-[0.04em] text-muted">
