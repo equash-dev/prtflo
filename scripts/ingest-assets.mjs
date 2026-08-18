@@ -16,11 +16,15 @@ const ROOT = process.cwd();
 const DROP_DIR = path.join(ROOT, 'product');
 const OUT_ROOT = path.join(ROOT, 'public', 'products');
 
-// Full native resolution (masters are 3584px wide); the zoom lightbox serves
-// these files directly, so keep every pixel. Browsing pages are unaffected —
-// next/image caps what it delivers to the viewport.
-const MAX_WIDTH = 3840;
-const QUALITY = 90;
+// Every browsing context (grid, hero, PDP frame, dossier, basket, campaign,
+// spots) gets this resized "display" tier. Numbered shots additionally get
+// a full native-resolution "-NN-zoom.webp" tier (masters are 3584px wide)
+// for the PDP zoom lightbox, which serves that file directly and skips
+// next/image's optimizer entirely.
+const DISPLAY_MAX_WIDTH = 2400;
+const DISPLAY_QUALITY = 85;
+const ZOOM_MAX_WIDTH = 3840;
+const ZOOM_QUALITY = 90;
 const SHOTS_PER_PRODUCT = 4;
 
 // Keep in sync with config/products.ts.
@@ -93,15 +97,26 @@ const skipped = [];
 const homeRefs = new Map();
 const homeGroups = new Map();
 
-async function toWebp(file, outPath) {
+async function writeDisplay(file, outPath) {
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
   await sharp(file)
-    .resize({ width: MAX_WIDTH, withoutEnlargement: true })
-    .webp({ quality: QUALITY, smartSubsample: true, effort: 5 })
+    .resize({ width: DISPLAY_MAX_WIDTH, withoutEnlargement: true })
+    .webp({ quality: DISPLAY_QUALITY, smartSubsample: true, effort: 5 })
     .toFile(outPath);
   const kb = Math.round(fs.statSync(outPath).size / 1024);
   console.log(`${path.basename(file)} → ${path.relative(ROOT, outPath)} (${kb} KB)`);
   converted += 1;
+}
+
+// Numbered shots (not refs/banners/spots) also get a full-resolution
+// "-zoom.webp" sibling for the PDP zoom lightbox.
+async function writeShotPair(file, outPath) {
+  await writeDisplay(file, outPath);
+  const zoomPath = outPath.replace(/\.webp$/, '-zoom.webp');
+  await sharp(file)
+    .resize({ width: ZOOM_MAX_WIDTH, withoutEnlargement: true })
+    .webp({ quality: ZOOM_QUALITY, smartSubsample: true, effort: 5 })
+    .toFile(zoomPath);
 }
 
 for (const file of walk(DROP_DIR)) {
@@ -128,16 +143,8 @@ for (const file of walk(DROP_DIR)) {
 
   const banner = base.match(BANNER_RE);
   if (banner) {
-    const outDir = path.join(ROOT, 'public', 'campaign');
-    const outPath = path.join(outDir, `banner-${banner[1]}.webp`);
-    fs.mkdirSync(outDir, { recursive: true });
-    await sharp(file)
-      .resize({ width: MAX_WIDTH, withoutEnlargement: true })
-      .webp({ quality: QUALITY, smartSubsample: true, effort: 5 })
-      .toFile(outPath);
-    const kb = Math.round(fs.statSync(outPath).size / 1024);
-    console.log(`${base} → ${path.relative(ROOT, outPath)} (${kb} KB)`);
-    converted += 1;
+    const outPath = path.join(ROOT, 'public', 'campaign', `banner-${banner[1]}.webp`);
+    await writeDisplay(file, outPath);
     continue;
   }
 
@@ -148,16 +155,8 @@ for (const file of walk(DROP_DIR)) {
       skipped.push(`${base} — unknown department '${spotMatch[1]}'`);
       continue;
     }
-    const outDir = path.join(ROOT, 'public', 'spots');
-    const outPath = path.join(outDir, `${slug}.webp`);
-    fs.mkdirSync(outDir, { recursive: true });
-    await sharp(file)
-      .resize({ width: MAX_WIDTH, withoutEnlargement: true })
-      .webp({ quality: QUALITY, smartSubsample: true, effort: 5 })
-      .toFile(outPath);
-    const kb = Math.round(fs.statSync(outPath).size / 1024);
-    console.log(`${base} → ${path.relative(ROOT, outPath)} (${kb} KB)`);
-    converted += 1;
+    const outPath = path.join(ROOT, 'public', 'spots', `${slug}.webp`);
+    await writeDisplay(file, outPath);
     continue;
   }
 
@@ -177,18 +176,13 @@ for (const file of walk(DROP_DIR)) {
   }
 
   const outName = shot ? `${shot[3]}.webp` : 'ref-01.webp';
-  const outDir = path.join(OUT_ROOT, product.category, product.slug);
-  const outPath = path.join(outDir, outName);
-  fs.mkdirSync(outDir, { recursive: true });
+  const outPath = path.join(OUT_ROOT, product.category, product.slug, outName);
 
-  await sharp(file)
-    .resize({ width: MAX_WIDTH, withoutEnlargement: true })
-    .webp({ quality: QUALITY, smartSubsample: true, effort: 5 })
-    .toFile(outPath);
-
-  const kb = Math.round(fs.statSync(outPath).size / 1024);
-  console.log(`${base} → ${path.relative(ROOT, outPath)} (${kb} KB)`);
-  converted += 1;
+  if (shot) {
+    await writeShotPair(file, outPath);
+  } else {
+    await writeDisplay(file, outPath);
+  }
 }
 
 // Home packs convert after the walk so each pack's shots can be renumbered
@@ -197,14 +191,14 @@ for (const [code, group] of homeGroups) {
   const slug = HOME_SLUGS[code];
   group.sort((a, b) => a.n - b.n);
   for (const [i, shot] of group.entries()) {
-    await toWebp(
+    await writeShotPair(
       shot.file,
       path.join(OUT_ROOT, 'home', slug, `${String(i + 1).padStart(2, '0')}.webp`),
     );
   }
 }
 for (const [code, file] of homeRefs) {
-  await toWebp(file, path.join(OUT_ROOT, 'home', HOME_SLUGS[code], 'ref-01.webp'));
+  await writeDisplay(file, path.join(OUT_ROOT, 'home', HOME_SLUGS[code], 'ref-01.webp'));
 }
 
 for (const s of skipped) console.warn(`skipped: ${s}`);

@@ -21,10 +21,13 @@ export function withExistingImages(product: Product): Product {
 
 // PDP gallery keeps one frame per configured shot even before the file
 // lands, and pairs each shot with its generation reference when one exists
-// at the ref-NN.webp convention (e.g. 01.webp → ref-01.webp).
+// at the ref-NN.webp convention (e.g. 01.webp → ref-01.webp). `src` points
+// at the display tier (resized for browsing); `zoomSrc` points at the
+// full-resolution NN-zoom.webp tier, used only by the zoom lightbox.
 export interface GalleryShot extends ProductImage {
   exists: boolean;
   refSrc?: string;
+  zoomSrc?: string;
 }
 
 // Campaign banners land as public/campaign/banner-NN.webp via the ingest
@@ -45,14 +48,34 @@ export function spotImage(slug: string): string | undefined {
   return imageExists(src) ? src : undefined;
 }
 
+export interface CampaignVideo {
+  webm: string;
+  mp4: string;
+  poster?: string;
+}
+
+// The campaign slot's video loop, when one has landed at
+// public/campaign/campaign-loop.{webm,mp4} (+ optional poster frame).
+// webm (VP9) is the primary source — mp4 (H.264) is the Safari fallback.
+export function campaignVideo(): CampaignVideo | undefined {
+  const webm = '/campaign/campaign-loop.webm';
+  const mp4 = '/campaign/campaign-loop.mp4';
+  if (!imageExists(webm) || !imageExists(mp4)) return undefined;
+  const poster = '/campaign/campaign-loop-poster.webp';
+  return { webm, mp4, poster: imageExists(poster) ? poster : undefined };
+}
+
 export function galleryShots(product: Product): GalleryShot[] {
   return product.images.map((img) => {
     const refSrc = img.src.replace(/\/(\d+)\.webp$/, '/ref-$1.webp');
+    const zoomSrc = img.src.replace(/\/(\d+)\.webp$/, '/$1-zoom.webp');
     return {
       ...img,
       exists: imageExists(img.src),
       refSrc:
         refSrc !== img.src && imageExists(refSrc) ? refSrc : undefined,
+      zoomSrc:
+        zoomSrc !== img.src && imageExists(zoomSrc) ? zoomSrc : undefined,
     };
   });
 }

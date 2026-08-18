@@ -7,11 +7,11 @@ import type { GalleryShot } from '@/lib/images';
 // Fullscreen viewer for the PDP gallery, patterned on Zara's zoomed view:
 // every shot stacked in one free vertical scroll at ~80vw, a fixed thumbnail
 // rail on the left tracking the scroll position, and a click-anchored deeper
-// zoom that hides the chrome. The stack serves optimized frames; the raw
-// ingested webp (up to 3840px) is only mounted over a frame once it has been
-// zoomed, so zoom still resolves to the master's actual pixels without the
-// open paying for every master up front. Esc exits the zoom, then closes;
-// arrows step between shots.
+// zoom that hides the chrome. The stack serves the resized display tier; the
+// full-resolution NN-zoom.webp master is only mounted over a frame once it
+// has been zoomed, so zoom still resolves to native pixels without the open
+// paying for every master up front. Esc exits the zoom, then closes; arrows
+// step between shots.
 const ZOOM = 2;
 
 export function GalleryLightbox({
@@ -149,7 +149,7 @@ export function GalleryLightbox({
                 />
                 {masters.has(i) ? (
                   <Image
-                    src={shot.src}
+                    src={shot.zoomSrc ?? shot.src}
                     alt=""
                     aria-hidden
                     fill

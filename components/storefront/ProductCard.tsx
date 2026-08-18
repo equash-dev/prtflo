@@ -61,7 +61,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
       </Link>
 
-      <div className="mt-2 flex items-start justify-between gap-2">
+      <div className="mt-2 flex items-start justify-between gap-2 px-2">
         <Link href={href} prefetch={false} className="min-w-0 flex-1">
           <h3 className="truncate text-[12px] text-accent">{product.name}</h3>
         </Link>
@@ -71,7 +71,7 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       {colours.length > 1 ? (
-        <p className="mt-0.5 text-[11px] text-muted">{colours.length} Colours</p>
+        <p className="mt-0.5 px-2 text-[11px] text-muted">{colours.length} Colours</p>
       ) : null}
     </div>
   );

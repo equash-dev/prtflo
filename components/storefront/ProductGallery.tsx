@@ -22,6 +22,11 @@ function Frame({
   onZoom?: () => void;
 }) {
   const [showRef, setShowRef] = useState(false);
+  // Once revealed, the reference frame stays mounted (opacity-toggled) so
+  // re-toggling doesn't refetch it — but it never mounts at all until the
+  // visitor asks for it, so a product page doesn't pay for every reference
+  // image up front.
+  const [refRevealed, setRefRevealed] = useState(false);
   const assetId =
     shot.assetCode ?? shot.src.replace('/products/', '').replace('.webp', '');
   return (
@@ -41,7 +46,7 @@ function Frame({
               showRef ? 'opacity-0' : '',
             ].join(' ')}
           />
-          {shot.refSrc ? (
+          {shot.refSrc && refRevealed ? (
             <Image
               src={shot.refSrc}
               alt={`${shot.alt} — generation reference`}
@@ -66,7 +71,10 @@ function Frame({
             <button
               type="button"
               aria-pressed={showRef}
-              onClick={() => setShowRef((v) => !v)}
+              onClick={() => {
+                setRefRevealed(true);
+                setShowRef((v) => !v);
+              }}
               className="absolute left-3 top-3 z-30 border border-hairline bg-canvas/85 px-2.5 py-1.5 text-[10px] uppercase tracking-[0.04em] text-ink transition-colors hover:bg-canvas"
             >
               {showRef ? 'View final shot' : 'View reference'}

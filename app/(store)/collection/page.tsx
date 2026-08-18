@@ -7,7 +7,15 @@ import { CampaignSlot } from '@/components/storefront/CampaignSlot';
 import { CampaignProcess } from '@/components/storefront/CampaignProcess';
 import { ProductGrid } from '@/components/storefront/ProductGrid';
 import Image from 'next/image';
-import { campaignBanners, spotImage, withExistingImages } from '@/lib/images';
+import { campaignBanners, campaignVideo, withExistingImages } from '@/lib/images';
+
+// Ecommerce product shots for the homepage tiles, not the styled/campaign
+// spot images — a plain-background ghost-hero shot per department reads as
+// "shop the product," which is what these tiles are for.
+const TILE_IMAGES: Record<string, string> = {
+  men: '/products/men/pleated-wide-shorts/01.webp',
+  women: '/products/women/oversized-double-breasted-blazer/01.webp',
+};
 
 export default function CollectionPage() {
   const banners = campaignBanners();
@@ -34,67 +42,59 @@ export default function CollectionPage() {
           all three sections and lands flush with the bottom edge of the
           campaign banner — the zone's last section — as it releases into
           normal flow right where the product grid begins. Grid-stack (both
-          children in the same cell) overlays the sticky wordmark on top of
-          the in-flow imagery without it taking its own layout space
-          (`h-0`). */}
+          children in the same cell) overlays the sticky wordmark in front of
+          the in-flow imagery without it taking its own layout space. */}
       <div className="grid grid-cols-1">
         <div className="col-start-1 row-start-1">
-          <section className="relative">
-            {/* svh, not vh: mobile browser chrome makes 100vh taller than the
-                visible viewport and the hero jumps as the toolbar collapses.
-                Full page height, confirmed from screenshot — Acne's hero and
-                category panels each run close to a full viewport, not a
-                fraction of one. */}
-            <div className="grid h-svh min-h-[560px] grid-cols-1 md:grid-cols-2">
-              {/* Visual placeholders: real Home-department shots standing in
-                  for whatever the eventual hero imagery is. Both act as
-                  buttons through to /home — black text throughout for
-                  legibility, and a solid button chip as the clear click
-                  target rather than bare text over the photo. */}
-              <Link href="/home" className="grain group relative block overflow-hidden bg-panel">
-                <Image
-                  src="/products/home/sculptural-stoneware-vase/01.webp"
-                  alt=""
-                  fill
-                  priority
-                  quality={90}
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-                <p className="absolute left-4 top-4 text-[10px] uppercase tracking-[0.04em] text-ink">
-                  {COPY.home.heroEyebrow}
-                </p>
-                <span className="absolute bottom-4 left-4 bg-canvas px-4 py-2 text-[11px] uppercase tracking-[0.04em] text-ink transition-colors group-hover:bg-ink group-hover:text-canvas">
-                  Shop Home
-                </span>
-              </Link>
-              <Link href="/home" className="grain group relative hidden overflow-hidden bg-selected md:block">
-                <Image
-                  src="/products/home/washed-linen-bedding-stack/01.webp"
-                  alt=""
-                  fill
-                  priority
-                  quality={90}
-                  sizes="50vw"
-                  className="object-cover"
-                />
-                <p className="absolute left-4 top-4 text-[10px] uppercase tracking-[0.04em] text-ink">
-                  {SITE.brandSerial}
-                </p>
-                <span className="absolute bottom-4 left-4 bg-canvas px-4 py-2 text-[11px] uppercase tracking-[0.04em] text-ink transition-colors group-hover:bg-ink group-hover:text-canvas">
-                  Shop Home
-                </span>
-              </Link>
-            </div>
+          {/* svh, not vh: mobile browser chrome makes 100vh taller than the
+              visible viewport and the hero jumps as the toolbar collapses. */}
+          <section className="grid h-svh min-h-[560px] grid-cols-1 md:grid-cols-2">
+            {/* Visual placeholders: real Home-department shots standing in
+                for whatever the eventual hero imagery is. Both act as
+                buttons through to /home — plain black text, no chip. */}
+            <Link href="/home" className="grain group relative block overflow-hidden bg-panel">
+              <Image
+                src="/products/home/sculptural-stoneware-vase/01.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+              />
+              <p className="absolute left-4 top-4 text-[10px] uppercase tracking-[0.04em] text-ink">
+                {COPY.home.heroEyebrow}
+              </p>
+              <span className="absolute bottom-4 left-4 text-[11px] uppercase tracking-[0.04em] text-ink transition-opacity group-hover:opacity-60">
+                Shop Home
+              </span>
+            </Link>
+            <Link href="/home" className="grain group relative hidden overflow-hidden bg-selected md:block">
+              <Image
+                src="/products/home/washed-linen-bedding-stack/01.webp"
+                alt=""
+                fill
+                priority
+                quality={90}
+                sizes="50vw"
+                className="object-cover"
+              />
+              <p className="absolute left-4 top-4 text-[10px] uppercase tracking-[0.04em] text-ink">
+                {SITE.brandSerial}
+              </p>
+              <span className="absolute bottom-4 left-4 text-[11px] uppercase tracking-[0.04em] text-ink transition-opacity group-hover:opacity-60">
+                Shop Home
+              </span>
+            </Link>
           </section>
 
-          {/* Tiles act as buttons: a solid canvas/ink chip is the click
-              target, black text throughout — no more bare white text
-              scrimmed over the photo. Men/Women only — Home has no range
-              yet, so it's not featured here (it gets the hero row instead). */}
+          {/* Tiles act as buttons: plain black text, no chip — no more bare
+              white text scrimmed over the photo either. Men/Women only —
+              Home has no range yet, so it's not featured here (it gets the
+              hero row instead). */}
           <section className="grid grid-cols-1 md:grid-cols-2">
             {CATEGORIES.filter((c) => c.slug !== 'home').map((c) => {
-              const spot = spotImage(c.slug);
+              const spot = TILE_IMAGES[c.slug];
               return (
                 <Link key={c.slug} href={`/${c.slug}`} className="group relative block">
                   {/* 275:410 — the confirmed Acne spot ratio, not viewport
@@ -113,7 +113,7 @@ export default function CollectionPage() {
                     ) : null}
                   </div>
                   <CampaignProcess id={`spot/${c.slug}`} />
-                  <span className="absolute bottom-4 left-4 bg-canvas px-4 py-2 text-[11px] uppercase tracking-[0.04em] text-ink transition-colors group-hover:bg-ink group-hover:text-canvas">
+                  <span className="absolute bottom-4 left-4 text-[11px] uppercase tracking-[0.04em] text-ink transition-opacity group-hover:opacity-60">
                     Shop {c.name}
                   </span>
                 </Link>
@@ -122,9 +122,9 @@ export default function CollectionPage() {
           </section>
 
           {/* Campaign — one straightforward frame; the editorial expansion
-              is /campaign. Now part of the pinned-wordmark zone, not a
-              separate section after it. */}
-          <CampaignSlot image={banners[0]} />
+              is /campaign. Part of the pinned-wordmark zone, not a separate
+              section after it. */}
+          <CampaignSlot image={banners[0]} video={campaignVideo()} />
         </div>
 
         <div
