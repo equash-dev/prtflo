@@ -37,9 +37,11 @@ function Accordion({ title, children }: { title: string; children: ReactNode }) 
 export function ProductDetails({
   product,
   shots,
+  modelPortraitSrc,
 }: {
   product: Product;
   shots: GalleryShot[];
+  modelPortraitSrc?: string;
 }) {
   const { code } = useCurrency();
   const { add } = useBasket();
@@ -166,6 +168,7 @@ export function ProductDetails({
         <PipelineDossier
           product={product}
           shots={shots}
+          modelPortraitSrc={modelPortraitSrc}
           onClose={() => setDossierOpen(false)}
         />
       ) : null}

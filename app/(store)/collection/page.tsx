@@ -5,6 +5,7 @@ import { CATEGORIES } from '@/config/categories';
 import { PRODUCTS } from '@/config/products';
 import { CampaignSlot } from '@/components/storefront/CampaignSlot';
 import { CampaignProcess } from '@/components/storefront/CampaignProcess';
+import { PinnedWordmark, MID_SPOT_ID } from '@/components/storefront/PinnedWordmark';
 import { ProductGrid } from '@/components/storefront/ProductGrid';
 import Image from 'next/image';
 import { campaignBanners, campaignVideo, withExistingImages } from '@/lib/images';
@@ -92,7 +93,7 @@ export default function CollectionPage() {
               white text scrimmed over the photo either. Men/Women only —
               Home has no range yet, so it's not featured here (it gets the
               hero row instead). */}
-          <section className="grid grid-cols-1 md:grid-cols-2">
+          <section id={MID_SPOT_ID} className="grid grid-cols-1 md:grid-cols-2">
             {CATEGORIES.filter((c) => c.slug !== 'home').map((c) => {
               const spot = TILE_IMAGES[c.slug];
               return (
@@ -127,14 +128,7 @@ export default function CollectionPage() {
           <CampaignSlot image={banners[0]} video={campaignVideo()} />
         </div>
 
-        <div
-          aria-hidden
-          className="pointer-events-none sticky bottom-8 z-10 col-start-1 row-start-1 self-end select-none md:bottom-12"
-        >
-          <span className="block whitespace-nowrap text-center text-[22vw] font-light uppercase leading-none tracking-tight text-ink md:text-[18vw]">
-            {SITE.brandName}
-          </span>
-        </div>
+        <PinnedWordmark />
       </div>
 
       <section className="py-16 md:py-20">

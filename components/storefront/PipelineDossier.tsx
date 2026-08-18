@@ -16,61 +16,94 @@ import { formatPrice } from '@/lib/pricing';
 // assembling into the final shot — beside the honest ledger of what
 // the piece's imagery took to make.
 
-function Plate({
+// The equation redrawn as a node graph: ingredient nodes converge through
+// a bus and trunk line into the final shot, instead of sitting in a flat
+// "+ + =" row. Node/Connectors/Trunk are generic over ingredient count so
+// the same graph serves the two-node (home) and three-node (apparel) case.
+function Node({
   src,
   alt,
+  tag,
   label,
   delayMs,
 }: {
   src?: string;
   alt?: string;
+  tag: string;
   label: string;
   delayMs: number;
 }) {
   return (
     <div
-      className="plate-in flex min-w-0 flex-col gap-1.5"
+      className="plate-in flex min-w-0 flex-1 flex-col items-center gap-1.5"
       style={{ animationDelay: `${delayMs}ms` }}
     >
       <div className="relative aspect-[2/3] w-16 overflow-hidden border border-hairline bg-panel md:w-20">
         {src ? (
           <Image src={src} alt={alt ?? label} fill sizes="5rem" className="object-cover" />
         ) : null}
+        <span className="absolute left-1 top-1 bg-canvas/80 px-1 font-mono text-[8px] text-ink">
+          {tag}
+        </span>
       </div>
-      <span className="text-[9px] uppercase tracking-[0.04em] text-muted">
+      <span className="text-center text-[9px] uppercase tracking-[0.04em] text-muted">
         {label}
       </span>
     </div>
   );
 }
 
-function Operator({ delayMs }: { delayMs: number }) {
+// Each ingredient drops a stub to a shared bus, which necks into a single
+// trunk — the graph reading of "these combine," in place of a plus sign.
+function Connectors({ count, delayMs }: { count: number; delayMs: number }) {
+  const inset = 50 / count;
   return (
-    <span
-      aria-hidden
-      className="plate-in pb-5 text-sm font-light text-muted"
-      style={{ animationDelay: `${delayMs}ms` }}
-    >
-      +
-    </span>
+    <div aria-hidden className="plate-in relative h-5" style={{ animationDelay: `${delayMs}ms` }}>
+      {Array.from({ length: count }).map((_, i) => (
+        <span
+          key={i}
+          className="absolute top-0 h-1/2 w-px bg-hairline"
+          style={{ left: `${((i + 0.5) / count) * 100}%` }}
+        />
+      ))}
+      <span
+        className="absolute top-1/2 h-px bg-hairline"
+        style={{ left: `${inset}%`, right: `${inset}%` }}
+      />
+      <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 bg-accent" />
+    </div>
+  );
+}
+
+function Trunk({ delayMs }: { delayMs: number }) {
+  return (
+    <div aria-hidden className="plate-in relative h-4" style={{ animationDelay: `${delayMs}ms` }}>
+      <span className="absolute left-1/2 h-full w-px -translate-x-1/2 bg-accent" />
+    </div>
   );
 }
 
 export function PipelineDossier({
   product,
   shots,
+  modelPortraitSrc,
   onClose,
 }: {
   product: Product;
   shots: GalleryShot[];
+  modelPortraitSrc?: string;
   onClose: () => void;
 }) {
   const { code } = useCurrency();
   const copy = COPY.pipeline;
+  const isHome = product.category === 'home';
+  const sub = isHome ? copy.subHome : copy.subApparel;
   const figures = generationFigures(product);
   const hero = shots.find((s) => s.exists);
   // Equation ingredients: an on-model frame, the ghost-garment reference,
   // and the seamless warm paper (the panel token — that IS the backdrop).
+  // Home has no model or mannequin shot — the packshot stands in as the
+  // object reference instead.
   const modelShot =
     shots.find(
       (s) => s.exists && (s.shotType === 'editorial' || s.shotType === 'mid-crop'),
@@ -78,6 +111,30 @@ export function PipelineDossier({
   const mannequinSrc = hero?.refSrc;
   const assetId =
     hero?.assetCode ?? `${product.code}_${product.colourCode}_01`;
+
+  const nodes: Array<{ tag: string; src?: string; alt?: string; label: string }> = isHome
+    ? [
+        { tag: '01', src: hero?.src, alt: hero?.alt, label: copy.equation.object },
+        { tag: '02', label: copy.equation.backdrop },
+      ]
+    : [
+        {
+          tag: '01',
+          src: modelPortraitSrc ?? modelShot?.src,
+          alt: product.modelName ? `${product.modelName} — reference portrait` : modelShot?.alt,
+          label: product.modelName
+            ? `${copy.equation.model} — ${product.modelName}`
+            : copy.equation.model,
+        },
+        {
+          tag: '02',
+          src: mannequinSrc,
+          alt: `${product.name} — ghost garment reference`,
+          label: copy.equation.mannequin,
+        },
+        { tag: '03', label: copy.equation.backdrop },
+      ];
+  const outputTag = String(nodes.length + 1).padStart(2, '0');
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -150,32 +207,23 @@ export function PipelineDossier({
       <div className="grid flex-1 gap-8 px-4 pb-10 md:px-6 lg:grid-cols-2 lg:gap-12">
         {/* The shoot that never happened, assembling. */}
         <div className="mx-auto w-full max-w-[340px] self-start md:max-w-[380px] lg:ml-auto lg:mr-0">
-          <div className="flex items-center gap-2 md:gap-3">
-            <Plate
-              src={modelShot?.src}
-              alt={modelShot?.alt}
-              label={copy.equation.model}
-              delayMs={0}
-            />
-            <Operator delayMs={250} />
-            <Plate
-              src={mannequinSrc}
-              alt={`${product.name} — ghost garment reference`}
-              label={copy.equation.mannequin}
-              delayMs={450}
-            />
-            <Operator delayMs={700} />
-            <Plate label={copy.equation.backdrop} delayMs={900} />
+          <div className="flex gap-2 md:gap-3">
+            {nodes.map((n, i) => (
+              <Node key={n.tag} {...n} delayMs={i * 300} />
+            ))}
           </div>
 
+          <Connectors count={nodes.length} delayMs={nodes.length * 300} />
+          <Trunk delayMs={nodes.length * 300 + 200} />
+
           <p
-            className="plate-in mt-5 text-[10px] uppercase tracking-[0.04em] text-muted"
-            style={{ animationDelay: '1200ms' }}
+            className="plate-in text-center text-[9px] uppercase tracking-[0.04em] text-muted"
+            style={{ animationDelay: `${nodes.length * 300 + 350}ms` }}
           >
-            = {copy.equation.final}
+            {outputTag} — {copy.equation.final}
           </p>
 
-          <div className="relative mt-2 aspect-[2/3] w-full overflow-hidden bg-panel">
+          <div className="relative mt-1.5 aspect-[2/3] w-full overflow-hidden bg-panel">
             {hero ? (
               <Image
                 src={hero.src}
@@ -184,12 +232,13 @@ export function PipelineDossier({
                 quality={90}
                 sizes="(min-width: 768px) 380px, 100vw"
                 className="shot-resolve object-cover"
-                style={{ animationDelay: '1500ms' }}
+                style={{ animationDelay: `${nodes.length * 300 + 500}ms` }}
               />
             ) : null}
             <div className="pixel-field absolute inset-0 flex flex-col justify-between bg-canvas/60 p-3">
               <div>
                 <p className="text-[10px] uppercase tracking-[0.04em] text-ink">
+                  <span className="font-mono text-muted">{outputTag} · </span>
                   {PIPELINE.line}
                 </p>
                 <p className="mt-1 font-mono text-[10px] leading-relaxed text-muted">
@@ -208,7 +257,7 @@ export function PipelineDossier({
           <h2 className="mt-3 text-xl font-light uppercase tracking-[0.02em] text-ink md:text-2xl">
             {copy.heading}
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-muted">{copy.sub}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted">{sub}</p>
 
           <dl className="mt-8">
             {rows.map((row) => (

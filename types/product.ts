@@ -28,6 +28,9 @@ export interface GenerationLog {
   /** Total minutes in the pipeline, prompt to accepted frame. Defaults to
    * attempts × the house minutes-per-attempt when omitted. */
   minutes?: number;
+  /** Studio-equivalent cost override. Defaults to frames × the house
+   * studio-shot rate when omitted. */
+  studioGBP?: number;
 }
 
 export interface Product {
@@ -37,6 +40,10 @@ export interface Product {
   code: string;
   /** Three-letter colourway code, e.g. INK. */
   colourCode: string;
+  /** The named AI model who fronts this piece's on-model shots, e.g.
+   * "Marlon". Portrait lands at public/models/{name.toLowerCase()}.webp.
+   * Apparel only — Home has no model in frame. */
+  modelName?: string;
   category: CategorySlug;
   basePriceGBP: number;
   shortDescription: string;

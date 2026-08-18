@@ -26,4 +26,8 @@ export interface CampaignSpot {
   minutes: number;
   /** Indicative studio comparator; defaults to selects × studio shot rate. */
   studioEquivalentGBP?: number;
+  /** Generation-cost override; defaults to attempts × the house per-attempt
+   * rate. For surfaces (like video) priced at a different order of
+   * magnitude than a still-image attempt. */
+  costOverrideGBP?: number;
 }

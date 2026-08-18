@@ -3,7 +3,7 @@
 // switcher like any price on the site.
 export const PIPELINE = {
   // Cost of one pipeline attempt (prompt + generation run), kept or discarded.
-  generationCostGBP: 0.12,
+  generationCostGBP: 0.177,
   // What the same frame would cost from a studio day (crew, set, model).
   studioShotCostGBP: 450,
   // House averages from the SS26 run — used by the find-in-store dossier

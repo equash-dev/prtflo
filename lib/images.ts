@@ -48,6 +48,12 @@ export function spotImage(slug: string): string | undefined {
   return imageExists(src) ? src : undefined;
 }
 
+// Model portraits land as public/models/{name}.webp via the ingest script.
+export function modelPortrait(name: string): string | undefined {
+  const src = `/models/${name.toLowerCase()}.webp`;
+  return imageExists(src) ? src : undefined;
+}
+
 export interface CampaignVideo {
   webm: string;
   mp4: string;

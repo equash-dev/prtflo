@@ -5,7 +5,7 @@ import { CategoryNav } from '@/components/storefront/CategoryNav';
 import { ProductGallery } from '@/components/storefront/ProductGallery';
 import { ProductDetails } from '@/components/storefront/ProductDetails';
 import { ProductGrid } from '@/components/storefront/ProductGrid';
-import { galleryShots, withExistingImages } from '@/lib/images';
+import { galleryShots, modelPortrait, withExistingImages } from '@/lib/images';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -32,6 +32,7 @@ export default async function ProductPage({ params }: Props) {
   if (!found) notFound();
   const product = withExistingImages(found);
   const shots = galleryShots(found);
+  const modelPortraitSrc = product.modelName ? modelPortrait(product.modelName) : undefined;
   const category = CATEGORY_MAP[product.category];
   const related = productsByCategory(product.category)
     .filter((p) => p.slug !== product.slug)
@@ -56,7 +57,7 @@ export default async function ProductPage({ params }: Props) {
         <div className="grid gap-8 lg:grid-cols-[1.7fr_minmax(320px,1fr)] lg:gap-12">
           <ProductGallery shots={shots} />
           <div className="px-4 md:px-10 lg:sticky lg:top-20 lg:self-start lg:pl-0">
-            <ProductDetails product={product} shots={shots} />
+            <ProductDetails product={product} shots={shots} modelPortraitSrc={modelPortraitSrc} />
           </div>
         </div>
       </section>

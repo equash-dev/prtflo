@@ -33,7 +33,7 @@ export function generationFigures(product: Product): GenerationFigures {
     discarded: Math.max(0, attempts - frames),
     minutes,
     costGBP: attempts * PIPELINE.generationCostGBP,
-    studioGBP: frames * PIPELINE.studioShotCostGBP,
+    studioGBP: product.generation?.studioGBP ?? frames * PIPELINE.studioShotCostGBP,
     logged,
   };
 }

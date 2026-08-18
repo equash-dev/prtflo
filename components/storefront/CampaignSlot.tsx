@@ -40,7 +40,7 @@ export function CampaignSlot({
             className="object-cover"
           />
         ) : null}
-        <CampaignProcess id="campaign/ss26-01" />
+        <CampaignProcess id={video ? 'campaign/ss26-01-video' : 'campaign/ss26-01'} />
       </div>
     </section>
   );

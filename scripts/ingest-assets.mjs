@@ -5,6 +5,8 @@
 //   PRTM01_INK_01.png  → public/products/men/heavyweight-boxy-tee/01.webp
 //   PRTM01_INK.png     → …/ref-01.webp  (generation source; powers the
 //                        "generation reference" hover on the ghost-hero frame)
+//   Marlon.png         → public/models/marlon.webp (model portrait, one of
+//                        the fixed MODEL_NAMES cast)
 //
 // Usage: npm run ingest
 
@@ -78,6 +80,11 @@ const BANNER_RE = /^banner[_-](\d{2})\.png$/i;
 // Department tiles: spot_womens.png → public/spots/women.webp
 const SPOT_RE = /^spot[_-]([a-z]+)\.png$/i;
 const SPOT_SLUGS = { mens: 'men', men: 'men', womens: 'women', women: 'women', home: 'home' };
+
+// Model portraits: Marlon.png → public/models/marlon.webp. Keep in sync
+// with the modelName values in config/products.ts.
+const MODEL_NAMES = ['Marlon', 'Eesa', 'Sven', 'Lee', 'Kasey', 'Leah', 'Ally', 'Zara'];
+const MODEL_RE = new RegExp(`^(${MODEL_NAMES.join('|')})\\.png$`, 'i');
 
 function* walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -160,6 +167,13 @@ for (const file of walk(DROP_DIR)) {
     continue;
   }
 
+  const modelMatch = base.match(MODEL_RE);
+  if (modelMatch) {
+    const outPath = path.join(ROOT, 'public', 'models', `${modelMatch[1].toLowerCase()}.webp`);
+    await writeDisplay(file, outPath);
+    continue;
+  }
+
   const shot = base.match(SHOT_RE);
   const ref = shot ? null : base.match(REF_RE);
   const match = shot ?? ref;
@@ -220,10 +234,16 @@ for (const [code, slug] of Object.entries(HOME_SLUGS)) {
     }
   }
 }
+for (const name of MODEL_NAMES) {
+  if (!fs.existsSync(path.join(ROOT, 'public', 'models', `${name.toLowerCase()}.webp`))) {
+    missing.push(`model:${name}`);
+  }
+}
 
 const expected =
   Object.keys(PRODUCT_CODES).length * SHOTS_PER_PRODUCT +
-  Object.keys(HOME_SLUGS).length * HOME_SHOTS_PER_PRODUCT;
+  Object.keys(HOME_SLUGS).length * HOME_SHOTS_PER_PRODUCT +
+  MODEL_NAMES.length;
 console.log(
   `\n${converted} converted, ${skipped.length} skipped. ` +
     `${expected - missing.length}/${expected} manifest shots on disk.`,

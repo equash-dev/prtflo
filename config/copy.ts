@@ -93,10 +93,13 @@ export const COPY = {
   pipeline: {
     eyebrow: 'Workflow',
     heading: 'There was no shoot.',
-    sub: 'A model who doesn’t exist, a garment never sewn, a backdrop never built, all put together in the workflow. Here’s the record of making this piece:',
+    subApparel:
+      'The model, garment, and backdrop are generated, not photographed, then combined.',
+    subHome: 'The object and backdrop are generated, not photographed, then combined.',
     equation: {
       model: 'Model',
       mannequin: 'Mannequin',
+      object: 'Object',
       backdrop: 'Backdrop',
       final: 'Final shot',
     },

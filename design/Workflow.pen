@@ -1,0 +1,753 @@
+{
+  "version": "2.17",
+  "children": [
+    {
+      "type": "frame",
+      "id": "hvOuw",
+      "x": 0,
+      "y": 0,
+      "name": "PDP Dossier — Nodal",
+      "clip": true,
+      "width": 780,
+      "height": 1000,
+      "fill": "$canvas",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "Q8omJe",
+          "x": 60,
+          "y": 40,
+          "name": "Eyebrow",
+          "fill": "$muted",
+          "content": "FIND IN STORE — GENERATION RECORD",
+          "fontFamily": "Geist Mono",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 0.5
+        },
+        {
+          "type": "frame",
+          "id": "EanWC",
+          "x": 60,
+          "y": 100,
+          "name": "Input — MODEL",
+          "clip": true,
+          "width": 160,
+          "height": 240,
+          "fill": "$panel",
+          "stroke": "$hairline",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "n95LKd",
+              "x": 10,
+              "y": 8,
+              "name": "Tag",
+              "fill": "$ink",
+              "content": "01",
+              "fontFamily": "Geist Mono",
+              "fontSize": 10,
+              "fontWeight": "normal",
+              "letterSpacing": 0.5
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "sIdfc",
+          "x": 60,
+          "y": 354,
+          "name": "Label — MODEL",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 160,
+          "content": "MODEL",
+          "textAlign": "center",
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "path",
+          "id": "P0TkH",
+          "x": 140,
+          "y": 340,
+          "name": "Stub — MODEL",
+          "geometry": "M0.5 0l0 60",
+          "viewBox": [
+            0,
+            0,
+            1,
+            60
+          ],
+          "width": 1,
+          "height": 60,
+          "stroke": "$hairline",
+          "strokeWidth": 1
+        },
+        {
+          "type": "frame",
+          "id": "sE51B",
+          "x": 280,
+          "y": 100,
+          "name": "Input — MANNEQUIN",
+          "clip": true,
+          "width": 160,
+          "height": 240,
+          "fill": "$panel",
+          "stroke": "$hairline",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "h9F6Qh",
+              "x": 10,
+              "y": 8,
+              "name": "Tag",
+              "fill": "$ink",
+              "content": "02",
+              "fontFamily": "Geist Mono",
+              "fontSize": 10,
+              "fontWeight": "normal",
+              "letterSpacing": 0.5
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "y4Lnq",
+          "x": 280,
+          "y": 354,
+          "name": "Label — MANNEQUIN",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 160,
+          "content": "MANNEQUIN",
+          "textAlign": "center",
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "path",
+          "id": "rfek7",
+          "x": 360,
+          "y": 340,
+          "name": "Stub — MANNEQUIN",
+          "geometry": "M0.5 0l0 60",
+          "viewBox": [
+            0,
+            0,
+            1,
+            60
+          ],
+          "width": 1,
+          "height": 60,
+          "stroke": "$hairline",
+          "strokeWidth": 1
+        },
+        {
+          "type": "frame",
+          "id": "EtmwV",
+          "x": 500,
+          "y": 100,
+          "name": "Input — BACKDROP",
+          "clip": true,
+          "width": 160,
+          "height": 240,
+          "fill": "$panel",
+          "stroke": "$hairline",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "l6FSOt",
+              "x": 10,
+              "y": 8,
+              "name": "Tag",
+              "fill": "$ink",
+              "content": "03",
+              "fontFamily": "Geist Mono",
+              "fontSize": 10,
+              "fontWeight": "normal",
+              "letterSpacing": 0.5
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "mNmsZ",
+          "x": 500,
+          "y": 354,
+          "name": "Label — BACKDROP",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 160,
+          "content": "BACKDROP",
+          "textAlign": "center",
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "path",
+          "id": "LIMEK",
+          "x": 580,
+          "y": 340,
+          "name": "Stub — BACKDROP",
+          "geometry": "M0.5 0l0 60",
+          "viewBox": [
+            0,
+            0,
+            1,
+            60
+          ],
+          "width": 1,
+          "height": 60,
+          "stroke": "$hairline",
+          "strokeWidth": 1
+        },
+        {
+          "type": "path",
+          "id": "Jbp0u",
+          "x": 140,
+          "y": 400,
+          "name": "Bus",
+          "geometry": "M0 0.5l440 0",
+          "viewBox": [
+            0,
+            0,
+            440,
+            1
+          ],
+          "width": 440,
+          "height": 1,
+          "stroke": "$hairline",
+          "strokeWidth": 1
+        },
+        {
+          "type": "path",
+          "id": "m0kVtT",
+          "x": 360,
+          "y": 400,
+          "name": "Trunk",
+          "geometry": "M0.5 0l0 70",
+          "viewBox": [
+            0,
+            0,
+            1,
+            70
+          ],
+          "width": 1,
+          "height": 70,
+          "stroke": "$accent",
+          "strokeWidth": 1.5
+        },
+        {
+          "type": "rectangle",
+          "id": "Hlft1",
+          "x": 356,
+          "y": 396,
+          "name": "Junction",
+          "fill": "$accent",
+          "width": 8,
+          "height": 8
+        },
+        {
+          "type": "frame",
+          "id": "s8i3wP",
+          "x": 210,
+          "y": 470,
+          "name": "Output",
+          "clip": true,
+          "width": 300,
+          "height": 450,
+          "fill": "$selected",
+          "stroke": "$ink",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "text",
+              "id": "lNrCS",
+              "x": 10,
+              "y": 8,
+              "name": "Tag",
+              "fill": "$ink",
+              "content": "04",
+              "fontFamily": "Geist Mono",
+              "fontSize": 10,
+              "fontWeight": "normal",
+              "letterSpacing": 0.5
+            },
+            {
+              "type": "text",
+              "id": "Tmc2U",
+              "x": 10,
+              "y": 410,
+              "name": "Line",
+              "fill": "$ink",
+              "textGrowth": "fixed-width",
+              "width": 280,
+              "content": "GENERATED. NO STUDIO, NO SHOOT, NO CAMERA.",
+              "fontFamily": "Geist Mono",
+              "fontSize": 9,
+              "fontWeight": "normal",
+              "letterSpacing": 0.3
+            },
+            {
+              "type": "text",
+              "id": "WUiI6",
+              "x": 10,
+              "y": 426,
+              "name": "Asset id",
+              "fill": "$muted",
+              "textGrowth": "fixed-width",
+              "width": 280,
+              "content": "PRTM01_INK_01",
+              "fontFamily": "Geist Mono",
+              "fontSize": 9,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "oKIGY",
+          "x": 210,
+          "y": 934,
+          "name": "Label — Output",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 300,
+          "content": "FINAL SHOT",
+          "textAlign": "center",
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "rectangle",
+          "id": "k7dmn",
+          "x": 137,
+          "y": 397,
+          "name": "Node dot",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "id": "Fdtbc",
+          "x": 357,
+          "y": 397,
+          "name": "Node dot",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "id": "dlHJ6",
+          "x": 577,
+          "y": 397,
+          "name": "Node dot",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "id": "CVvkc",
+          "x": 137,
+          "y": 337,
+          "name": "Node dot — top MODEL",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "id": "LHj0O",
+          "x": 357,
+          "y": 337,
+          "name": "Node dot — top MANNEQUIN",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "rectangle",
+          "id": "e6cmf",
+          "x": 577,
+          "y": 337,
+          "name": "Node dot — top BACKDROP",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "FRIPe",
+      "x": 900,
+      "y": 0,
+      "name": "Campaign Process — Nodal",
+      "clip": true,
+      "width": 1500,
+      "height": 460,
+      "fill": "$canvas",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "RDjkh",
+          "x": 60,
+          "y": 36,
+          "name": "Line",
+          "fill": "$ink",
+          "content": "GENERATED. NO STUDIO, NO SHOOT, NO CAMERA.",
+          "fontFamily": "Geist Mono",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "text",
+          "id": "kjLDF",
+          "x": 60,
+          "y": 56,
+          "name": "Asset id",
+          "fill": "$muted",
+          "content": "campaign/ss26-01 · Collection front — full bleed",
+          "fontFamily": "Geist Mono",
+          "fontSize": 10,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "NxVhv",
+          "x": 60,
+          "y": 96,
+          "name": "Concept",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 620,
+          "content": "One frame to carry the season: the range worn in a place that was never scouted.",
+          "lineHeight": 1.4,
+          "fontFamily": "Geist",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "gWc2M",
+          "x": 60,
+          "y": 300,
+          "name": "Rail",
+          "geometry": "M0 0.5l1300 0",
+          "viewBox": [
+            0,
+            0,
+            1300,
+            1
+          ],
+          "width": 1300,
+          "height": 1,
+          "stroke": "$hairline",
+          "strokeWidth": 1
+        },
+        {
+          "type": "rectangle",
+          "id": "q9n2Y",
+          "x": 57,
+          "y": 297,
+          "name": "Dot — BRIEF",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "text",
+          "id": "LneOc",
+          "x": 60,
+          "y": 272,
+          "name": "Tag — BRIEF",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "01  BRIEF",
+          "fontFamily": "Geist Mono",
+          "fontSize": 10,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "text",
+          "id": "dO8A0",
+          "x": 60,
+          "y": 316,
+          "name": "Detail — BRIEF",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "No set dressing, no props. Quiet light; the garments talk.",
+          "lineHeight": 1.4,
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "id": "i8g6rN",
+          "x": 377,
+          "y": 297,
+          "name": "Dot — INGREDIENTS",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "text",
+          "id": "z3H40e",
+          "x": 380,
+          "y": 272,
+          "name": "Tag — INGREDIENTS",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "02  INGREDIENTS",
+          "fontFamily": "Geist Mono",
+          "fontSize": 10,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "text",
+          "id": "DTdRf",
+          "x": 380,
+          "y": 316,
+          "name": "Detail — INGREDIENTS",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "Ghost heroes, the calibrated pose set, one supplied backdrop plate.",
+          "lineHeight": 1.4,
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "id": "NDqjc",
+          "x": 697,
+          "y": 297,
+          "name": "Dot — PASSES",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "text",
+          "id": "gsces",
+          "x": 700,
+          "y": 272,
+          "name": "Tag — PASSES",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "03  PASSES",
+          "fontFamily": "Geist Mono",
+          "fontSize": 10,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "text",
+          "id": "K8Wms",
+          "x": 700,
+          "y": 316,
+          "name": "Detail — PASSES",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "Twenty-four attempts over four stagings. Light held constant.",
+          "lineHeight": 1.4,
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "id": "Ti4h8",
+          "x": 1017,
+          "y": 297,
+          "name": "Dot — GRADE",
+          "fill": "$ink",
+          "width": 6,
+          "height": 6
+        },
+        {
+          "type": "text",
+          "id": "jTCVr",
+          "x": 1020,
+          "y": 272,
+          "name": "Tag — GRADE",
+          "fill": "$ink",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "04  GRADE",
+          "fontFamily": "Geist Mono",
+          "fontSize": 10,
+          "fontWeight": "normal",
+          "letterSpacing": 0.4
+        },
+        {
+          "type": "text",
+          "id": "ha7t3",
+          "x": 1020,
+          "y": 316,
+          "name": "Detail — GRADE",
+          "fill": "$muted",
+          "textGrowth": "fixed-width",
+          "width": 280,
+          "content": "A single warm grade matched to the storefront panels.",
+          "lineHeight": 1.4,
+          "fontFamily": "Geist",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "Z1L2rD",
+          "x": 1350,
+          "y": 255,
+          "name": "Output",
+          "width": 210,
+          "height": 110,
+          "fill": "$ink",
+          "stroke": "$accent",
+          "strokeWidth": 1,
+          "layout": "none",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "Z6bXT",
+              "x": -3,
+              "y": 0,
+              "name": "Dot",
+              "enabled": false,
+              "width": 1,
+              "height": 1
+            },
+            {
+              "type": "text",
+              "id": "P4LvTV",
+              "x": 14,
+              "y": 14,
+              "name": "Cost label",
+              "fill": "$selected",
+              "content": "TO GENERATE",
+              "fontFamily": "Geist Mono",
+              "fontSize": 9,
+              "fontWeight": "normal",
+              "letterSpacing": 0.4
+            },
+            {
+              "type": "text",
+              "id": "Boflx",
+              "x": 14,
+              "y": 30,
+              "name": "Cost value",
+              "fill": "$canvas",
+              "content": "£4.25",
+              "fontFamily": "Geist Mono",
+              "fontSize": 16,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "text",
+              "id": "FdbXa",
+              "x": 14,
+              "y": 62,
+              "name": "Studio label",
+              "fill": "$selected",
+              "content": "STUDIO EQUIVALENT",
+              "fontFamily": "Geist Mono",
+              "fontSize": 9,
+              "fontWeight": "normal",
+              "letterSpacing": 0.4
+            },
+            {
+              "type": "text",
+              "id": "d1XWt5",
+              "x": 14,
+              "y": 78,
+              "name": "Studio value",
+              "fill": "$canvas",
+              "content": "£3,200",
+              "fontFamily": "Geist Mono",
+              "fontSize": 13,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "rectangle",
+          "id": "sep9y",
+          "x": 1357,
+          "y": 297,
+          "name": "Dot — Output",
+          "fill": "$accent",
+          "width": 6,
+          "height": 6
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "ground": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "canvas": {
+      "type": "color",
+      "value": "#ffffff"
+    },
+    "panel": {
+      "type": "color",
+      "value": "#f2f2f2"
+    },
+    "ink": {
+      "type": "color",
+      "value": "#111111"
+    },
+    "muted": {
+      "type": "color",
+      "value": "#767676"
+    },
+    "hairline": {
+      "type": "color",
+      "value": "#e2e2e2"
+    },
+    "selected": {
+      "type": "color",
+      "value": "#d4d4d4"
+    },
+    "accent": {
+      "type": "color",
+      "value": "#1414e0"
+    }
+  },
+  "fileToken": "4f6e039b-d18d-4839-81bf-cbe22446bf53"
+}

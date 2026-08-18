@@ -48,6 +48,7 @@ export const PRODUCTS: Product[] = [
     name: 'Heavyweight boxy tee',
     code: 'PRTM01',
     colourCode: 'INK',
+    modelName: 'Marlon',
     category: 'men',
     basePriceGBP: 55,
     shortDescription: '240gsm jersey, boxy, ink navy.',
@@ -57,6 +58,7 @@ export const PRODUCTS: Product[] = [
     composition: '240gsm cotton jersey.',
     care: 'Machine wash cold. Dry flat.',
     images: shots('men', 'heavyweight-boxy-tee', 'PRTM01', 'INK', 'Heavyweight boxy tee', 'Ecru flatlock seam line + woven PRTFLO hem tab', 'top'),
+    generation: { attempts: 10, minutes: 23, studioGBP: 195 },
     sizes: [
       { label: 'S', inStock: true },
       { label: 'M', inStock: true },
@@ -71,6 +73,7 @@ export const PRODUCTS: Product[] = [
     name: 'Garment-dyed slogan tee',
     code: 'PRTM02',
     colourCode: 'FOR',
+    modelName: 'Marlon',
     category: 'men',
     basePriceGBP: 50,
     shortDescription: 'Garment-dyed jersey, relaxed, forest.',
@@ -80,6 +83,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Garment-dyed washed cotton jersey.',
     care: 'Machine wash cold, inside out. Do not tumble dry.',
     images: shots('men', 'garment-dyed-slogan-tee', 'PRTM02', 'FOR', 'Garment-dyed slogan tee', 'Cracked puff print texture + dye marbling', 'top'),
+    generation: { attempts: 18, minutes: 32, studioGBP: 240 },
     sizes: [
       { label: 'S', inStock: true },
       { label: 'M', inStock: true },
@@ -94,6 +98,7 @@ export const PRODUCTS: Product[] = [
     name: 'Heavyweight crew tee',
     code: 'PRTM03',
     colourCode: 'OXB',
+    modelName: 'Marlon',
     category: 'men',
     basePriceGBP: 55,
     shortDescription: 'Compact jersey, cropped boxy, oxblood.',
@@ -103,6 +108,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Compact cotton jersey.',
     care: 'Machine wash cold. Dry flat.',
     images: shots('men', 'heavyweight-crew-tee', 'PRTM03', 'OXB', 'Heavyweight crew tee', 'Tonal embroidered logotype + panel seam relief', 'top'),
+    generation: { attempts: 8, minutes: 17, studioGBP: 155 },
     sizes: [
       { label: 'S', inStock: true },
       { label: 'M', inStock: true },
@@ -116,6 +122,7 @@ export const PRODUCTS: Product[] = [
     name: 'Printed knit tank',
     code: 'PRTM04',
     colourCode: 'OCH',
+    modelName: 'Eesa',
     category: 'men',
     basePriceGBP: 65,
     shortDescription: 'Fine-gauge knit, jacquard arch, ochre.',
@@ -125,6 +132,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Fine-gauge knit.',
     care: 'Hand wash cold. Dry flat.',
     images: shots('men', 'printed-knit-tank', 'PRTM04', 'OCH', 'Printed knit tank', 'Knitted-in jacquard arch + navy tipping', 'top'),
+    generation: { attempts: 13, minutes: 26, studioGBP: 225 },
     sizes: [
       { label: 'S', inStock: true },
       { label: 'M', inStock: true },
@@ -138,6 +146,7 @@ export const PRODUCTS: Product[] = [
     name: 'Camp collar graphic shirt',
     code: 'PRTM05',
     colourCode: 'OFW',
+    modelName: 'Sven',
     category: 'men',
     basePriceGBP: 85,
     shortDescription: 'Cotton poplin, camp collar, off-white.',
@@ -147,6 +156,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Cotton poplin.',
     care: 'Machine wash cool. Iron low.',
     images: shots('men', 'camp-collar-graphic-shirt', 'PRTM05', 'OFW', 'Camp collar graphic shirt', 'Circular crest graphic + collar piping + MOP buttons', 'top'),
+    generation: { attempts: 19, minutes: 36, studioGBP: 290 },
     sizes: [
       { label: 'S', inStock: true },
       { label: 'M', inStock: true },
@@ -161,6 +171,7 @@ export const PRODUCTS: Product[] = [
     name: 'Double-layer long sleeve tee',
     code: 'PRTM06',
     colourCode: 'PET',
+    modelName: 'Sven',
     category: 'men',
     basePriceGBP: 60,
     shortDescription: 'Heavyweight jersey, double-layer, petrol.',
@@ -170,6 +181,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Heavyweight cotton jersey.',
     care: 'Machine wash cold. Dry flat.',
     images: shots('men', 'double-layer-long-sleeve-tee', 'PRTM06', 'PET', 'Double-layer long sleeve tee', 'Coverstitched layer junction + thumb-slit cuff', 'top'),
+    generation: { attempts: 12, minutes: 28, studioGBP: 205 },
     sizes: [
       { label: 'S', inStock: true },
       { label: 'M', inStock: true },
@@ -183,6 +195,7 @@ export const PRODUCTS: Product[] = [
     name: 'Washed balloon jeans',
     code: 'PRTM07',
     colourCode: 'STN',
+    modelName: 'Lee',
     category: 'men',
     basePriceGBP: 125,
     shortDescription: '14oz rigid denim, balloon leg, stone wash.',
@@ -192,6 +205,7 @@ export const PRODUCTS: Product[] = [
     composition: '14oz rigid denim.',
     care: 'Machine wash cold, inside out. Wash seldom.',
     images: shots('men', 'washed-balloon-jeans', 'PRTM07', 'STN', 'Washed balloon jeans', '3D whiskering + roped stacked cuff + ecru topstitch', 'bottom'),
+    generation: { attempts: 15, minutes: 30, studioGBP: 270 },
     sizes: [
       { label: '28', inStock: true },
       { label: '30', inStock: true },
@@ -207,6 +221,7 @@ export const PRODUCTS: Product[] = [
     name: 'Wide-leg twill trousers',
     code: 'PRTM08',
     colourCode: 'OLV',
+    modelName: 'Lee',
     category: 'men',
     basePriceGBP: 95,
     shortDescription: 'Garment-dyed twill, wide leg, washed olive.',
@@ -216,6 +231,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Garment-dyed cotton twill.',
     care: 'Machine wash cool. Line dry.',
     images: shots('men', 'wide-leg-twill-trousers', 'PRTM08', 'OLV', 'Wide-leg twill trousers', 'Pintuck crease line + tan bartack + waist tab', 'bottom'),
+    generation: { attempts: 10, minutes: 22, studioGBP: 210 },
     sizes: [
       { label: '28', inStock: true },
       { label: '30', inStock: true },
@@ -230,6 +246,7 @@ export const PRODUCTS: Product[] = [
     name: 'Relaxed cargo trousers',
     code: 'PRTM09',
     colourCode: 'WBK',
+    modelName: 'Eesa',
     category: 'men',
     basePriceGBP: 110,
     shortDescription: 'Washed cotton cargo, wide, washed black.',
@@ -239,6 +256,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Washed cotton.',
     care: 'Machine wash cold, inside out.',
     images: shots('men', 'relaxed-cargo-trousers', 'PRTM09', 'WBK', 'Relaxed cargo trousers', 'Double-stacked bellows pocket + gunmetal toggle', 'bottom'),
+    generation: { attempts: 17, minutes: 33, studioGBP: 255 },
     sizes: [
       { label: '28', inStock: true },
       { label: '30', inStock: true },
@@ -254,6 +272,7 @@ export const PRODUCTS: Product[] = [
     name: 'Pleated wide shorts',
     code: 'PRTM10',
     colourCode: 'ECR',
+    modelName: 'Lee',
     category: 'men',
     basePriceGBP: 75,
     shortDescription: 'Tailored twill, double pleat, ecru.',
@@ -263,6 +282,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Cotton twill.',
     care: 'Machine wash cool. Iron low.',
     images: shots('men', 'pleated-wide-shorts', 'PRTM10', 'ECR', 'Pleated wide shorts', 'Horn-button tab + side buckle + pick stitching', 'bottom'),
+    generation: { attempts: 14, minutes: 31, studioGBP: 205 },
     sizes: [
       { label: '28', inStock: true },
       { label: '30', inStock: true },
@@ -279,6 +299,7 @@ export const PRODUCTS: Product[] = [
     name: 'Oversized double-breasted blazer',
     code: 'PRTW01',
     colourCode: 'CAM',
+    modelName: 'Kasey',
     category: 'women',
     basePriceGBP: 185,
     shortDescription: 'Chalk-stripe wool, double-breasted, charcoal.',
@@ -288,6 +309,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Mid-weight wool blend, woven chalk stripe.',
     care: 'Dry clean only.',
     images: shots('women', 'oversized-double-breasted-blazer', 'PRTW01', 'CAM', 'Oversized double-breasted blazer', 'Hand pick-stitched lapel line + kissing cuff buttons', 'top'),
+    generation: { attempts: 24, minutes: 48, studioGBP: 355 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -301,6 +323,7 @@ export const PRODUCTS: Product[] = [
     name: 'Crossover-waist wide-leg jeans',
     code: 'PRTW02',
     colourCode: 'MBL',
+    modelName: 'Leah',
     category: 'women',
     basePriceGBP: 115,
     shortDescription: 'Washed denim, crossover waist, mid-blue.',
@@ -310,6 +333,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Washed denim.',
     care: 'Machine wash cold, inside out. Wash seldom.',
     images: shots('women', 'crossover-waist-wide-leg-jeans', 'PRTW02', 'MBL', 'Crossover-waist wide-leg jeans', 'Crossover closure + offset buttons + honey topstitch', 'bottom'),
+    generation: { attempts: 18, minutes: 35, studioGBP: 290 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -324,6 +348,7 @@ export const PRODUCTS: Product[] = [
     name: 'Barrel-leg trousers',
     code: 'PRTW03',
     colourCode: 'DOL',
+    modelName: 'Leah',
     category: 'women',
     basePriceGBP: 95,
     shortDescription: 'Garment-washed cotton, barrel leg, dark olive.',
@@ -333,6 +358,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Garment-washed cotton.',
     care: 'Machine wash cool. Line dry.',
     images: shots('women', 'barrel-leg-trousers', 'PRTW03', 'DOL', 'Barrel-leg trousers', 'Curved panel seam-work + knee dart', 'bottom'),
+    generation: { attempts: 13, minutes: 27, studioGBP: 215 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -346,6 +372,7 @@ export const PRODUCTS: Product[] = [
     name: 'Low-rise roomy jeans',
     code: 'PRTW04',
     colourCode: 'GGN',
+    modelName: 'Ally',
     category: 'women',
     basePriceGBP: 120,
     shortDescription: 'Washed denim, low-rise, grey-green.',
@@ -355,6 +382,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Washed denim.',
     care: 'Machine wash cold, inside out. Wash seldom.',
     images: shots('women', 'low-rise-roomy-jeans', 'PRTW04', 'GGN', 'Low-rise roomy jeans', 'Frayed hem edge + dropped micro coin pocket', 'bottom'),
+    generation: { attempts: 12, minutes: 26, studioGBP: 225 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -369,6 +397,7 @@ export const PRODUCTS: Product[] = [
     name: 'Linen-blend wide-leg trousers',
     code: 'PRTW05',
     colourCode: 'CHO',
+    modelName: 'Kasey',
     category: 'women',
     basePriceGBP: 110,
     shortDescription: 'Linen blend, palazzo wide, chocolate.',
@@ -378,6 +407,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Linen blend.',
     care: 'Machine wash cool, gentle. Line dry.',
     images: shots('women', 'linen-blend-wide-leg-trousers', 'PRTW05', 'CHO', 'Linen-blend wide-leg trousers', 'Openwork fagoting + covered-button diagonal', 'bottom'),
+    generation: { attempts: 10, minutes: 26, studioGBP: 215 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -391,6 +421,7 @@ export const PRODUCTS: Product[] = [
     name: 'Sequinned wrap skort',
     code: 'PRTW06',
     colourCode: 'BRZ',
+    modelName: 'Ally',
     category: 'women',
     basePriceGBP: 95,
     shortDescription: 'Matte sequins, wrap skort, bronze.',
@@ -400,6 +431,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Mixed-scale matte sequins on soft base.',
     care: 'Spot clean only.',
     images: shots('women', 'sequinned-wrap-skort', 'PRTW06', 'BRZ', 'Sequinned wrap skort', 'Mixed-scale sequin swirl + scalloped hem', 'bottom'),
+    generation: { attempts: 21, minutes: 39, studioGBP: 290 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -414,6 +446,7 @@ export const PRODUCTS: Product[] = [
     name: 'Sequinned mini skirt',
     code: 'PRTW07',
     colourCode: 'MOS',
+    modelName: 'Kasey',
     category: 'women',
     basePriceGBP: 125,
     shortDescription: 'Floral sequins, micro mini, moss.',
@@ -423,6 +456,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Dimensional floral sequins on soft base.',
     care: 'Spot clean only.',
     images: shots('women', 'sequinned-mini-skirt', 'PRTW07', 'MOS', 'Sequinned mini skirt', 'Beaded floral paillettes, petal depth', 'bottom'),
+    generation: { attempts: 17, minutes: 35, studioGBP: 265 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -436,6 +470,7 @@ export const PRODUCTS: Product[] = [
     name: 'Frayed-stripe midi shirtdress',
     code: 'PRTW08',
     colourCode: 'BWS',
+    modelName: 'Zara',
     category: 'women',
     basePriceGBP: 135,
     shortDescription: 'Textured stripe cotton, raw seams, midi.',
@@ -445,6 +480,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Textured cotton stripe.',
     care: 'Machine wash cool, gentle. Line dry.',
     images: shots('women', 'frayed-stripe-midi-shirtdress', 'PRTW08', 'BWS', 'Frayed-stripe midi shirtdress', 'Ladder-stitch waist insertion + frayed pocket flap', 'top'),
+    generation: { attempts: 22, minutes: 44, studioGBP: 340 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -460,6 +496,7 @@ export const PRODUCTS: Product[] = [
     name: 'Buttoned knit midi dress',
     code: 'PRTW09',
     colourCode: 'ECR',
+    modelName: 'Zara',
     category: 'women',
     basePriceGBP: 145,
     shortDescription: 'Fine compact knit, buttoned column, ecru.',
@@ -469,6 +506,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Fine compact knit.',
     care: 'Hand wash cold. Dry flat.',
     images: shots('women', 'buttoned-knit-midi-dress', 'PRTW09', 'ECR', 'Buttoned knit midi dress', 'Rhinestone button run + pointelle band', 'top'),
+    generation: { attempts: 17, minutes: 33, studioGBP: 270 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -483,6 +521,7 @@ export const PRODUCTS: Product[] = [
     name: 'Boat-neck cropped knit',
     code: 'PRTW10',
     colourCode: 'BLK',
+    modelName: 'Zara',
     category: 'women',
     basePriceGBP: 85,
     shortDescription: 'Mixed-gauge rib, cropped, black.',
@@ -492,6 +531,7 @@ export const PRODUCTS: Product[] = [
     composition: 'Mixed-gauge rib knit.',
     care: 'Hand wash cold. Dry flat.',
     images: shots('women', 'boat-neck-cropped-knit', 'PRTW10', 'BLK', 'Boat-neck cropped knit', 'Gauge transition + thumbhole cuff', 'top'),
+    generation: { attempts: 6, minutes: 19, studioGBP: 150 },
     sizes: [
       { label: 'XS', inStock: true },
       { label: 'S', inStock: true },
@@ -518,6 +558,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'High-fired stoneware.',
     care: 'Wipe clean.',
     images: homeShots('sculptural-stoneware-vase', 'H01', 'Sculptural stoneware vase'),
+    generation: { attempts: 9, minutes: 23, studioGBP: 135 },
     isBestSeller: true,
   },
   {
@@ -533,6 +574,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Glazed stoneware.',
     care: 'Dishwasher safe on a gentle cycle.',
     images: homeShots('hand-painted-plate-set', 'H02', 'Hand-painted plate set'),
+    generation: { attempts: 16, minutes: 33, studioGBP: 205 },
   },
   {
     slug: 'ribbed-amber-glass-tumblers',
@@ -547,6 +589,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Mouth-blown glass.',
     care: 'Hand wash.',
     images: homeShots('ribbed-amber-glass-tumblers', 'H03', 'Ribbed amber glass tumblers'),
+    generation: { attempts: 16, minutes: 32, studioGBP: 195 },
     isNew: true,
   },
   {
@@ -562,6 +605,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Unfilled travertine.',
     care: 'Wipe clean; lift wax when cool.',
     images: homeShots('travertine-candleholder-pair', 'H04', 'Travertine candleholder pair'),
+    generation: { attempts: 8, minutes: 18, studioGBP: 145 },
   },
   {
     slug: 'kilim-patchwork-cushion',
@@ -576,6 +620,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Wool face, linen back, feather pad.',
     care: 'Spot clean.',
     images: homeShots('kilim-patchwork-cushion', 'H05', 'Kilim patchwork cushion'),
+    generation: { attempts: 11, minutes: 21, studioGBP: 160 },
   },
   {
     slug: 'herringbone-wool-throw',
@@ -590,6 +635,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: '100% brushed lambswool.',
     care: 'Dry clean or air flat.',
     images: homeShots('herringbone-wool-throw', 'H06', 'Herringbone wool throw'),
+    generation: { attempts: 9, minutes: 23, studioGBP: 135 },
     isNew: true,
   },
   {
@@ -605,6 +651,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Hand-loomed wool.',
     care: 'Professional clean.',
     images: homeShots('geometric-wool-runner', 'H07', 'Geometric wool runner'),
+    generation: { attempts: 16, minutes: 33, studioGBP: 195 },
   },
   {
     slug: 'glazed-ceramic-table-lamp',
@@ -619,6 +666,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Glazed ceramic, linen shade.',
     care: 'Wipe clean.',
     images: homeShots('glazed-ceramic-table-lamp', 'H08', 'Glazed ceramic table lamp'),
+    generation: { attempts: 10, minutes: 20, studioGBP: 120 },
   },
   {
     slug: 'organic-plaster-mirror',
@@ -633,6 +681,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Plaster, glass.',
     care: 'Dust dry; do not wet.',
     images: homeShots('organic-plaster-mirror', 'H09', 'Organic plaster mirror'),
+    generation: { attempts: 17, minutes: 34, studioGBP: 190 },
   },
   {
     slug: 'olive-wood-serving-board',
@@ -647,6 +696,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Oiled olive wood.',
     care: 'Hand wash; re-oil now and then.',
     images: homeShots('olive-wood-serving-board', 'H10', 'Olive wood serving board'),
+    generation: { attempts: 5, minutes: 12, studioGBP: 85 },
   },
   {
     slug: 'washed-linen-bedding-stack',
@@ -661,6 +711,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: '100% European flax linen.',
     care: 'Machine wash cool. Do not iron.',
     images: homeShots('washed-linen-bedding-stack', 'H11', 'Washed linen bedding stack'),
+    generation: { attempts: 9, minutes: 19, studioGBP: 145 },
     isBestSeller: true,
   },
   {
@@ -676,6 +727,7 @@ const HOME_PRODUCTS: Product[] = [
     composition: 'Glazed ceramic, weighted.',
     care: 'Wipe clean.',
     images: homeShots('ceramic-arch-bookends', 'H12', 'Ceramic arch bookends'),
+    generation: { attempts: 4, minutes: 14, studioGBP: 90 },
   },
 ];
 
@@ -695,8 +747,9 @@ export const PRODUCT_MAP: Record<string, Product> = PRODUCTS.reduce(
 // tops/bottoms and light/dark colourways. PRODUCTS itself stays in
 // linesheet order; only listing pages sort by this.
 const MERCH_ORDER: string[] = [
-  // Men — models: PRTM01–03 blond, PRTM05–06 brunet, PRTM04 + PRTM09 two
-  // more; PRTM07/08/10 crop below the face and act as separators.
+  // Men — Marlon fronts PRTM01–03, Sven fronts PRTM05/06, Eesa fronts
+  // PRTM04 + PRTM09; PRTM07/08/10 (Lee) crop below the face and act as
+  // separators.
   'heavyweight-boxy-tee',
   'washed-balloon-jeans',
   'camp-collar-graphic-shirt',
@@ -707,12 +760,12 @@ const MERCH_ORDER: string[] = [
   'double-layer-long-sleeve-tee',
   'heavyweight-crew-tee',
   'wide-leg-twill-trousers',
-  // Women — one model fronts five leads (PRTW02/03/08/09/10, slots
-  // 1/3/6/8/9) and a second fronts three (PRTW01/05/07, slots 2/5/10).
-  // Five-in-ten can't avoid every adjacency at every breakpoint; this
-  // arrangement is clash-free in the 4-col grid (rows and columns), and
-  // the two unavoidable 2-col mobile stackings pair her most differently
-  // styled shots (dress over jeans, dress over black knit).
+  // Women — Zara fronts three leads (PRTW08/09/10, slots 1/6/8), Kasey
+  // fronts three (PRTW01/05/07, slots 2/5/10), Leah fronts two (PRTW02/03,
+  // slots 3/9), Ally fronts two (PRTW04/06, slots 4/7). Arrangement is
+  // clash-free in the 4-col grid (rows and columns), and the two
+  // unavoidable 2-col mobile stackings pair her most differently styled
+  // shots (dress over jeans, dress over black knit).
   'frayed-stripe-midi-shirtdress',
   'oversized-double-breasted-blazer',
   'crossover-waist-wide-leg-jeans',

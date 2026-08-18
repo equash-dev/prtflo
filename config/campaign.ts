@@ -38,6 +38,42 @@ export const CAMPAIGN_SPOTS: Record<string, CampaignSpot> = {
     // A location day: crew, permits, catering — the frame this replaces.
     studioEquivalentGBP: 3200,
   },
+  'campaign/ss26-01-video': {
+    id: 'campaign/ss26-01-video',
+    kind: 'banner',
+    title: 'SS26 campaign film',
+    placement: 'Collection front — full bleed, video',
+    concept:
+      'The same frame, in motion: a 25-second loop of the range in a place that was never scouted.',
+    process: [
+      {
+        stage: 'Brief',
+        detail: 'No set dressing, no props, no cuts. One continuous camera move.',
+      },
+      {
+        stage: 'Ingredients',
+        detail:
+          'The still’s hero frame carried forward through the pipeline’s motion model.',
+      },
+      {
+        stage: 'Passes',
+        detail: 'One generation run, twenty-five seconds, kept whole.',
+      },
+      {
+        stage: 'Grade',
+        detail: 'Same warm grade as the still, so the loop reads as one continuous surface.',
+      },
+    ],
+    attempts: 1,
+    selects: 1,
+    minutes: 0,
+    // A location shoot day, same comparator as the still — motion doesn't
+    // change what the real-world equivalent would have cost to crew.
+    studioEquivalentGBP: 3200,
+    // Video generation runs at a different cost order than a still attempt;
+    // the flat per-attempt rate doesn't apply here.
+    costOverrideGBP: 4.41,
+  },
   'spot/men': {
     id: 'spot/men',
     kind: 'spot',

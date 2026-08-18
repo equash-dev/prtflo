@@ -17,7 +17,7 @@ export function CampaignProcess({ id }: { id: string }) {
   if (!pipeline || !spot) return null;
 
   const compact = spot.kind === 'spot';
-  const costGBP = spot.attempts * PIPELINE.generationCostGBP;
+  const costGBP = spot.costOverrideGBP ?? spot.attempts * PIPELINE.generationCostGBP;
   const studioGBP =
     spot.studioEquivalentGBP ?? spot.selects * PIPELINE.studioShotCostGBP;
   const figures = [
@@ -50,12 +50,19 @@ export function CampaignProcess({ id }: { id: string }) {
         {spot.concept}
       </p>
 
+      {/* The making of it as a chain, not a bordered list: each stage is a
+          node on a rail, the rail necks into the closing arithmetic — the
+          chain's answer, not an afterthought line. */}
       <ol className={compact ? 'mt-3' : 'mt-4 max-w-[52ch]'}>
         {spot.process.map((step, i) => (
-          <li
-            key={step.stage}
-            className="flex items-baseline gap-3 border-t border-hairline py-2"
-          >
+          <li key={step.stage} className="flex items-baseline gap-3 py-1.5">
+            <div className="relative w-3 shrink-0 self-stretch" aria-hidden>
+              <span
+                className="absolute left-1/2 w-px -translate-x-1/2 bg-hairline"
+                style={i === 0 ? { top: '50%', bottom: 0 } : { top: 0, bottom: 0 }}
+              />
+              <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 bg-ink" />
+            </div>
             <span className="font-mono text-[10px] tabular-nums text-muted">
               {String(i + 1).padStart(2, '0')}
             </span>
@@ -72,34 +79,40 @@ export function CampaignProcess({ id }: { id: string }) {
             </span>
           </li>
         ))}
-      </ol>
 
-      {/* Flows under the steps rather than pinning to the slot's bottom —
-          banners keep their own copy block down there, tiles their label. */}
-      <div className="pt-3">
-        <p className="text-[10px] uppercase tracking-[0.04em] text-muted">
-          {figures}
-        </p>
-        {spot.attempts > 0 ? (
-          <p className="mt-1 text-[10px] uppercase tracking-[0.04em] text-ink">
-            <span className="tabular-nums">
-              {formatPrice(costGBP, code, { decimals: 2 })}
-            </span>{' '}
-            to generate
-            <span className="mx-2 text-muted">·</span>
-            <span className="text-muted">
-              studio equivalent{' '}
-              <span className="tabular-nums">
-                {formatPrice(studioGBP, code)}
-              </span>
-            </span>
-          </p>
-        ) : (
-          <p className="mt-1 text-[10px] uppercase tracking-[0.04em] text-muted">
-            {formatPrice(0, code, { decimals: 2 })} to generate · nothing replaced
-          </p>
-        )}
-      </div>
+        {/* Flows under the steps rather than pinning to the slot's bottom —
+            banners keep their own copy block down there, tiles their label. */}
+        <li className="flex items-baseline gap-3 pt-2.5">
+          <div className="relative w-3 shrink-0 self-stretch" aria-hidden>
+            <span className="absolute left-1/2 top-0 h-1/2 w-px -translate-x-1/2 bg-accent" />
+            <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 bg-accent" />
+          </div>
+          <div className="min-w-0">
+            <p className="text-[10px] uppercase tracking-[0.04em] text-muted">
+              {figures}
+            </p>
+            {spot.attempts > 0 ? (
+              <p className="mt-1 text-[10px] uppercase tracking-[0.04em] text-ink">
+                <span className="tabular-nums">
+                  {formatPrice(costGBP, code, { decimals: 2 })}
+                </span>{' '}
+                to generate
+                <span className="mx-2 text-muted">·</span>
+                <span className="text-muted">
+                  studio equivalent{' '}
+                  <span className="tabular-nums">
+                    {formatPrice(studioGBP, code)}
+                  </span>
+                </span>
+              </p>
+            ) : (
+              <p className="mt-1 text-[10px] uppercase tracking-[0.04em] text-muted">
+                {formatPrice(0, code, { decimals: 2 })} to generate · nothing replaced
+              </p>
+            )}
+          </div>
+        </li>
+      </ol>
     </div>
   );
 }
