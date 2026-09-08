@@ -5,6 +5,7 @@ import { CATEGORIES } from '@/config/categories';
 import { PRODUCTS } from '@/config/products';
 import { CampaignSlot } from '@/components/storefront/CampaignSlot';
 import { CampaignProcess } from '@/components/storefront/CampaignProcess';
+import { SpotLabel } from '@/components/storefront/SpotLabel';
 import { ProductGrid } from '@/components/storefront/ProductGrid';
 import { Button } from '@/components/ui/Button';
 import Image from 'next/image';
@@ -73,9 +74,6 @@ export default function CollectionPage() {
         </div>
       </section>
 
-      {/* Tile labels run light on a bottom scrim over a photo (spot content
-          is arbitrary — ink can't be trusted to read against it) and stay
-          ink on the bare panel fallback, where a scrim would be noise. */}
       <section className="grid grid-cols-1 gap-1 md:grid-cols-3">
         {CATEGORIES.map((c) => {
           const spot = spotImage(c.slug);
@@ -83,32 +81,18 @@ export default function CollectionPage() {
             <Link key={c.slug} href={`/${c.slug}`} className="group relative block">
               <div className="grain pixel-field relative aspect-[4/5] overflow-hidden bg-panel transition-colors duration-500 group-hover:bg-selected md:aspect-[3/4]">
                 {spot ? (
-                  <>
-                    <Image
-                      src={spot}
-                      alt={c.name}
-                      fill
-                      quality={90}
-                      sizes="(min-width: 768px) 33vw, 100vw"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-ink/55 to-transparent" />
-                  </>
+                  <Image
+                    src={spot}
+                    alt={c.name}
+                    fill
+                    quality={90}
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
                 ) : null}
               </div>
               <CampaignProcess id={`spot/${c.slug}`} />
-              <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-5">
-                <span
-                  className={`text-[12px] uppercase tracking-[0.04em] ${spot ? 'text-canvas' : 'text-ink'}`}
-                >
-                  {c.name}
-                </span>
-                <span
-                  className={`text-[11px] uppercase tracking-[0.04em] transition-colors ${spot ? 'text-canvas/70 group-hover:text-canvas' : 'text-muted group-hover:text-ink'}`}
-                >
-                  View
-                </span>
-              </div>
+              <SpotLabel name={c.name} hasImage={Boolean(spot)} />
             </Link>
           );
         })}
