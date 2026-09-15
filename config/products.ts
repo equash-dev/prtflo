@@ -66,7 +66,6 @@ export const PRODUCTS: Product[] = [
       { label: 'XL', inStock: true },
     ],
     colours: ['Ink Navy'],
-    isBestSeller: true,
   },
   {
     slug: 'garment-dyed-slogan-tee',
@@ -189,6 +188,7 @@ export const PRODUCTS: Product[] = [
       { label: 'XL', inStock: true },
     ],
     colours: ['Petrol Blue / Ecru'],
+    isBestSeller: true,
   },
   {
     slug: 'washed-balloon-jeans',
@@ -740,6 +740,18 @@ export const PRODUCT_MAP: Record<string, Product> = PRODUCTS.reduce(
   },
   {} as Record<string, Product>,
 );
+
+// The /collection "New & best selling" rail, hand-picked in order. Departments
+// alternate so the rail never reads as one; home is deliberately absent.
+const FEATURED_SLUGS: string[] = [
+  'double-layer-long-sleeve-tee',
+  'crossover-waist-wide-leg-jeans',
+  'garment-dyed-slogan-tee',
+  'low-rise-roomy-jeans',
+];
+
+export const featuredProducts = (): Product[] =>
+  FEATURED_SLUGS.map((slug) => PRODUCT_MAP[slug]).filter(Boolean);
 
 // Listing order, hand-merchandised. Imagery was generated in sequential
 // batches, so neighbouring product codes share a model — this order spaces

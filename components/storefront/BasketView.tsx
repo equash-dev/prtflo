@@ -69,7 +69,7 @@ function QtyStepper({
 }
 
 export function BasketView() {
-  const { lines, setQty, remove } = useBasket();
+  const { lines, setQty, remove, hydrated } = useBasket();
   const { code } = useCurrency();
   const copy = COPY.basket;
 
@@ -83,6 +83,12 @@ export function BasketView() {
     (sum, { line, product }) => sum + product.basePriceGBP * line.qty,
     0,
   );
+
+  // The basket lives in localStorage, so on a cold load there is a beat
+  // before it exists. Say nothing during it rather than claiming empty.
+  if (!hydrated) {
+    return <section aria-busy className="px-4 py-28 md:px-10" />;
+  }
 
   if (entries.length === 0) {
     return (

@@ -135,6 +135,56 @@ body {
   100% { transform: translate3d(4%, -3%, 0) scale(1.05); }
 }
 
+/* ---- Landing atmosphere ----------------------------------------------
+   Landing page only. `.ambient` above is the shared one used by /enter and
+   /intro; nothing here touches it.
+
+   The whole idea in one property: the ground is in colour while the house
+   is playing it straight, and WORKFLOW drains it to greyscale. Saturation
+   carries the reveal, so there is nothing else to fade in or out. */
+
+.atmos {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.atmos-glow {
+  /* Tints, not the raw #1414E0: a saturated hue at low alpha on true black
+     goes muddy long before it reads as colour. Wide, overlapping radii so
+     the three carry as one aurora rather than three spots. */
+  background:
+    radial-gradient(60% 70% at 20% 25%, rgba(64, 86, 255, 0.42), transparent 70%),
+    radial-gradient(65% 75% at 82% 78%, rgba(255, 122, 69, 0.26), transparent 72%),
+    radial-gradient(45% 55% at 68% 10%, rgba(168, 74, 255, 0.3), transparent 70%);
+  /* saturate(1) rather than none: `none` has nothing to interpolate from,
+     so the drain would snap instead of easing. */
+  filter: saturate(1);
+  transition: filter 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+  animation:
+    atmos-drift 26s ease-in-out infinite alternate,
+    atmos-pulse 11s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+/* WORKFLOW on: the colour goes. Desaturation preserves luminance, so the
+   glow keeps its shape and weight and only loses its hue. */
+.atmos-glow[data-on='true'] {
+  filter: saturate(0);
+}
+
+@keyframes atmos-drift {
+  0% { transform: translate3d(-3%, -2%, 0) scale(1.05); }
+  50% { transform: translate3d(2%, 3%, 0) scale(1.12); }
+  100% { transform: translate3d(4%, -3%, 0) scale(1.05); }
+}
+/* The breath. Period deliberately out of phase with the 26s drift. The
+   floor stays high: dropping to 0.5 took the glow back under the
+   perceptible threshold at the bottom of every cycle. */
+@keyframes atmos-pulse {
+  from { opacity: 0.72; }
+  to { opacity: 1; }
+}
+
 /* ---- /enter gate ---- */
 
 /* Wrong password: a quiet 1px settle, never a klaxon */
@@ -166,8 +216,14 @@ body {
   .gate-miss,
   .gate-error,
   .ambient::before,
+  .atmos-glow,
   .plate-in,
   .shot-resolve {
     animation: none !important;
+  }
+  /* The colour still drains with the toggle — that is state, not
+     decoration — it just arrives at greyscale without easing there. */
+  .atmos-glow {
+    transition: none !important;
   }
 }

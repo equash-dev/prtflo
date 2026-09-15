@@ -14,6 +14,10 @@ const geist = Geist({
 // the page belongs to the house rather than defaulting to white.
 export const viewport: Viewport = {
   themeColor: '#4f4a44',
+  // Required for env(safe-area-inset-*) to resolve to anything but 0px on
+  // notched iPhones. The mobile commerce bar in ProductDetails pads itself
+  // by the bottom inset and was silently getting nothing without this.
+  viewportFit: 'cover',
 };
 
 export const metadata: Metadata = {

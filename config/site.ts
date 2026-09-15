@@ -2,7 +2,7 @@ export const SITE = {
   brandName: 'PRTFLO',
   brandSerial: 'PRTFLO—001 / SS26',
   brandTagline: 'A fashion house that exists only as generated images.',
-  contactEmail: 'hello@prtflo.com',
+  contactEmail: 'elliottquashie@gmail.com',
   nav: [
     { label: 'Men', href: '/men' },
     { label: 'Women', href: '/women' },

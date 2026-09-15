@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { CampaignLoop } from './CampaignLoop';
 import { CampaignProcess } from './CampaignProcess';
 import type { CampaignVideo } from '@/lib/images';
 
@@ -19,17 +20,7 @@ export function CampaignSlot({
     <section className="relative mt-1">
       <div className="grain relative h-svh min-h-[560px] overflow-hidden bg-panel">
         {video ? (
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster={video.poster}
-            className="absolute inset-0 h-full w-full object-cover"
-          >
-            <source src={video.webm} type="video/webm" />
-            <source src={video.mp4} type="video/mp4" />
-          </video>
+          <CampaignLoop video={video} />
         ) : image ? (
           <Image
             src={image}

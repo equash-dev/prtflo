@@ -5,6 +5,8 @@ export const COPY = {
       'A fictional fashion house, built as a portfolio piece. Every image here is AI-generated; there was never a photo shoot. Have a look around as if it were real.',
     enterLabel: 'Enter the collection',
     aboutLabel: 'About the project',
+    workflowHint:
+      'Flip this on and every image in the store shows what it cost to generate against a studio equivalent. It stays on while you browse.',
   },
   home: {
     heroEyebrow: 'Spring / Summer 2026',

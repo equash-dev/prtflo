@@ -26,8 +26,10 @@ export function ProductGrid({
         cols === 'fixed-4' ? 'md:grid-cols-4' : 'md:grid-cols-3 xl:grid-cols-4',
       ].join(' ')}
     >
-      {products.map((p) => (
-        <ProductCard key={p.slug} product={p} />
+      {products.map((p, i) => (
+        // The first row is the LCP element. Two cards covers the 2-up mobile
+        // grid; the wider grids fill the rest of the row from cache anyway.
+        <ProductCard key={p.slug} product={p} priority={i < 2} />
       ))}
     </div>
   );

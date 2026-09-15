@@ -45,6 +45,8 @@ function load(): BasketLine[] {
 interface BasketContextValue {
   lines: BasketLine[];
   count: number;
+  /** False until localStorage has been read, on the first client effect. */
+  hydrated: boolean;
   add: (line: LineRef) => void;
   setQty: (line: LineRef, qty: number) => void;
   remove: (line: LineRef) => void;
@@ -55,9 +57,11 @@ const BasketContext = createContext<BasketContextValue | null>(null);
 
 export function BasketProvider({ children }: { children: ReactNode }) {
   const [lines, setLines] = useState<BasketLine[]>([]);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
     setLines(load());
+    setHydrated(true);
   }, []);
 
   const update = useCallback(
@@ -108,12 +112,13 @@ export function BasketProvider({ children }: { children: ReactNode }) {
     () => ({
       lines,
       count: lines.reduce((n, l) => n + l.qty, 0),
+      hydrated,
       add,
       setQty,
       remove,
       clear,
     }),
-    [lines, add, setQty, remove, clear],
+    [lines, hydrated, add, setQty, remove, clear],
   );
 
   return (

@@ -8,7 +8,13 @@ import { useCurrency } from '@/context/CurrencyContext';
 import { formatPrice } from '@/lib/pricing';
 import { PipelineOverlay } from './PipelineOverlay';
 
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({
+  product,
+  priority = false,
+}: {
+  product: Product;
+  priority?: boolean;
+}) {
   const { code } = useCurrency();
   // The hover-swap frame can never show on touch devices, so don't make
   // them download it — it doubles the grid's image payload otherwise.
@@ -32,6 +38,7 @@ export function ProductCard({ product }: { product: Product }) {
               src={primary.src}
               alt={primary.alt}
               fill
+              priority={priority}
               quality={90}
               sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
               className={[

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
+import { AtmosphereLayer } from '@/components/landing/AtmosphereLayer';
+import { PipelineToggle } from '@/components/storefront/PipelineToggle';
 import { COPY } from '@/config/copy';
 import { SITE } from '@/config/site';
 
@@ -12,7 +14,9 @@ export const metadata: Metadata = {
 
 export default function LandingPage() {
   return (
-    <main className="flex min-h-svh flex-col justify-between bg-ground px-6 py-12 text-canvas md:px-12 md:py-16">
+    <main className="atmos flex min-h-svh flex-col justify-between bg-ground px-6 py-12 text-canvas md:px-12 md:py-16">
+      <AtmosphereLayer />
+
       <p className="cold-open text-[11px] uppercase tracking-[0.2em] text-canvas/60">
         {SITE.brandSerial}
       </p>
@@ -32,19 +36,34 @@ export default function LandingPage() {
         </p>
       </div>
 
-      <div
-        className="cold-open flex flex-wrap items-center gap-x-8 gap-y-4"
-        style={{ '--cold-open-delay': '320ms' } as React.CSSProperties}
-      >
-        <Button href="/collection" size="lg">
-          {COPY.landing.enterLabel} →
-        </Button>
-        <Link
-          href="/intro"
-          className="text-[11px] uppercase tracking-[0.04em] text-canvas/60 transition-colors hover:text-canvas"
+      <div>
+        <div
+          className="cold-open flex flex-wrap items-center gap-x-8 gap-y-4"
+          style={{ '--cold-open-delay': '320ms' } as React.CSSProperties}
         >
-          {COPY.landing.aboutLabel}
-        </Link>
+          <Button href="/collection" size="lg">
+            {COPY.landing.enterLabel} →
+          </Button>
+          <Link
+            href="/intro"
+            className="text-[11px] uppercase tracking-[0.04em] text-canvas/60 transition-colors hover:text-canvas"
+          >
+            {COPY.landing.aboutLabel}
+          </Link>
+        </div>
+
+        {/* The disclosure switch, offered before the store rather than left to
+            be found in the header. Pipeline state persists, so flipping it
+            here means the catalogue opens already annotated. */}
+        <div
+          className="cold-open mt-8 flex max-w-md items-start gap-4 border-t border-canvas/15 pt-6"
+          style={{ '--cold-open-delay': '480ms' } as React.CSSProperties}
+        >
+          <PipelineToggle tone="dark" />
+          <p className="text-[11px] leading-relaxed text-canvas/50">
+            {COPY.landing.workflowHint}
+          </p>
+        </div>
       </div>
     </main>
   );

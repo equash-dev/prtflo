@@ -154,7 +154,6 @@ export function GalleryLightbox({
                     aria-hidden
                     fill
                     unoptimized
-                    sizes="100vw"
                     className="object-cover"
                     style={imageStyle}
                   />
@@ -168,7 +167,12 @@ export function GalleryLightbox({
                   aria-label={zoomedHere ? 'Exit zoom' : `Zoom into ${shot.alt}`}
                   onClick={(e) => {
                     const point = pointFrom(e, e.currentTarget);
-                    if (zoom?.index !== i) {
+                    // Only a wide viewport has the pixels to justify the
+                    // full-res master. A phone at 2x over a ~390px frame is
+                    // already out-resolved by the display tier it has, so
+                    // fetching the master would be up to 3.4MB it cannot show.
+                    const wide = window.matchMedia('(min-width: 1024px)').matches;
+                    if (wide && zoom?.index !== i) {
                       setMasters((m) => (m.has(i) ? m : new Set(m).add(i)));
                     }
                     setZoom((z) => (z?.index === i ? null : { index: i, ...point }));

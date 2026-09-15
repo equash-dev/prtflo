@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { COPY } from '@/config/copy';
 import { SITE } from '@/config/site';
 import { CATEGORIES } from '@/config/categories';
-import { PRODUCTS } from '@/config/products';
+import { featuredProducts } from '@/config/products';
 import { CampaignSlot } from '@/components/storefront/CampaignSlot';
 import { CampaignProcess } from '@/components/storefront/CampaignProcess';
 import { PinnedWordmark, MID_SPOT_ID } from '@/components/storefront/PinnedWordmark';
@@ -20,19 +20,10 @@ const TILE_IMAGES: Record<string, string> = {
 
 export default function CollectionPage() {
   const banners = campaignBanners();
-  // Alternate men/women so the rail never reads as one department —
-  // PRODUCTS is in linesheet order (men first), so a straight slice would.
-  const flagged = PRODUCTS.filter((p) => p.isBestSeller || p.isNew);
-  const flaggedMen = flagged.filter((p) => p.category === 'men');
-  const flaggedWomen = flagged.filter((p) => p.category === 'women');
-  const featured = Array.from(
-    { length: Math.max(flaggedMen.length, flaggedWomen.length) },
-    (_, i) => [flaggedMen[i], flaggedWomen[i]],
-  )
-    .flat()
-    .filter((p): p is (typeof flagged)[number] => Boolean(p))
-    .slice(0, 4)
-    .map(withExistingImages);
+  // Hand-merchandised in config/products.ts (FEATURED_SLUGS), not derived
+  // from the new/bestseller flags — the rail's order and department mix
+  // are a merchandising call.
+  const featured = featuredProducts().map(withExistingImages);
 
   return (
     <>
@@ -70,12 +61,14 @@ export default function CollectionPage() {
                 Shop Home
               </span>
             </Link>
+            {/* No priority: this tile is hidden below md, but the preload
+                link priority emits carries no media attribute, so phones
+                would fetch a hero they never render. */}
             <Link href="/home" className="grain group relative hidden overflow-hidden bg-selected md:block">
               <Image
                 src="/products/home/washed-linen-bedding-stack/01.webp"
                 alt=""
                 fill
-                priority
                 quality={90}
                 sizes="50vw"
                 className="object-cover"

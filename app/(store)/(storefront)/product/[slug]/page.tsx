@@ -40,7 +40,7 @@ export default async function ProductPage({ params }: Props) {
     .map(withExistingImages);
 
   return (
-    <>
+    <div className="pb-[calc(4.5rem+env(safe-area-inset-bottom))] lg:pb-0">
       <CategoryNav activeSlug={product.category} />
       <section className="py-8 md:py-10">
         <nav className="mb-6 px-4 text-[11px] uppercase tracking-[0.04em] text-muted md:px-10">
@@ -70,6 +70,6 @@ export default async function ProductPage({ params }: Props) {
           <ProductGrid products={related} />
         </section>
       ) : null}
-    </>
+    </div>
   );
 }

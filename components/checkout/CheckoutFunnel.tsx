@@ -57,7 +57,7 @@ function StepRail({ step }: { step: Step }) {
 }
 
 export function CheckoutFunnel() {
-  const { lines } = useBasket();
+  const { lines, hydrated } = useBasket();
   const { code } = useCurrency();
   const copy = COPY.checkout;
   const [step, setStep] = useState<Step>('delivery');
@@ -75,6 +75,12 @@ export function CheckoutFunnel() {
     .filter((e): e is { line: BasketLine; product: Product } =>
       Boolean(e.product),
     );
+
+  // Same beat as /basket: never tell someone mid-funnel that there is
+  // nothing to check out just because localStorage has not been read yet.
+  if (!hydrated && step === 'delivery') {
+    return <section aria-busy className="px-4 py-28 md:px-10" />;
+  }
 
   if (entries.length === 0 && step === 'delivery') {
     return (

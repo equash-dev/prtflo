@@ -43,18 +43,24 @@ export function Header() {
           : 'transition-transform duration-300',
       ].join(' ')}
     >
-      <div className="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-4 px-4 md:px-10">
-        <nav className="flex items-center gap-4 md:gap-6">
-          {SITE.nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-[12px] uppercase tracking-[0.02em] text-ink transition-opacity hover:opacity-60"
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+      <div className="grid h-14 grid-cols-[1fr_auto_1fr] items-center gap-2 px-4 md:gap-4 md:px-10">
+        <div className="flex min-w-0 items-center gap-3">
+          <div className="sm:hidden">
+            <PipelineToggle />
+          </div>
+
+          <nav className="hidden min-w-0 items-center gap-3 sm:flex md:gap-6">
+            {SITE.nav.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-[12px] uppercase tracking-[0.02em] text-ink transition-opacity hover:opacity-60"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
         <Link
           href="/collection"
@@ -63,7 +69,7 @@ export function Header() {
           {SITE.brandName}
         </Link>
 
-        <div className="flex items-center justify-self-end gap-4 md:gap-5">
+        <div className="flex min-w-0 items-center justify-self-end gap-3 md:gap-5">
           {/* Negative margins keep the layout tight while the padded box
               gives both text controls a finger-sized touch target. */}
           <button
@@ -86,6 +92,7 @@ export function Header() {
           <div className="hidden sm:block">
             <CurrencySwitcher />
           </div>
+
         </div>
       </div>
     </header>

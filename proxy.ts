@@ -19,8 +19,13 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // `.*\..*` exempts every dotted path: all public/ assets (/products/**.webp
-  // etc.) stay open by design ("pages only" gating) — and so would any future
-  // route containing a dot (robots.txt, sitemap.xml).
-  matcher: ['/((?!_next/static|_next/image|favicon\\.ico|.*\\..*).*)'],
+  // Pages are gated; public/ assets are not. The asset directories are named
+  // here rather than excluded by a catch-all dotted-path rule. The previous
+  // `.*\..*` also swallowed the `.rsc` and `.segment.rsc` transport suffixes
+  // that Next appends to this matcher, so each page's RSC payload skipped the
+  // gate while its HTML was gated: /collection.rsc served the whole page to
+  // anyone who asked for it. Keep this list in step with public/.
+  matcher: [
+    '/((?!_next/static|_next/image|favicon\\.ico|icon\\.svg|products/|campaign/|models/|spots/).*)',
+  ],
 };
