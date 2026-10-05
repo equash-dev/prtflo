@@ -28,7 +28,7 @@ export const COPY = {
   },
   gate: {
     eyebrow: 'Elliott Quashie · Private portfolio',
-    heading: 'AI, put to work.',
+    heading: 'PRTFLO',
     introduction: 'From product concepts and campaign imagery to the site itself, PRTFLO was built using AI. I designed and orchestrated the workflows, using batch automation to turn a creative brief into a complete fashion storefront.',
     prompt: 'Enter the password to explore the Storefront and About Me. PRTFLO is a fictional fashion house and a portfolio project, not a real shop.',
     placeholder: 'Password',
