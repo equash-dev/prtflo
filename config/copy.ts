@@ -1,13 +1,13 @@
 export const COPY = {
   landing: {
-    eyebrow: 'Welcome inside',
-    heading: 'Where would you like to start?',
+    eyebrow: 'AI orchestration · Batch automation',
+    heading: 'Explore the result.',
     framing:
-      'Get to know the person behind the work, or explore the project as a customer would.',
+      'Creative direction, AI generation and batch automation, brought together in a complete fashion storefront. Explore the output, then meet the person who built the workflow.',
     enterLabel: 'Storefront',
-    storeDescription: 'Explore PRTFLO, a fictional fashion house with AI-generated imagery. A working demo, not a real shop.',
+    storeDescription: 'See the workflow in action: a full catalogue of AI-generated imagery, produced through batch automation and brought together in a working storefront.',
     aboutLabel: 'About Me',
-    aboutDescription: 'My background, creative work and the tools and workflows I build around it.',
+    aboutDescription: 'How I connect creative direction, AI tools and automation to build repeatable production workflows.',
     workflowHint:
       'Flip this on and every image in the store shows what it cost to generate against a studio equivalent. It stays on while you browse.',
   },
@@ -27,9 +27,10 @@ export const COPY = {
     image: '/campaign/ss26-01.webp',
   },
   gate: {
-    eyebrow: 'Private preview',
-    introduction: 'A personal portfolio by Elliott Quashie, bringing together my background in motion, 3D and AI with PRTFLO: a fictional fashion storefront built with generated imagery.',
-    prompt: 'Enter the password to explore About Me and the Storefront. This is a portfolio project, not a real shop.',
+    eyebrow: 'Elliott Quashie · Private portfolio',
+    heading: 'AI, put to work.',
+    introduction: 'From product concepts and campaign imagery to the site itself, PRTFLO was built using AI. I designed and orchestrated the workflows, using batch automation to turn a creative brief into a complete fashion storefront.',
+    prompt: 'Enter the password to explore the Storefront and About Me. PRTFLO is a fictional fashion house and a portfolio project, not a real shop.',
     placeholder: 'Password',
     submitLabel: 'Unlock portfolio',
     pendingLabel: 'Unlocking…',
@@ -38,9 +39,9 @@ export const COPY = {
   },
   intro: {
     arrival: {
-      eyebrow: 'You’re in',
-      heading: 'Not a real shop.',
-      sub: 'A working fashion house where every image is generated. There’s no studio behind any of this, just a workflow.',
+      eyebrow: 'From brief to storefront',
+      heading: 'A whole collection. One connected workflow.',
+      sub: 'PRTFLO brings creative direction, AI generation and batch automation together: product concepts become complete image sets, organised and delivered into a working storefront. A fictional fashion house, built to demonstrate the process.',
       scrollCue: 'Scroll',
     },
     plates: [

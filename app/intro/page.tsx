@@ -4,7 +4,7 @@ import { Arrival } from '@/components/intro/Arrival';
 export const metadata: Metadata = {
   title: 'About the project',
   description:
-    'Not a real shop. A portfolio piece: a fashion house that exists entirely as generated imagery.',
+    'How creative direction, AI generation and batch automation connect a creative brief to a complete fashion storefront.',
 };
 
 export default function IntroPage() {

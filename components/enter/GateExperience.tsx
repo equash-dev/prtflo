@@ -25,7 +25,7 @@ export function GateExperience() {
           {COPY.gate.eyebrow}
         </p>
         <h1 className="mt-6 text-5xl font-normal uppercase leading-[0.95] tracking-tight md:text-7xl lg:text-8xl">
-          {SITE.brandName}
+          {COPY.gate.heading}
         </h1>
         <p className="mt-8 max-w-xl text-lg leading-relaxed text-canvas/70 md:text-xl">
           {COPY.gate.introduction}

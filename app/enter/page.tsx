@@ -4,7 +4,7 @@ import { SITE } from '@/config/site';
 
 export const metadata: Metadata = {
   title: { absolute: `${SITE.brandName} — private` },
-  description: 'Elliott Quashie’s personal portfolio: motion, 3D, AI and a fictional fashion storefront. Enter with a password to explore.',
+  description: 'AI orchestration and batch automation by Elliott Quashie. From a creative brief to a complete fashion storefront. Enter with a password to explore.',
   robots: { index: false, follow: false },
 };
 

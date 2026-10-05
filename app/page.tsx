@@ -8,7 +8,7 @@ import { SITE } from '@/config/site';
 export const metadata: Metadata = {
   title: { absolute: `${SITE.brandName} — portfolio` },
   description:
-    'A portfolio piece: a fictional fashion house where every image is AI-generated. Not a real shop.',
+    'Creative direction, AI generation and batch automation, connected in a complete fashion storefront. A portfolio project by Elliott Quashie.',
 };
 
 export default function LandingPage() {
