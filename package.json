@@ -14,6 +14,7 @@
     "test:demo": "node --test tests/batch-demo.test.mjs tests/styling-demo.test.mjs tests/journey-frames.test.mjs tests/interactive-demos.test.mjs"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"

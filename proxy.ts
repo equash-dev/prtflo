@@ -25,7 +25,8 @@ export const config = {
   // that Next appends to this matcher, so each page's RSC payload skipped the
   // gate while its HTML was gated: /collection.rsc served the whole page to
   // anyone who asked for it. Keep this list in step with public/.
+  // Analytics must also load and record visits before the password is entered.
   matcher: [
-    '/((?!_next/static|_next/image|favicon\\.ico|icon\\.svg|products/|campaign/|models/|spots/).*)',
+    '/((?!_next/static|_next/image|_vercel/insights/|favicon\\.ico|icon\\.svg|products/|campaign/|models/|spots/).*)',
   ],
 };

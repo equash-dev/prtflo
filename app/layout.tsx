@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Geist } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import { Providers } from '@/context/Providers';
 import { SITE } from '@/config/site';
@@ -35,6 +36,7 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable} h-full`}>
       <body className="min-h-full bg-ground text-ink">
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );

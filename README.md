@@ -31,6 +31,11 @@ Changing the password invalidates existing access cookies. Direct page links,
 including `/about` and `/collection`, also require the password; storefront image
 directories remain public. Gate and choice-screen text lives in `config/copy.ts`.
 
+Vercel Web Analytics tracks page views through the root layout. Enable Analytics
+in the Vercel project dashboard and deploy to start collecting visits. The
+`/_vercel/insights/` endpoints bypass the password gate so visits to the entry
+page are counted too. Local development does not send production analytics.
+
 ## Editing content (no code required)
 
 All non-code edits live in `config/`:
