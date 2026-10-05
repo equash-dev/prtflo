@@ -1,0 +1,810 @@
+{
+  "project": "PRTFLO / SS26",
+  "description": "Asset manifest exported from the published catalogue configuration.",
+  "products": [
+    {
+      "code": "PRTM01",
+      "name": "Heavyweight boxy tee",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM01_INK_01",
+          "path": "/products/men/heavyweight-boxy-tee/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM01_INK_02",
+          "path": "/products/men/heavyweight-boxy-tee/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM01_INK_03",
+          "path": "/products/men/heavyweight-boxy-tee/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM01_INK_04",
+          "path": "/products/men/heavyweight-boxy-tee/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM02",
+      "name": "Garment-dyed slogan tee",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM02_FOR_01",
+          "path": "/products/men/garment-dyed-slogan-tee/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM02_FOR_02",
+          "path": "/products/men/garment-dyed-slogan-tee/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM02_FOR_03",
+          "path": "/products/men/garment-dyed-slogan-tee/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM02_FOR_04",
+          "path": "/products/men/garment-dyed-slogan-tee/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM03",
+      "name": "Heavyweight crew tee",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM03_OXB_01",
+          "path": "/products/men/heavyweight-crew-tee/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM03_OXB_02",
+          "path": "/products/men/heavyweight-crew-tee/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM03_OXB_03",
+          "path": "/products/men/heavyweight-crew-tee/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM03_OXB_04",
+          "path": "/products/men/heavyweight-crew-tee/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM04",
+      "name": "Printed knit tank",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM04_OCH_01",
+          "path": "/products/men/printed-knit-tank/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM04_OCH_02",
+          "path": "/products/men/printed-knit-tank/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM04_OCH_03",
+          "path": "/products/men/printed-knit-tank/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM04_OCH_04",
+          "path": "/products/men/printed-knit-tank/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM05",
+      "name": "Camp collar graphic shirt",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM05_OFW_01",
+          "path": "/products/men/camp-collar-graphic-shirt/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM05_OFW_02",
+          "path": "/products/men/camp-collar-graphic-shirt/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM05_OFW_03",
+          "path": "/products/men/camp-collar-graphic-shirt/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM05_OFW_04",
+          "path": "/products/men/camp-collar-graphic-shirt/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM06",
+      "name": "Double-layer long sleeve tee",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM06_PET_01",
+          "path": "/products/men/double-layer-long-sleeve-tee/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM06_PET_02",
+          "path": "/products/men/double-layer-long-sleeve-tee/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM06_PET_03",
+          "path": "/products/men/double-layer-long-sleeve-tee/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM06_PET_04",
+          "path": "/products/men/double-layer-long-sleeve-tee/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM07",
+      "name": "Washed balloon jeans",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM07_STN_01",
+          "path": "/products/men/washed-balloon-jeans/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM07_STN_02",
+          "path": "/products/men/washed-balloon-jeans/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM07_STN_03",
+          "path": "/products/men/washed-balloon-jeans/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM07_STN_04",
+          "path": "/products/men/washed-balloon-jeans/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM08",
+      "name": "Wide-leg twill trousers",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM08_OLV_01",
+          "path": "/products/men/wide-leg-twill-trousers/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM08_OLV_02",
+          "path": "/products/men/wide-leg-twill-trousers/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM08_OLV_03",
+          "path": "/products/men/wide-leg-twill-trousers/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM08_OLV_04",
+          "path": "/products/men/wide-leg-twill-trousers/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM09",
+      "name": "Relaxed cargo trousers",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM09_WBK_01",
+          "path": "/products/men/relaxed-cargo-trousers/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM09_WBK_02",
+          "path": "/products/men/relaxed-cargo-trousers/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM09_WBK_03",
+          "path": "/products/men/relaxed-cargo-trousers/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM09_WBK_04",
+          "path": "/products/men/relaxed-cargo-trousers/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTM10",
+      "name": "Pleated wide shorts",
+      "category": "men",
+      "assets": [
+        {
+          "code": "PRTM10_ECR_01",
+          "path": "/products/men/pleated-wide-shorts/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM10_ECR_02",
+          "path": "/products/men/pleated-wide-shorts/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM10_ECR_03",
+          "path": "/products/men/pleated-wide-shorts/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTM10_ECR_04",
+          "path": "/products/men/pleated-wide-shorts/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW01",
+      "name": "Oversized double-breasted blazer",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW01_CAM_01",
+          "path": "/products/women/oversized-double-breasted-blazer/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW01_CAM_02",
+          "path": "/products/women/oversized-double-breasted-blazer/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW01_CAM_03",
+          "path": "/products/women/oversized-double-breasted-blazer/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW01_CAM_04",
+          "path": "/products/women/oversized-double-breasted-blazer/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW02",
+      "name": "Crossover-waist wide-leg jeans",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW02_MBL_01",
+          "path": "/products/women/crossover-waist-wide-leg-jeans/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW02_MBL_02",
+          "path": "/products/women/crossover-waist-wide-leg-jeans/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW02_MBL_03",
+          "path": "/products/women/crossover-waist-wide-leg-jeans/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW02_MBL_04",
+          "path": "/products/women/crossover-waist-wide-leg-jeans/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW03",
+      "name": "Barrel-leg trousers",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW03_DOL_01",
+          "path": "/products/women/barrel-leg-trousers/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW03_DOL_02",
+          "path": "/products/women/barrel-leg-trousers/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW03_DOL_03",
+          "path": "/products/women/barrel-leg-trousers/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW03_DOL_04",
+          "path": "/products/women/barrel-leg-trousers/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW04",
+      "name": "Low-rise roomy jeans",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW04_GGN_01",
+          "path": "/products/women/low-rise-roomy-jeans/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW04_GGN_02",
+          "path": "/products/women/low-rise-roomy-jeans/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW04_GGN_03",
+          "path": "/products/women/low-rise-roomy-jeans/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW04_GGN_04",
+          "path": "/products/women/low-rise-roomy-jeans/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW05",
+      "name": "Linen-blend wide-leg trousers",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW05_CHO_01",
+          "path": "/products/women/linen-blend-wide-leg-trousers/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW05_CHO_02",
+          "path": "/products/women/linen-blend-wide-leg-trousers/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW05_CHO_03",
+          "path": "/products/women/linen-blend-wide-leg-trousers/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW05_CHO_04",
+          "path": "/products/women/linen-blend-wide-leg-trousers/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW06",
+      "name": "Sequinned wrap skort",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW06_BRZ_01",
+          "path": "/products/women/sequinned-wrap-skort/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW06_BRZ_02",
+          "path": "/products/women/sequinned-wrap-skort/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW06_BRZ_03",
+          "path": "/products/women/sequinned-wrap-skort/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW06_BRZ_04",
+          "path": "/products/women/sequinned-wrap-skort/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW07",
+      "name": "Sequinned mini skirt",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW07_MOS_01",
+          "path": "/products/women/sequinned-mini-skirt/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW07_MOS_02",
+          "path": "/products/women/sequinned-mini-skirt/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW07_MOS_03",
+          "path": "/products/women/sequinned-mini-skirt/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW07_MOS_04",
+          "path": "/products/women/sequinned-mini-skirt/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW08",
+      "name": "Frayed-stripe midi shirtdress",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW08_BWS_01",
+          "path": "/products/women/frayed-stripe-midi-shirtdress/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW08_BWS_02",
+          "path": "/products/women/frayed-stripe-midi-shirtdress/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW08_BWS_03",
+          "path": "/products/women/frayed-stripe-midi-shirtdress/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW08_BWS_04",
+          "path": "/products/women/frayed-stripe-midi-shirtdress/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW09",
+      "name": "Buttoned knit midi dress",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW09_ECR_01",
+          "path": "/products/women/buttoned-knit-midi-dress/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW09_ECR_02",
+          "path": "/products/women/buttoned-knit-midi-dress/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW09_ECR_03",
+          "path": "/products/women/buttoned-knit-midi-dress/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW09_ECR_04",
+          "path": "/products/women/buttoned-knit-midi-dress/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "PRTW10",
+      "name": "Boat-neck cropped knit",
+      "category": "women",
+      "assets": [
+        {
+          "code": "PRTW10_BLK_01",
+          "path": "/products/women/boat-neck-cropped-knit/01.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW10_BLK_02",
+          "path": "/products/women/boat-neck-cropped-knit/02.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW10_BLK_03",
+          "path": "/products/women/boat-neck-cropped-knit/03.webp",
+          "available": true
+        },
+        {
+          "code": "PRTW10_BLK_04",
+          "path": "/products/women/boat-neck-cropped-knit/04.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H01",
+      "name": "Sculptural stoneware vase",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H01_PACK_01",
+          "path": "/products/home/sculptural-stoneware-vase/01.webp",
+          "available": true
+        },
+        {
+          "code": "H01_PACK_02",
+          "path": "/products/home/sculptural-stoneware-vase/02.webp",
+          "available": true
+        },
+        {
+          "code": "H01_PACK_03",
+          "path": "/products/home/sculptural-stoneware-vase/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H02",
+      "name": "Hand-painted plate set",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H02_PACK_01",
+          "path": "/products/home/hand-painted-plate-set/01.webp",
+          "available": true
+        },
+        {
+          "code": "H02_PACK_02",
+          "path": "/products/home/hand-painted-plate-set/02.webp",
+          "available": true
+        },
+        {
+          "code": "H02_PACK_03",
+          "path": "/products/home/hand-painted-plate-set/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H03",
+      "name": "Ribbed amber glass tumblers",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H03_PACK_01",
+          "path": "/products/home/ribbed-amber-glass-tumblers/01.webp",
+          "available": true
+        },
+        {
+          "code": "H03_PACK_02",
+          "path": "/products/home/ribbed-amber-glass-tumblers/02.webp",
+          "available": true
+        },
+        {
+          "code": "H03_PACK_03",
+          "path": "/products/home/ribbed-amber-glass-tumblers/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H04",
+      "name": "Travertine candleholder pair",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H04_PACK_01",
+          "path": "/products/home/travertine-candleholder-pair/01.webp",
+          "available": true
+        },
+        {
+          "code": "H04_PACK_02",
+          "path": "/products/home/travertine-candleholder-pair/02.webp",
+          "available": true
+        },
+        {
+          "code": "H04_PACK_03",
+          "path": "/products/home/travertine-candleholder-pair/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H05",
+      "name": "Kilim patchwork cushion",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H05_PACK_01",
+          "path": "/products/home/kilim-patchwork-cushion/01.webp",
+          "available": true
+        },
+        {
+          "code": "H05_PACK_02",
+          "path": "/products/home/kilim-patchwork-cushion/02.webp",
+          "available": true
+        },
+        {
+          "code": "H05_PACK_03",
+          "path": "/products/home/kilim-patchwork-cushion/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H06",
+      "name": "Herringbone wool throw",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H06_PACK_01",
+          "path": "/products/home/herringbone-wool-throw/01.webp",
+          "available": true
+        },
+        {
+          "code": "H06_PACK_02",
+          "path": "/products/home/herringbone-wool-throw/02.webp",
+          "available": true
+        },
+        {
+          "code": "H06_PACK_03",
+          "path": "/products/home/herringbone-wool-throw/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H07",
+      "name": "Geometric wool runner",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H07_PACK_01",
+          "path": "/products/home/geometric-wool-runner/01.webp",
+          "available": true
+        },
+        {
+          "code": "H07_PACK_02",
+          "path": "/products/home/geometric-wool-runner/02.webp",
+          "available": true
+        },
+        {
+          "code": "H07_PACK_03",
+          "path": "/products/home/geometric-wool-runner/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H08",
+      "name": "Glazed ceramic table lamp",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H08_PACK_01",
+          "path": "/products/home/glazed-ceramic-table-lamp/01.webp",
+          "available": true
+        },
+        {
+          "code": "H08_PACK_02",
+          "path": "/products/home/glazed-ceramic-table-lamp/02.webp",
+          "available": true
+        },
+        {
+          "code": "H08_PACK_03",
+          "path": "/products/home/glazed-ceramic-table-lamp/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H09",
+      "name": "Organic plaster mirror",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H09_PACK_01",
+          "path": "/products/home/organic-plaster-mirror/01.webp",
+          "available": true
+        },
+        {
+          "code": "H09_PACK_02",
+          "path": "/products/home/organic-plaster-mirror/02.webp",
+          "available": true
+        },
+        {
+          "code": "H09_PACK_03",
+          "path": "/products/home/organic-plaster-mirror/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H10",
+      "name": "Olive wood serving board",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H10_PACK_01",
+          "path": "/products/home/olive-wood-serving-board/01.webp",
+          "available": true
+        },
+        {
+          "code": "H10_PACK_02",
+          "path": "/products/home/olive-wood-serving-board/02.webp",
+          "available": true
+        },
+        {
+          "code": "H10_PACK_03",
+          "path": "/products/home/olive-wood-serving-board/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H11",
+      "name": "Washed linen bedding stack",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H11_PACK_01",
+          "path": "/products/home/washed-linen-bedding-stack/01.webp",
+          "available": true
+        },
+        {
+          "code": "H11_PACK_02",
+          "path": "/products/home/washed-linen-bedding-stack/02.webp",
+          "available": true
+        },
+        {
+          "code": "H11_PACK_03",
+          "path": "/products/home/washed-linen-bedding-stack/03.webp",
+          "available": true
+        }
+      ]
+    },
+    {
+      "code": "H12",
+      "name": "Ceramic arch bookends",
+      "category": "home",
+      "assets": [
+        {
+          "code": "H12_PACK_01",
+          "path": "/products/home/ceramic-arch-bookends/01.webp",
+          "available": true
+        },
+        {
+          "code": "H12_PACK_02",
+          "path": "/products/home/ceramic-arch-bookends/02.webp",
+          "available": true
+        },
+        {
+          "code": "H12_PACK_03",
+          "path": "/products/home/ceramic-arch-bookends/03.webp",
+          "available": true
+        }
+      ]
+    }
+  ]
+}

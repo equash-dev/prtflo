@@ -9,7 +9,7 @@ export function proxy(request: NextRequest) {
     // The gate is not a destination once inside. POSTs pass through so the
     // Server Action always reaches the page.
     if (authed && request.method === 'GET') {
-      return NextResponse.redirect(new URL('/intro', request.url));
+      return NextResponse.redirect(new URL('/', request.url));
     }
     return NextResponse.next();
   }

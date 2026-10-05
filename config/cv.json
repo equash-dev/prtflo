@@ -1,0 +1,105 @@
+{
+  "name": "Elliott Quashie",
+  "title": "AI creative production & implementation",
+  "currentRole": "Head of AI Content",
+  "employer": "Debenhams Group",
+  "location": "Leicester, UK",
+  "phone": "07863 369495",
+  "website": "https://www.prtflo.co.uk/",
+  "status": "Curriculum vitae",
+  "profile": "I come from a background in motion design, 3D and video. Over the last two years, my work has moved into AI, from making content to building tools that help a studio produce it. As Head of AI Content at Debenhams Group, I'm now bringing that work into the wider business.",
+  "employment": [
+    {
+      "employer": "Debenhams Group",
+      "role": "Head of AI Content",
+      "period": "July 2024 - Present",
+      "summary": "I joined Debenhams in July 2024 as a Motion Designer for the brand, but spent the next two years working entirely on AI content, tools and workflows. My role then changed to Head of AI Content, with a focus on bringing AI into the wider group.",
+      "points": [
+        "I built an in-house AI production workflow to bring garment references, outfit styling, model and pose selection, batch generation, human review and delivery into one studio workflow. It reduced production costs per product by around 92%, based on approximate before-and-after costs. That made paid work for external vendors possible and helped the studio become a profit-making part of the business.",
+        "Alongside making content, I test image and video models, explore virtual try-on research and build node-based workflows. I also use AI-assisted coding to build practical tools, including equipment tracking, that take repetitive work off the studio's hands. I'm interested in how an experiment becomes something a team can use, with review built into the process.",
+        "I presented this work in America to an audience of industry leaders from companies including Ralph Lauren, Walmart, The Home Depot and Calvin Klein."
+      ]
+    },
+    {
+      "employer": "Freelance",
+      "role": "Motion Designer / Video Editor / Creative Designer",
+      "period": "November 2023 - July 2024",
+      "summary": "While freelancing, I worked with agencies and in-house teams on motion design, video editing and creative design. The briefs took me across different formats, from moving-image content to VR products and Meta filters.",
+      "points": []
+    },
+    {
+      "employer": "The One Off",
+      "role": "Senior Motion Designer",
+      "period": "January 2022 - November 2023",
+      "summary": "At The One Off, I introduced 3D motion design for Sports Direct and created content across several brands. I also pitched ideas directly to clients and stakeholders, taking part in the conversations that shaped the work.",
+      "points": []
+    },
+    {
+      "employer": "JD Sports Fashion",
+      "role": "Senior Motion Designer",
+      "period": "February 2017 - March 2020",
+      "summary": "I joined JD Sports as its first full-time Motion Graphic Designer, bringing 3D into the studio's creative work. Alongside website assets and content produced in-house, I led an outdoor brand campaign in New York's Times Square.",
+      "points": []
+    }
+  ],
+  "project": {
+    "name": "PRTFLO",
+    "period": "SS26",
+    "type": "Self-directed portfolio project",
+    "points": [
+      "I built PRTFLO as a fictional fashion house, creating the imagery, campaign motion, copy and storefront. Behind it, I connected shared instructions, shot lists and automated asset preparation into a repeatable process.",
+      "I used product codes and shot manifests to keep the catalogue organised, and included workflow records alongside the finished images so visitors can see how the work was made."
+    ]
+  },
+  "skills": [
+    "AI tool evaluation & implementation",
+    "Image & video production",
+    "Node-based & batch workflows",
+    "Creative briefs & stakeholder presentations",
+    "Human review & quality control",
+    "AI-assisted coding & production tools",
+    "Motion design & 3D",
+    "Asset preparation & workflow documentation"
+  ],
+  "education": [
+    {
+      "institution": "Ravensbourne University",
+      "course": "Film Production"
+    }
+  ],
+  "labels": {
+    "heading": "CV & contact",
+    "title": "Creative work. Practical implementation.",
+    "profile": "Profile",
+    "project": "Selected project",
+    "skills": "Core capabilities",
+    "employment": "Experience",
+    "education": "Education",
+    "download": "Download CV",
+    "format": "PDF / 1 page",
+    "filename": "elliott-quashie-cv.pdf"
+  },
+  "print": {
+    "profile": "I come from a background in motion design, 3D and video. Over the last two years, my work has moved into AI, from making content to building tools that help a studio produce it. As Head of AI Content at Debenhams Group, I'm now bringing that work into the wider business.",
+    "skills": [
+      "AI implementation",
+      "Image & video",
+      "Motion design & 3D",
+      "Node workflows",
+      "Batch production",
+      "AI-assisted coding"
+    ],
+    "impact": {
+      "value": "92%",
+      "label": "Lower cost per product",
+      "note": "Approximate production cost reduction through the in-house AI workflow, based on before-and-after costs."
+    },
+    "project": "I built PRTFLO as a fictional fashion house, creating the imagery, campaign motion, copy and storefront. Behind it, I connected shared instructions, shot lists and automated asset preparation into a repeatable process.",
+    "experience": {
+      "Debenhams Group": "I joined Debenhams as a Motion Designer and spent two years focused entirely on AI before becoming Head of AI Content across the group. I built an in-house AI workflow for styling, generation, review and delivery. It reduced costs per product by around 92%, based on before-and-after estimates, and enabled paid work for external vendors. I presented this work in America to industry leaders from companies including Ralph Lauren, Walmart, The Home Depot and Calvin Klein.",
+      "Freelance": "While freelancing, I worked with agencies and in-house teams on motion design, video editing and creative design. The briefs took me across different formats, from moving-image content to VR products and Meta filters.",
+      "The One Off": "At The One Off, I introduced 3D motion design for Sports Direct and created content across several brands. I also pitched ideas directly to clients and stakeholders, taking part in the conversations that shaped the work.",
+      "JD Sports Fashion": "I joined JD Sports as its first full-time Motion Graphic Designer, bringing 3D into the studio's creative work. Alongside website assets and content produced in-house, I led an outdoor brand campaign in New York's Times Square."
+    }
+  }
+}

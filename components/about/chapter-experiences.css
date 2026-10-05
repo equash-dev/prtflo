@@ -1,0 +1,269 @@
+﻿/* Small, self-contained experiences inside the chapter media areas. */
+.terminal-experiment, .experiment-results, .kanban-demo { height: 100%; min-height: 0; color: #181816; }
+.terminal-experiment button, .terminal-experiment select, .experiment-results button, .kanban-demo button { min-height: 44px; border: 1px solid #b7b7ae; border-radius: 0; padding: 8px 12px; font-size: 13px; }
+.terminal-experiment button:disabled { opacity: .6; cursor: wait; }
+.experiment-disclosure { font-size: 11px; line-height: 1.5; color: #66655f; }
+.terminal-experiment { display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: 14px; padding: 24px; background: #e7e5dd; }
+.terminal-experiment > header { display: flex; justify-content: space-between; gap: 16px; font: 11px/1.5 monospace; padding-bottom: 14px; border-bottom: 1px solid #c9c7be; }
+.terminal-stage { min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) 156px; gap: 12px; }
+.terminal-output { display: flex; flex-direction: column; align-items: center; min-height: 0; }
+.terminal-output svg { flex: 1; width: 100%; min-height: 0; max-height: 270px; }
+.terminal-output p { font-size: 12px; text-align: center; line-height: 1.5; margin-top: 6px; }
+.vton-garment { transform-origin: 130px 100px; }
+.terminal-output[data-result='0'] .vton-garment { transform: translate(14px, -4px) rotate(14deg); }
+.terminal-output[data-result='1'] .vton-garment { transform: translate(-9px, 7px) skewX(-16deg) scaleY(1.45); }
+.terminal-output[data-result='2'] .vton-garment { transform: translate(28px, 0) scaleX(.55) rotate(-12deg); }
+.terminal-console { background: #20211f; color: #dfdfd1; padding: 14px 16px; font: 11px/1.7 monospace; overflow: hidden; }
+.terminal-console > p:first-child { color: #c0caa8; white-space: nowrap; font-size: 10px; }
+.terminal-console ol { margin-top: 6px; }
+.terminal-console li > span { color: #898c7e; margin-right: 12px; }
+.terminal-idle { color: #929588; margin-top: 14px; }
+.terminal-experiment > footer { display: flex; justify-content: space-between; gap: 12px; align-items: flex-end; }
+.terminal-experiment label { display: flex; align-items: center; gap: 10px; font-size: 12px; }
+.terminal-experiment select { background: transparent; max-width: 160px; }
+.terminal-experiment > footer > button { background: #181816; color: #f4f3ee; border-color: #181816; }
+.experiment-results { display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 20px; }
+.experiment-results > header, .kanban-impact { display: flex; align-items: end; gap: 20px; }
+.experiment-results > header > strong, .kanban-impact > strong { font-size: clamp(68px, 6.9vw, 100px); font-weight: 400; line-height: 1; letter-spacing: -.06em; color: #1414e0; }
+.experiment-results > header > div, .kanban-impact > div { padding-bottom: 6px; max-width: 235px; }
+.experiment-results header span, .kanban-impact > div span { font-size: 15px; line-height: 1.4; }
+.experiment-results header p, .kanban-impact p { font-size: 12px; color: #66655f; line-height: 1.5; margin-top: 6px; }
+.experiment-results figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; }
+.experiment-slide { position: relative; min-height: 0; background: #e7e5dd; }
+.experiment-pending { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 24px; font-size: 12px; color: #66655f; }
+.experiment-pending > span:first-child { font: 11px monospace; }
+.experiment-pending > span:nth-child(2) { align-self: center; font-size: 80px; font-weight: 300; color: #b4b2a8; }
+.experiment-results figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; }
+.experiment-results figcaption p { font-size: 14px; line-height: 1.6; max-width: 360px; }
+.experiment-results figcaption > div { display: flex; align-items: center; gap: 8px; flex-shrink: 0; font: 11px monospace; }
+.experiment-results figcaption button { width: 44px; font-size: 18px; }
+.kanban-demo { display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto auto; gap: 12px; }
+.kanban-impact > strong { font-size: clamp(88px, 8vw, 116px); min-width: 3ch; font-variant-numeric: tabular-nums; }
+.kanban-impact b { font-weight: 500; }
+.kanban-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.kanban-heading h3 { font-size: 18px; letter-spacing: -.02em; }
+.kanban-heading > button { border: 0; text-decoration: underline; }
+.kanban-board { min-height: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.kanban-board > section { display: flex; flex-direction: column; gap: 10px; padding: 10px; background: #e7e5dd; min-width: 0; min-height: 0; border: 1px solid transparent; }
+.kanban-board > section[data-over=true] { border-color: #1414e0; background: #dfdfe8; }
+.kanban-board h4 { font-size: 12px; display: flex; gap: 8px; justify-content: space-between; align-items: center; font-weight: 500; min-height: 28px; }
+.kanban-board h4 > span { color: #77756d; font-weight: 400; }
+.kanban-cards { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; overscroll-behavior: contain; }
+.kanban-demo .kanban-card { display: flex; flex: none; flex-direction: column; width: 100%; gap: 9px; padding: 10px; text-align: left; background: #f9f8f2; border-color: #d3d1c7; cursor: grab; }
+.kanban-demo .kanban-card:active { cursor: grabbing; }
+.kanban-card > span { color: #77756d; font-size: 10px; line-height: 1.4; }
+.kanban-card > strong { font-size: 12px; line-height: 1.45; font-weight: 400; }
+.kanban-demo .kanban-card[aria-pressed=true] { border-color: #1414e0; }
+.kanban-demo .kanban-card[data-amended=true] { border-color: #1414e0; }
+.kanban-card[data-amended=true] > span:first-child { color: #1414e0; }
+.kanban-card .kanban-card-id { font: 9px monospace; }
+.kanban-demo .kanban-destination { width: 100%; border: 0; padding: 5px 0; font-size: 11px; min-height: 32px; color: #1414e0; }
+.kanban-destination:disabled { color: #aaa89c; cursor: default; }
+.kanban-feedback { font-size: 12px; line-height: 1.5; min-height: 36px; }
+/* A full workspace replaces the chapter overview, staying inside its frame. */
+:is(#one-off-creatives, #batch-production) .story-scene[data-panel-open=true],
+.about-timeline[data-enhanced=true] :is(#one-off-creatives, #batch-production) .story-scene[data-panel-open=true] { grid-template-columns: minmax(0, 1fr); gap: 0; }
+:is(#one-off-creatives, #batch-production) .story-scene[data-panel-open=true] > .story-copy { display: none; }
+.journey-surface-panel[data-fit=true] { display: flex; flex-direction: column; overflow: hidden; scroll-margin-top: 76px; }
+.journey-surface-panel[data-fit=true] .journey-surface-header { flex: none; min-height: 56px; padding: 6px 16px; }
+.journey-surface-panel[data-fit=true] .journey-surface-content { flex: 1; min-height: 0; padding: 16px; overflow: hidden; }
+.node-demo-root { height: 100%; min-height: 0; container-type: inline-size; }
+.node-game { height: 100%; min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 12px; }
+.node-game-heading { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.node-game-heading h3 { font-size: 24px; line-height: 1.15; letter-spacing: -.03em; margin-top: 4px; }
+.node-game-heading h3:focus, .node-result-view h4:focus { outline: none; }
+.node-game-tools { display: flex; gap: 8px; }
+.node-play-area { position: relative; min-height: 0; background: #e7e5dd; }
+.node-canvas-viewport { position: absolute; inset: 0; overflow: hidden; user-select: none; }
+.node-canvas-viewport .node-board { position: absolute; left: 50%; top: 50%; margin: 0; transform-origin: center; }
+.node-board .workflow-node { top: 0; left: 0; box-shadow: none; }
+.node-game .node-drag { height: 44px; min-height: 44px; font-size: 13px; padding: 0 12px; user-select: none; }
+.node-inputs { padding-bottom: 8px; }
+.node-inputs:has(> p) { padding-bottom: 0; }
+.node-inputs > p { line-height: 28px; font-size: 10px; padding-inline: 12px; }
+.node-input-row { height: 28px; font-size: 12px; }
+.node-game .node-port { width: 44px; height: 28px; min-height: 28px; padding: 9px 17px; left: -22px; top: 0; touch-action: none; cursor: crosshair; }
+.node-game .node-output { height: 44px; min-height: 44px; padding: 17px; left: auto; right: -22px; top: 0; }
+.node-input-row[data-wire-over=true] { background: #1414e014; color: #1414e0; }
+.node-input-row[data-wire-over=true] .node-port > span { background: #1414e0; border-color: #1414e0; outline: 3px solid #1414e02b; }
+.node-wires .node-wire-preview { stroke-width: 2.5; stroke-dasharray: 5 3; }
+.node-game-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 48px; }
+.node-game-footer > p { font-size: 12px; line-height: 1.5; max-width: 680px; }
+.node-game-footer > div { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.node-run-count { font: 11px monospace; color: #66655f; }
+.node-result-view { position: absolute; inset: 0; display: grid; grid-template-rows: auto minmax(0, 1fr); gap: 16px; padding: 20px; }
+.node-result-view h4 { font-size: 28px; line-height: 1.2; font-weight: 400; letter-spacing: -.03em; }
+.node-result-view p:last-child { font-size: 12px; color: #66655f; margin-top: 4px; }
+.node-result-images { display: flex; justify-content: center; gap: 12px; min-height: 0; }
+.node-result-images > div { flex: 1; position: relative; max-width: 380px; min-height: 0; }
+/* The pipeline uses the same fixed workspace, one production stage at a time. */
+.journey-surface-panel[data-fit=true] .batch-demo { height: 100%; display: grid; grid-template-rows: auto auto minmax(0, 1fr) auto; gap: 8px; }
+.batch-demo .batch-demo-heading { padding: 0; flex-direction: row; align-items: center; gap: 20px; }
+.batch-demo-heading > p { font-size: 12px; line-height: 1.5; color: #66655f; }
+.batch-demo .batch-steps { padding: 0; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; }
+.batch-demo .batch-steps button { padding: 6px 10px; min-height: 40px; flex-wrap: nowrap; }
+.batch-demo .batch-workspace { min-height: 0; grid-template-columns: 112px minmax(0, 1fr); }
+.batch-demo .batch-queue { display: flex; flex-direction: column; border-right: 1px solid #d5d3cb; }
+.batch-demo .batch-queue button { padding: 14px 12px; gap: 4px; }
+.batch-demo .batch-preview { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0; padding: 10px 0 0 16px; gap: 8px; }
+.batch-demo .batch-stage-label { display: flex; align-items: baseline; gap: 12px; }
+.batch-demo .batch-stage-label h4 { font-size: 15px; line-height: 1.4; }
+.batch-demo .batch-stage-label p { font-size: 11px; line-height: 1.4; margin: 0; }
+.batch-stage-body { min-height: 0; display: flex; flex-direction: column; gap: 8px; }
+.batch-demo .styling-workbench { flex: 1; min-height: 0; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 16px; margin: 0; }
+.batch-demo .styling-preview { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; gap: 6px; }
+.batch-demo .styling-view-toggle { margin: 0; }
+.batch-demo .styling-view-toggle button { min-height: 32px; padding: 4px 10px; font-size: 11px; }
+.batch-demo .styling-board { min-height: 0; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); padding: 6px; gap: 5px; }
+.batch-demo .styling-board figure { min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.batch-demo .styling-board figure[data-category=top] { grid-row: span 2; }
+.batch-demo .styling-board figure > div, .batch-demo .styling-board figure[data-category=top] > div { height: auto; min-height: 0; }
+.batch-demo .styling-board figcaption { padding: 4px; font-size: 9px; line-height: 1.25; }
+.batch-demo .styling-board figcaption > span { display: none; }
+.batch-demo .styling-result { height: auto; min-height: 0; }
+.batch-demo .styling-caption { margin: 0; font-size: 10px; line-height: 1.3; }
+.batch-demo .styling-picker { min-height: 0; display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; gap: 6px; }
+.batch-demo .styling-categories { flex-wrap: nowrap; }
+.batch-demo .styling-categories button { padding: 4px; font-size: 11px; min-height: 34px; }
+.batch-demo .styling-options { min-height: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: minmax(0, 1fr); margin: 0; gap: 5px; }
+.batch-demo .styling-options legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.batch-demo .styling-options button { display: flex; flex-direction: column; min-height: 0; gap: 4px; padding: 5px; line-height: 1.2; font-size: 10px; }
+.batch-demo .styling-option-visual { width: 100%; flex: 1; min-height: 0; height: auto; margin: 0; }
+.batch-demo .styling-check { width: 16px; height: 16px; top: 4px; right: 4px; border-radius: 0; }
+.batch-demo .styling-status { padding: 5px 8px; margin: 0; font-size: 10px; line-height: 1.4; }
+.batch-demo .styling-presets { display: flex; align-items: center; gap: 12px; font-size: 11px; }
+.batch-demo .styling-presets select { flex: 1; min-width: 0; min-height: 34px; border: 1px solid #b7b7ae; background: transparent; padding: 4px 8px; }
+.batch-demo .batch-actions { margin: 0; gap: 6px 10px; }
+.batch-demo .batch-actions button { min-height: 38px; padding: 6px 12px; font-size: 11px; }
+.batch-demo .batch-actions p { font-size: 10px; line-height: 1.4; padding: 0; }
+.batch-demo .batch-provenance { padding: 4px 0 0; font-size: 10px; line-height: 1.3; }
+.batch-demo .batch-frames { flex: 1; min-height: 0; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 0; }
+.batch-demo .batch-frames-single { grid-template-columns: minmax(0, 1fr); }
+.batch-demo .batch-frames figure { min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; }
+.batch-demo .batch-frames figure > div { aspect-ratio: auto; min-height: 0; }
+.batch-demo .batch-frames figcaption { margin-top: 4px; }
+.batch-demo .batch-review { margin: 0; gap: 8px; flex: none; }
+.batch-demo .batch-review button { min-height: 36px; }
+.batch-demo .batch-delivery { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 4px; }
+.batch-demo .batch-delivery > div { flex: 1; min-height: 0; padding: 3px 0; gap: 12px; font-size: 11px; line-height: 1.3; }
+.batch-demo .batch-delivery img { width: 36px; height: 48px; object-fit: contain; }
+.batch-demo .batch-delivery > button { margin: 0; min-height: 36px; }
+@media (max-width: 1000px) {
+  #one-off-creatives .story-visual { height: min(700px, calc(100svh - 112px)); min-height: 480px; }
+  #experiments .story-visual, #machine-learning .story-visual { height: 620px; }
+  #production-tools .story-visual { height: 700px; }
+  :is(#one-off-creatives, #batch-production) .story-scene[data-panel-open=true] > .story-visual { height: min(740px, calc(100svh - 112px)); min-height: 480px; }
+  .kanban-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kanban-cards { flex-direction: row; align-items: flex-start; }
+  .kanban-demo .kanban-card { flex: 1 0 100px; }
+}
+@container (max-width: 700px) {
+  .node-game-heading { gap: 10px; }
+  .node-game-heading h3 { font-size: 21px; }
+  .node-game-tools { gap: 4px; }
+  .node-game-tools button { padding: 6px 8px; }
+  .node-game-footer { flex-direction: column; align-items: stretch; gap: 8px; }
+  .node-game-footer > p { font-size: 11px; min-height: 32px; }
+  .node-game-footer > div { justify-content: flex-end; }
+}
+@media (max-width: 600px) {
+  .terminal-experiment { padding: 18px; }
+  .terminal-experiment label { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .terminal-experiment > footer > button { font-size: 12px; }
+  .terminal-console { padding-inline: 10px; }
+  .terminal-console > p:first-child { font-size: 8px; }
+  .experiment-results > header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .experiment-results > header > div { max-width: none; }
+  .experiment-results figcaption { align-items: start; flex-direction: column; gap: 8px; }
+  .experiment-results figcaption > div { width: 100%; justify-content: flex-end; }
+  .experiment-results figcaption > div > span { margin-right: auto; }
+  .kanban-impact { gap: 14px; }
+  .kanban-impact > strong { font-size: 80px; }
+  .kanban-impact > div span { font-size: 13px; }
+  .kanban-cards { flex-direction: column; }
+  .kanban-demo .kanban-card { flex: none; gap: 5px; padding: 7px; }
+  .kanban-card .kanban-card-id { display: none; }
+  .kanban-feedback { font-size: 11px; }
+  .node-game-heading { gap: 8px; }
+  .node-game-heading h3 { font-size: 18px; }
+  .node-game-tools { gap: 4px; }
+  .node-game-tools button { padding: 5px 8px; min-height: 36px; }
+  .node-game-footer { flex-direction: column; align-items: stretch; gap: 6px; }
+  .node-game-footer > p { min-height: 36px; font-size: 11px; }
+  .node-game-footer > div { justify-content: flex-end; }
+  .node-result-view { padding: 12px; }
+  .node-result-view h4 { font-size: 24px; }
+  .journey-surface-panel[data-fit=true] .journey-surface-content { padding: 10px; }
+  .journey-surface-panel[data-fit=true] .journey-surface-header { gap: 4px; padding-inline: 10px; flex-wrap: nowrap; }
+  .journey-surface-panel[data-fit=true] .journey-surface-header h3 { font-size: 11px; }
+  .journey-surface-panel[data-fit=true] .journey-surface-header button { font-size: 11px; gap: 6px; }
+  .batch-demo .batch-demo-heading { gap: 8px; }
+  .batch-demo-heading > p { font-size: 10px; }
+  .batch-demo .batch-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .batch-demo .batch-steps button { font-size: 10px; min-height: 30px; padding: 4px; }
+  .batch-demo .batch-workspace { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .batch-demo .batch-queue { flex-direction: row; border-right: 0; }
+  .batch-demo .batch-queue button { flex: 1; padding: 5px 7px; gap: 1px; font-size: 10px; }
+  .batch-demo .batch-queue button > span:nth-child(2) { display: none; }
+  .batch-demo .batch-queue button > span { font-size: 9px; }
+  .batch-demo .batch-preview { padding: 6px 0 0; gap: 6px; }
+  .batch-demo .batch-stage-label p { font-size: 10px; }
+  .batch-demo .styling-workbench { grid-template-columns: minmax(0, .7fr) minmax(0, 1.3fr); gap: 8px; }
+  .batch-demo .styling-board { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(0, 1fr)); }
+  .batch-demo .styling-board figure[data-category=top] { grid-row: auto; }
+  .batch-demo .styling-board figcaption { font-size: 8px; }
+  .batch-demo .styling-options { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); }
+  .batch-demo .styling-categories { flex-wrap: wrap; gap: 2px; }
+  .batch-demo .styling-categories button { min-height: 26px; font-size: 9px; }
+  .batch-demo .styling-view-toggle { flex-wrap: wrap; gap: 2px; }
+  .batch-demo .styling-view-toggle button { font-size: 9px; padding: 3px 5px; min-height: 26px; }
+  .batch-demo .styling-presets { flex-direction: column; align-items: stretch; gap: 2px; font-size: 10px; }
+  .batch-demo .styling-presets select { min-height: 30px; }
+  .batch-demo .styling-caption { font-size: 8px; }
+  .batch-demo .batch-actions button { min-height: 34px; padding: 4px 8px; font-size: 10px; }
+  .batch-demo .batch-frames { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .batch-demo .batch-frames-single { grid-template-columns: 1fr; grid-template-rows: 1fr; }
+}
+.journey-reel-slot { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.journey-inline-reel { display: block; width: 100%; height: auto; max-height: 100%; aspect-ratio: auto 16 / 9; object-fit: contain; background: var(--chapter-ground); }
+
+.journey-video-gallery { height: 100%; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; background: var(--media-ground); }
+.journey-video-stage { min-width: 0; min-height: 0; overflow: hidden; }
+.journey-video-gallery .journey-inline-reel { width: auto; max-width: 100%; background: transparent; }
+.journey-video-gallery figcaption { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 20px; font-size: 14px; line-height: 1.5; border-top: 1px solid #ffffff26; }
+.journey-video-gallery figcaption small { display: block; font-size: 12px; opacity: .65; margin-top: 3px; }
+.journey-video-gallery figcaption > div { display: flex; gap: 6px; flex: none; }
+.journey-video-gallery figcaption button { width: 44px; height: 44px; border: 1px solid currentColor; }
+.journey-video-gallery figcaption button:hover { background: #ffffff14; }
+
+/* Chapter 07 reuses actual ecommerce looks, with descriptive styling labels. */
+.batch-demo .indicative-outfit { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; }
+.indicative-outfit-photo { min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 6px; }
+.indicative-outfit-photo > div { position: relative; min-height: 0; background: #eae9e2; }
+.indicative-outfit-photo figcaption { font-size: 10px; color: #66655f; }
+.indicative-outfit-details { min-height: 0; overflow: auto; display: flex; flex-direction: column; gap: 18px; padding: 4px 12px 8px 0; }
+.indicative-outfit-kicker { font-size: 10px; color: #66655f; }
+.indicative-outfit-details h5 { font-size: clamp(22px, 2.4vw, 34px); line-height: 1.15; letter-spacing: -.035em; margin-top: 6px; font-weight: 400; }
+.indicative-outfit-details h6 { font-size: 12px; font-weight: 500; margin-bottom: 8px; }
+.indicative-outfit-details dl > div { display: grid; grid-template-columns: 95px 1fr; gap: 12px; padding: 9px 0; border-top: 1px solid #d5d3cb; font-size: 12px; line-height: 1.5; }
+.indicative-outfit-details dt { color: #66655f; }
+.indicative-outfit-note { font-size: 11px; line-height: 1.5; color: #66655f; }
+.indicative-outfit-views legend { font-size: 11px; margin-bottom: 8px; }
+.indicative-outfit-views > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.batch-demo .indicative-outfit-views button { font-size: 11px; min-height: 38px; padding: 8px 12px; }
+.batch-demo .indicative-outfit-views button[aria-pressed=true] { color: #fff; background: #171717; border-color: #171717; }
+.indicative-primary-preview { display: flex; align-items: center; gap: 12px; font-size: 11px; color: #66655f; }
+.indicative-primary-preview img { flex: none; object-fit: contain; }
+.batch-demo .batch-queue-image { width: 66px; height: 88px; object-fit: contain; }
+.batch-demo .batch-queue { min-height: 0; overflow-y: auto; }
+.batch-demo .batch-queue button { flex-shrink: 0; }
+#batch-production .journey-surface-overview .journey-gallery-image img { object-fit: contain; }
+@media (max-width: 767px) {
+  .batch-demo .indicative-outfit { grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: 12px; }
+  .indicative-outfit-details { gap: 12px; padding-right: 4px; }
+  .indicative-outfit-details h5 { font-size: 21px; }
+  .indicative-outfit-details dl > div { grid-template-columns: 1fr; gap: 1px; padding: 6px 0; font-size: 11px; }
+  .indicative-outfit-details dt, .indicative-outfit-note { font-size: 10px; }
+  .batch-demo .batch-queue-image { display: none; }
+  .batch-demo .indicative-outfit-views button { padding: 7px 8px; font-size: 10px; }
+}

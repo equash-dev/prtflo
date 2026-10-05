@@ -29,5 +29,5 @@ export async function unlock(
     path: '/',
     maxAge: 60 * 60 * 24 * 30,
   });
-  redirect('/intro');
+  redirect('/');
 }

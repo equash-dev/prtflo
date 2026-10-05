@@ -6,15 +6,14 @@ says so up front.
 
 What's here:
 
-1. **Front door** (`/`) — a chromeless landing that sets context (a portfolio,
-   not a real shop; every image is generated) and leads into the collection.
+1. **Front door** (`/enter` → `/`) — a password gate with a brief portfolio
+   introduction, followed by equal choices for About Me and Storefront.
 2. **Storefront** (`/collection`) — a browse-only multi-category catalogue
    (men, women, archive) with category, listing, and
    product pages. Every product, image, and price is driven from `config/*.ts`.
    A GBP/USD/EUR currency switcher restyles every price as editorial dressing.
-3. **About the project** (`/intro`, `/about`) — an experiential page with
-   scroll-reveal motion and a studio-vs-generated drag slider, plus a plain
-   about page. Both make the "every image was generated" point explicit.
+3. **About the project** (`/intro`, `/about`) — project context and a personal
+   career story with chapter navigation, showreels, galleries and interactive demos.
 
 ## Quick start
 
@@ -24,6 +23,13 @@ npm run dev
 ```
 
 Open <http://localhost:3000>.
+
+Set `SITE_PASSWORD` in `.env.local` for local development and in the hosting
+environment for deployment. Without it, the gate stays locked. Successful entry
+sets an HTTP-only access cookie for 30 days and opens the choice screen at `/`.
+Changing the password invalidates existing access cookies. Direct page links,
+including `/about` and `/collection`, also require the password; storefront image
+directories remain public. Gate and choice-screen text lives in `config/copy.ts`.
 
 ## Editing content (no code required)
 
@@ -36,6 +42,48 @@ All non-code edits live in `config/`:
 | `config/products.ts` | Full product catalogue (typed) |
 | `config/currencies.ts` | GBP/USD/EUR definitions + FX rates |
 | `config/copy.ts` | Landing, home, and about strings |
+| `config/about.ts` | About Me introduction, PRTFLO case study and production approach |
+| `config/cv.json` | CV preview and downloadable PDF content |
+| `config/journey.ts` | How I Got Here chapters, captions and example slots |
+| `config/batch-demo.ts` | Wardrobe choices, matching saved outputs and pipeline demo copy |
+
+### About timeline and CV
+
+`/about` starts with a personal introduction, then eight How I Got Here chapters,
+followed by the CV. A sticky chapter menu and next-step links let visitors skip
+ahead. A single pinned stage moves through a Canals-inspired editorial strip of
+upright imagery and large type, with a narrow navigation rail. Scroll, drag or
+use chapter shortcuts. A reading view remains available. Demos, showreels and the
+CV preview open inside each slide's media area. Media extends beneath a continuous
+editorial sheet, with small crop changes and gentle movement. Chapters have solid
+colour backgrounds; imagery stays in the chapter media areas. Reduced-motion preferences
+disable animated movement.
+
+See [the journey content guide](docs/about-journey.md) for the single intro portrait,
+showreels, example galleries and America speaking photos. Chapter 04 has an equipment
+tracker; chapter 05 has a three-round node connection game. The pipeline demo uses local
+sample images. Chapter 07 uses three existing ecommerce looks, with descriptive
+labels for the trousers, shoes and any layers shown. Visitors choose a saved primary
+view, then explore the existing shot set, approve or hold looks, and download an
+illustrative manifest. A view change clears previous approvals. Both the UI and
+exports identify this as an indicative demo with no live generation or delivery.
+
+Run `npm run export:workflow` after changing the catalogue or prompt instructions
+to refresh the downloadable manifest and instructions in `public/about/`.
+
+Add a portrait at `public/about/portrait.webp` to replace the reserved portrait
+space. Adjust its description in `config/about.ts`.
+
+Edit `config/cv.json`, then run `npm run export:cv` (Python with `reportlab`
+installed) to regenerate `public/about/elliott-quashie-cv.pdf` and its copy in
+`output/pdf/`. The on-page preview retains the full career detail; the `print`
+section in the same JSON supplies concise copy for the single-page PDF.
+The PDF follows the supplied editorial reference: black type on white, a bold
+name with contact details at the top right, and section labels beside one aligned
+content column. Skills split into two columns. There is no certifications section.
+It uses the contact email in `config/site.ts` and stays behind the password gate.
+The generator checks that text fits the single page with a clear bottom margin.
+Employment dates use the confirmed months and years in `config/cv.json`.
 
 To add a product: append an object to `PRODUCTS` in `config/products.ts` and
 drop image files at `public/products/{category}/{slug}/01.webp`,

@@ -42,14 +42,14 @@ body {
   opacity: 1;
   transform: none;
   transition:
-    opacity 1100ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 1100ms cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
   transition-delay: var(--cold-open-delay, 0ms);
 }
 @starting-style {
   .cold-open {
     opacity: 0;
-    transform: translateY(0.6rem);
+    transform: translateY(0.25rem);
   }
 }
 
@@ -62,7 +62,7 @@ body {
 }
 .reveal-up.reveal-armed {
   opacity: 0;
-  transform: translateY(1.5rem);
+  transform: translateY(0.5rem);
 }
 .reveal-up.reveal-armed.is-visible {
   opacity: 1;
@@ -103,10 +103,10 @@ body {
   to { opacity: 1; transform: none; }
 }
 .shot-resolve {
-  animation: shot-resolve 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation: shot-resolve 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 @keyframes shot-resolve {
-  from { opacity: 0; filter: blur(16px); }
+  from { opacity: 0; filter: blur(4px); }
   to { opacity: 1; filter: blur(0); }
 }
 
@@ -130,9 +130,9 @@ body {
   will-change: transform;
 }
 @keyframes ambient-drift {
-  0% { transform: translate3d(-3%, -2%, 0) scale(1.05); }
-  50% { transform: translate3d(2%, 3%, 0) scale(1.12); }
-  100% { transform: translate3d(4%, -3%, 0) scale(1.05); }
+  0% { transform: translate3d(-.75%, -.5%, 0) scale(1.025); }
+  50% { transform: translate3d(.5%, .75%, 0) scale(1.025); }
+  100% { transform: translate3d(1%, -.75%, 0) scale(1.025); }
 }
 
 /* ---- Landing atmosphere ----------------------------------------------
@@ -173,15 +173,13 @@ body {
 }
 
 @keyframes atmos-drift {
-  0% { transform: translate3d(-3%, -2%, 0) scale(1.05); }
-  50% { transform: translate3d(2%, 3%, 0) scale(1.12); }
-  100% { transform: translate3d(4%, -3%, 0) scale(1.05); }
+  0% { transform: translate3d(-.75%, -.5%, 0) scale(1.025); }
+  50% { transform: translate3d(.5%, .75%, 0) scale(1.025); }
+  100% { transform: translate3d(1%, -.75%, 0) scale(1.025); }
 }
-/* The breath. Period deliberately out of phase with the 26s drift. The
-   floor stays high: dropping to 0.5 took the glow back under the
-   perceptible threshold at the bottom of every cycle. */
+/* A small brightness change, out of phase with the drift. */
 @keyframes atmos-pulse {
-  from { opacity: 0.72; }
+  from { opacity: 0.88; }
   to { opacity: 1; }
 }
 

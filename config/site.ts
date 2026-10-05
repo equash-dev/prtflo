@@ -9,7 +9,7 @@ export const SITE = {
     { label: 'Home', href: '/home' },
   ],
   utilityNav: [
-    { label: 'About', href: '/about' },
+    { label: 'About me', href: '/about' },
   ],
   revealLine: 'Every image in this house was generated.',
 } as const;

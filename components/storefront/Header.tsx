@@ -50,7 +50,7 @@ export function Header() {
           </div>
 
           <nav className="hidden min-w-0 items-center gap-3 sm:flex md:gap-6">
-            {SITE.nav.map((item) => (
+            {[...SITE.nav, ...SITE.utilityNav].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -95,6 +95,13 @@ export function Header() {
 
         </div>
       </div>
+      <nav aria-label="About" className="flex justify-end border-t border-hairline px-4 sm:hidden">
+        {SITE.utilityNav.map((item) => (
+          <Link key={item.href} href={item.href} className="inline-flex min-h-11 items-center text-[11px] uppercase tracking-[0.02em] text-ink transition-opacity hover:opacity-60">
+            {item.label}
+          </Link>
+        ))}
+      </nav>
     </header>
 
     {searchOpen ? <SearchOverlay onClose={() => setSearchOpen(false)} /> : null}

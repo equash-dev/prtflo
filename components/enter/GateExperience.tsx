@@ -12,7 +12,7 @@ export function GateExperience() {
   );
 
   return (
-    <main className="ambient flex min-h-svh flex-col justify-between bg-ground px-6 py-12 text-canvas md:px-12 md:py-16">
+    <main className="ambient flex min-h-svh flex-col justify-between gap-12 bg-ground px-6 py-12 text-canvas md:px-12 md:py-16">
       <p className="cold-open text-[11px] uppercase tracking-[0.2em] text-canvas/60">
         {SITE.brandSerial}
       </p>
@@ -28,6 +28,9 @@ export function GateExperience() {
           {SITE.brandName}
         </h1>
         <p className="mt-8 max-w-xl text-lg leading-relaxed text-canvas/70 md:text-xl">
+          {COPY.gate.introduction}
+        </p>
+        <p id="gate-hint" className="mt-4 max-w-xl text-sm leading-relaxed text-canvas/50">
           {COPY.gate.prompt}
         </p>
       </div>
@@ -41,11 +44,11 @@ export function GateExperience() {
           type="password"
           name="password"
           autoComplete="current-password"
-          autoFocus
           required
           placeholder={COPY.gate.placeholder}
           aria-label={COPY.gate.placeholder}
           aria-invalid={state ? true : undefined}
+          aria-describedby={state ? 'gate-hint gate-error' : 'gate-hint'}
           className={`w-full border-0 border-b bg-transparent pb-3 text-base text-canvas outline-none transition-colors placeholder:uppercase placeholder:tracking-[0.04em] placeholder:text-canvas/40 focus:border-canvas ${
             state ? 'gate-miss border-canvas/60' : 'border-canvas/30'
           } ${isPending ? 'opacity-50' : ''}`}
@@ -55,11 +58,11 @@ export function GateExperience() {
           <button
             type="submit"
             disabled={isPending}
-            className="text-[11px] uppercase tracking-[0.04em] text-canvas/80 transition-colors hover:text-canvas disabled:opacity-50"
+            className="min-h-11 shrink-0 text-[11px] uppercase tracking-[0.04em] text-canvas/80 transition-colors hover:text-canvas focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-canvas disabled:opacity-50"
           >
-            {COPY.gate.submitLabel} →
+            {isPending ? COPY.gate.pendingLabel : COPY.gate.submitLabel} <span aria-hidden="true">→</span>
           </button>
-          <p aria-live="polite" className="gate-error text-[11px] uppercase tracking-[0.04em] text-canvas/50">
+          <p id="gate-error" aria-live="polite" className="gate-error text-[11px] uppercase tracking-[0.04em] text-canvas/70">
             {state && !isPending ? state.error : null}
           </p>
         </div>

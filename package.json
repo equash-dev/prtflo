@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "ingest": "node scripts/ingest-assets.mjs",
-    "export:generation": "node scripts/export-generation-figures.mjs"
+    "export:generation": "node scripts/export-generation-figures.mjs",
+    "export:cv": "node scripts/export-cv.mjs",
+    "export:workflow": "node scripts/export-workflow.mjs",
+    "test:demo": "node --test tests/batch-demo.test.mjs tests/styling-demo.test.mjs tests/journey-frames.test.mjs tests/interactive-demos.test.mjs"
   },
   "dependencies": {
     "next": "16.2.9",

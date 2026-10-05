@@ -1,10 +1,13 @@
 export const COPY = {
   landing: {
-    eyebrow: 'Portfolio · not a real shop',
+    eyebrow: 'Welcome inside',
+    heading: 'Where would you like to start?',
     framing:
-      'A fictional fashion house, built as a portfolio piece. Every image here is AI-generated; there was never a photo shoot. Have a look around as if it were real.',
-    enterLabel: 'Enter the collection',
-    aboutLabel: 'About the project',
+      'Get to know the person behind the work, or explore the project as a customer would.',
+    enterLabel: 'Storefront',
+    storeDescription: 'Explore PRTFLO, a fictional fashion house with AI-generated imagery. A working demo, not a real shop.',
+    aboutLabel: 'About Me',
+    aboutDescription: 'My background, creative work and the tools and workflows I build around it.',
     workflowHint:
       'Flip this on and every image in the store shows what it cost to generate against a studio equivalent. It stays on while you browse.',
   },
@@ -25,11 +28,13 @@ export const COPY = {
   },
   gate: {
     eyebrow: 'Private preview',
-    prompt: 'You were given a word. Use it.',
+    introduction: 'A personal portfolio by Elliott Quashie, bringing together my background in motion, 3D and AI with PRTFLO: a fictional fashion storefront built with generated imagery.',
+    prompt: 'Enter the password to explore About Me and the Storefront. This is a portfolio project, not a real shop.',
     placeholder: 'Password',
-    submitLabel: 'Enter',
-    errorWrong: 'That isn’t it.',
-    errorUnavailable: 'The door isn’t configured. Come back later.',
+    submitLabel: 'Unlock portfolio',
+    pendingLabel: 'Unlocking…',
+    errorWrong: 'Incorrect password. Please try again.',
+    errorUnavailable: 'Access is temporarily unavailable. Please try again later.',
   },
   intro: {
     arrival: {
